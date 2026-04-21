@@ -1,0 +1,66 @@
+---
+interface Props {
+  embedHtml?: string;
+  thumbnail?: string;
+  title?: string;
+}
+
+const {
+  embedHtml = '<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>',
+  thumbnail = '/banners/video-thumb.webp',
+  title = 'Clique para assistir'
+} = Astro.props;
+---
+
+<div class="video-section section-spacing bg-bordo/5">
+  <div class="container max-w-4xl">
+    <div class="video-wrapper relative aspect-video rounded-xl overflow-hidden shadow-2xl bg-ink/10">
+      <!-- Facade lazy loading -->
+      <button
+        type="button"
+        class="video-facade absolute inset-0 w-full h-full cursor-pointer group"
+        aria-label={title}
+        data-embed={embedHtml}
+      >
+        <!-- Thumbnail placeholder -->
+        <div class="absolute inset-0 bg-gradient-to-br from-bordo to-bordo-dark flex items-center justify-center">
+          <div class="text-center text-white p-8">
+            <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
+              <svg class="w-10 h-10 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+            <p class="text-lg font-display">{title}</p>
+          </div>
+        </div>
+      </button>
+
+      <!-- Iframe container (populated on click) -->
+      <div class="video-iframe hidden"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.video-facade').forEach(facade => {
+    facade.addEventListener('click', function() {
+      const embedHtml = this.getAttribute('data-embed');
+      const wrapper = this.closest('.video-wrapper');
+      const iframeContainer = wrapper?.querySelector('.video-iframe');
+
+      if (iframeContainer && embedHtml) {
+        iframeContainer.innerHTML = embedHtml;
+        iframeContainer.classList.remove('hidden');
+        iframeContainer.classList.add('absolute', 'inset-0');
+
+        const iframe = iframeContainer.querySelector('iframe');
+        if (iframe) {
+          iframe.classList.add('w-full', 'h-full');
+          iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+        }
+
+        this.remove();
+      }
+    });
+  });
+</script>

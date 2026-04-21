@@ -1,0 +1,25 @@
+---
+interface Props {
+  position: 1 | 2 | 3;
+  alt?: string;
+}
+
+const { position, alt = `Banner promocional ${position}` } = Astro.props;
+const bannerSrc = `/banners/banner-0${position}.webp`;
+---
+
+<div class="banner-slot section-spacing">
+  <div class="container">
+    <a href="#cta" class="block group">
+      <img
+        src={bannerSrc}
+        alt={alt}
+        width="1140"
+        height="200"
+        loading={position === 1 ? 'eager' : 'lazy'}
+        decoding="async"
+        class="w-full h-auto rounded-lg shadow-md transition-transform duration-300 group-hover:scale-[1.02]"
+      />
+    </a>
+  </div>
+</div>

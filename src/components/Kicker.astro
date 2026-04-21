@@ -1,0 +1,13 @@
+---
+interface Props {
+  text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<div class="bg-bordo text-white py-3 text-center">
+  <p class="container text-sm md:text-base font-semibold tracking-wide">
+    {text}
+  </p>
+</div>
