@@ -1,201 +1,358 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Features from '~/components/widgets/Features.astro';
-import Content from '~/components/widgets/Content.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import { YouTube } from 'astro-embed';
 
 const metadata = {
   title: 'Mentoria Fé | Relacionamento Abençoado Segundo a Palavra',
   ignoreTitleTemplate: true,
 };
+
+const author = 'Pr. Elias Martins';
+const publishDate = '21 de abril de 2026';
+const readingTime = '18 min de leitura';
+
+const sections = [
+  { n: 1, title: 'O Fundamento Inabalável do Amor Bíblico', verse: { text: 'Todo aquele, pois, que escuta estas minhas palavras e as pratica, será comparado a um homem prudente que edificou a sua casa sobre a rocha.', ref: 'Mateus 7:24' }, body: [
+    'O amor verdadeiro não é apenas um sentimento — é uma decisão fundamentada na Palavra de Deus. Quando Jesus disse "Amai-vos uns aos outros como eu vos amei" (João 13:34), Ele não estava falando de uma emoção passageira, mas de um compromisso inabalável que transforma relacionamentos.',
+    'Muitos casais constroem suas casas sobre a areia das emoções. Quando as tempestades vêm — e elas sempre vêm — tudo desmorona. Mas aqueles que edificam sobre a rocha da Palavra permanecem firmes, mesmo quando os ventos sopram com força.',
+  ]},
+  { n: 2, title: 'Por Que Seu Relacionamento Precisa de Propósito Divino', verse: { text: 'E os dois serão uma só carne. Assim, já não são mais dois, mas uma só carne.', ref: 'Marcos 10:8' }, body: [
+    'Deus criou o casamento com um propósito maior do que simplesmente fazer duas pessoas felizes. Ele projetou a união conjugal para refletir Seu amor pela Igreja, para criar um ambiente onde filhos possam crescer conhecendo a Deus, e para que dois se tornem um em missão.',
+    'Sem esse propósito maior, os relacionamentos se tornam centrados em si mesmos. Cada parceiro busca apenas sua própria satisfação, e quando ela não vem, a frustração toma conta. Mas quando um casal entende que existe algo maior — um chamado divino — as pequenas diferenças perdem importância diante da grandeza da missão.',
+  ]},
+  { n: 3, title: 'Os 3 Pilares de um Relacionamento Abençoado', body: [
+    'Todo relacionamento que prospera sob a bênção de Deus está fundamentado em três pilares essenciais:',
+    '<strong>1. Aliança</strong> — Não é um contrato que pode ser quebrado quando conveniente. É um pacto sagrado diante de Deus, selado por um compromisso que transcende as circunstâncias.',
+    '<strong>2. Comunicação</strong> — A Palavra nos ensina a falar a verdade em amor (Efésios 4:15). Isso significa honestidade sem crueldade, transparência sem manipulação.',
+    '<strong>3. Comunhão</strong> — Um casal que ora junto, estuda a Palavra junto e serve junto desenvolve uma intimidade que vai além do físico.',
+    'Quando um desses pilares está fraco, todo o relacionamento fica instável. A boa notícia é que, com Deus, qualquer pilar pode ser restaurado.',
+  ]},
+  { n: 4, title: 'O Erro Fatal Que 87% dos Casais Cristãos Cometem', verse: { text: 'Vós, maridos, amai vossa mulher, como também Cristo amou a igreja e a si mesmo se entregou por ela.', ref: 'Efésios 5:25' }, body: [
+    'Aqui está uma verdade que poucos pregadores falam: muitos casais cristãos negligenciam a intimidade emocional achando que espiritualidade é suficiente.',
+    'Eles oram juntos, vão à igreja juntos, mas não conversam de verdade. Não compartilham seus medos, suas dúvidas, seus sonhos. Com o tempo, vivem como colegas de quarto piedosos, mas distantes.',
+    'Deus criou Adão e Eva para serem "uma só carne" — isso inclui união espiritual, emocional E física. Negligenciar qualquer uma dessas dimensões é viver abaixo do plano de Deus para o casamento.',
+  ]},
+  { n: 5, title: 'Como a Oração Transforma Conflitos em Conexão', body: [
+    'Todo casal discute. A questão não é se vocês terão conflitos, mas como irão resolvê-los. E aqui está um segredo poderoso: é quase impossível continuar brigando com alguém enquanto você ora por ela.',
+    'Quando você leva seu cônjuge diante do trono de Deus, algo muda em você primeiro. Seu coração se amolece. Sua perspectiva se amplia. Você começa a ver seu parceiro como Deus o vê — uma pessoa imperfeita, sim, mas amada e em processo de transformação.',
+    'A oração não muda apenas as circunstâncias. Ela muda você. E quando você muda, seu relacionamento muda.',
+  ]},
+  { n: 6, title: 'O Poder do Perdão Que Liberta', verse: { text: 'Suportai-vos uns aos outros, perdoai-vos mutuamente, caso alguém tenha motivo de queixa contra outrem. Assim como o Senhor vos perdoou, assim também perdoai vós.', ref: 'Colossenses 3:13' }, body: [
+    'Pedro perguntou a Jesus quantas vezes deveria perdoar seu irmão. "Até sete vezes?" A resposta de Jesus foi revolucionária: "Não te digo até sete vezes, mas até setenta vezes sete" (Mateus 18:22).',
+    'No casamento, o perdão não é opcional — é o oxigênio do relacionamento. Sem ele, ressentimentos se acumulam como toxinas, envenenando cada interação.',
+    'Perdoar não significa fingir que a ofensa não aconteceu. Significa escolher não usar aquela dívida como arma. É liberar o outro do tribunal do seu coração e entregá-lo ao único Juiz justo.',
+  ]},
+  { n: 7, title: 'Linguagens do Amor: O Que a Bíblia Já Sabia', body: [
+    'Antes de Gary Chapman popularizar as cinco linguagens do amor, a Bíblia já ensinava esse princípio: cada pessoa recebe e expressa amor de maneira diferente.',
+    'Quando Paulo instrui maridos a amarem suas esposas "como Cristo amou a igreja", ele descreve um amor que se adapta, que serve, que entende as necessidades do outro. Cristo não amou a Igreja de uma única forma — Ele ensinou, curou, consolou, confrontou, sacrificou-se.',
+    'Descobrir como seu cônjuge recebe amor é um ato de humildade. Significa sair do seu modo padrão e aprender uma nova "língua" para expressar o que você sente.',
+  ]},
+  { n: 8, title: 'Intimidade Santa: Desfazendo Mitos Religiosos', verse: { text: 'Bebe a água da tua própria cisterna e das correntes do teu poço.', ref: 'Provérbios 5:15' }, body: [
+    'Por séculos, uma teologia distorcida ensinou que o prazer físico no casamento era algo tolerado, não celebrado. Mas isso não é o que as Escrituras ensinam.',
+    'O livro de Cantares de Salomão é uma celebração explícita da intimidade conjugal. A esposa descreve a beleza do corpo do seu amado. O marido responde com igual admiração.',
+    'A intimidade sexual dentro do casamento é um presente de Deus — não apenas para procriação, mas para conexão, prazer e expressão do amor mútuo.',
+  ]},
+  { n: 9, title: 'Quando Seu Cônjuge Não Muda (E Você Está Cansado de Esperar)', body: [
+    'Uma das orações mais dolorosas é aquela que parece não ser respondida: "Senhor, muda meu cônjuge." Você já orou isso? Meses, talvez anos, esperando uma transformação que não vem.',
+    'Aqui está uma perspectiva diferente: e se Deus estiver usando seu cônjuge exatamente como ele é para transformar VOCÊ?',
+    'Isso não significa aceitar abuso ou negligência grave. Significa reconhecer que, muitas vezes, o refinamento do nosso caráter acontece através das pessoas mais próximas.',
+  ]},
+  { n: 10, title: 'O Papel do Homem Segundo o Coração de Deus', verse: { text: 'Maridos, amai vossa mulher, como também Cristo amou a igreja e a si mesmo se entregou por ela.', ref: 'Efésios 5:25' }, body: [
+    'Ser cabeça do lar não significa ser chefe. Jesus redefiniu liderança quando lavou os pés dos discípulos. O homem que lidera como Cristo lidera servindo.',
+    'Isso significa: tomar iniciativa na busca pela comunhão com Deus, assumir responsabilidade pelo clima emocional do lar, proteger sua família — física, emocional e espiritualmente, e amar sua esposa sacrificialmente.',
+  ]},
+  { n: 11, title: 'O Chamado da Mulher Virtuosa Para Hoje', verse: { text: 'Enganosa é a graça, e vã, a formosura, mas a mulher que teme ao Senhor, essa será louvada.', ref: 'Provérbios 31:30' }, body: [
+    'Provérbios 31 não é uma lista de tarefas impossíveis. É um retrato de uma mulher que vive com propósito, sabedoria e generosidade.',
+    'Ela trabalha com diligência. Administra seu lar com competência. Fala com sabedoria. Seus filhos e seu marido a honram — não porque ela seja perfeita, mas porque ela teme ao Senhor.',
+    'A mulher virtuosa de hoje enfrenta desafios diferentes, mas o princípio é o mesmo: uma vida ancorada em Deus produz frutos que atravessam gerações.',
+  ]},
+  { n: 12, title: 'Criando Filhos em Meio ao Caos do Mundo', body: [
+    'Nunca foi tão desafiador criar filhos cristãos. A cultura ao redor empurra valores que se opõem radicalmente à Palavra. E, no entanto, Deus nos confiou essa missão.',
+    'Deuteronômio 6:6-7 é claro: as palavras de Deus devem estar no seu coração primeiro, e então você as ensina ao seu filho — andando, deitando, levantando, em cada circunstância cotidiana.',
+    'Seus filhos não precisam de pais perfeitos. Precisam de pais autênticos, que conhecem a graça e a estendem ao lar.',
+  ]},
+  { n: 13, title: 'Finanças no Casamento: A Causa #1 de Brigas', body: [
+    'Pesquisas mostram: dinheiro é a maior fonte de conflito em casamentos — cristãos ou não. E a raiz quase sempre é espiritual.',
+    'A Bíblia fala mais sobre dinheiro do que sobre oração. Jesus sabia que a forma como administramos recursos revela o que está no centro do coração.',
+    'Transparência financeira é um ato espiritual. Dívidas, mordomia, ofertas, prioridades — tudo isso é território sagrado no casamento.',
+  ]},
+  { n: 14, title: 'Quando o Passado Ameaça o Presente', body: [
+    'Todos nós carregamos bagagens. Traumas da infância, relacionamentos anteriores, feridas que nunca cicatrizaram direito. E essas feridas têm um jeito curioso de aparecer no casamento.',
+    'A boa notícia é que o evangelho alcança as raízes. Cristo não oferece apenas perdão — Ele oferece cura. E essa cura pode chegar até os lugares mais escondidos da nossa alma.',
+    'Terapia cristã, direção espiritual, grupos de apoio bíblicos — Deus usa meios variados para nos trazer inteireza.',
+  ]},
+  { n: 15, title: 'Amizade no Casamento: O Segredo dos 50 Anos Juntos', body: [
+    'Pergunte a um casal que está junto há 50 anos qual é o segredo. Raramente será "nós nos apaixonamos todos os dias". A resposta mais comum: "nós nos tornamos melhores amigos".',
+    'A paixão vai e volta. A atração física muda com os anos. Mas a amizade — aquela que compartilha piadas internas, sustenta na dor, celebra nas vitórias — essa endurece com o tempo.',
+    'Cultive amizade. Ria junto. Crie rituais simples. Tenha curiosidade contínua sobre quem seu cônjuge está se tornando.',
+  ]},
+  { n: 16, title: 'Proteções Contra a Tentação', body: [
+    'Nenhum casamento é imune. Todos estamos sujeitos a tentações — e o inimigo conhece os pontos fracos de cada um.',
+    'Proteções espirituais: oração diária juntos, estudo bíblico, comunhão com outros casais cristãos maduros.',
+    'Proteções estruturais: limites claros em amizades com o sexo oposto, transparência digital, evitar situações de risco. Não são regras legalistas — são abrigos em tempo de tempestade.',
+  ]},
+  { n: 17, title: 'Quando a Igreja Machuca Seu Casamento', body: [
+    'Poucas coisas doem mais do que ser ferido no lugar onde você esperava cura. Legalismos que culpam, conselhos pastorais equivocados, comunidades que preferem julgar a acompanhar.',
+    'Se isso aconteceu com você, saiba: Deus não é igual à igreja imperfeita. A Palavra permanece verdadeira mesmo quando seus representantes falham.',
+    'Busque uma comunidade saudável. Existem. Cure-se. Não abandone a fé por causa de feridos que também precisam de graça.',
+  ]},
+  { n: 18, title: 'Reconstruindo Depois da Traição', body: [
+    'Traição é um tipo específico de morte. Morre a confiança, morre a inocência da relação, morre a narrativa que vocês construíram juntos.',
+    'Reconstruir não é voltar ao que era. É construir algo novo, sobre fundações diferentes. Com arrependimento genuíno, transparência radical, tempo de cura e, frequentemente, acompanhamento profissional.',
+    'É possível? Sim. Muitos casamentos que sobreviveram à traição dizem ser mais profundos hoje do que antes da crise. Deus ressuscita — inclusive casamentos.',
+  ]},
+  { n: 19, title: 'Deixando um Legado Para as Próximas Gerações', body: [
+    'Seu casamento não é apenas seu. Ele forma a visão que seus filhos terão do amor. É a tela onde eles aprenderão como Deus se relaciona com Sua Igreja.',
+    'Que legado você está escrevendo? Não nas palavras que prega, mas nos gestos cotidianos que testemunham.',
+    'Cada casal cristão tem o poder de interromper ciclos destrutivos e iniciar novas heranças — de fé, de amor, de perseverança.',
+  ]},
+  { n: 20, title: 'O Próximo Passo Para Seu Relacionamento', body: [
+    'Conhecimento sem aplicação é orgulho. Ler este artigo sem agir é apenas sentir-se virtuoso por um momento.',
+    'Então, qual será seu próximo passo? Uma conversa adiada? Um pedido de perdão pendente? Um compromisso de oração junto? Uma noite marcada para reconectar?',
+    'Escolha algo hoje. Pequeno. Concreto. Faça antes de dormir. Porque o caminho de mil quilômetros começa sempre com um passo de fé.',
+  ]},
+];
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero ================================================ -->
-  <Hero
-    id="hero"
-    tagline="Mentoria bíblica para casais"
-    actions={[
-      { variant: 'primary', text: 'Quero Começar Agora', href: '#cta', icon: 'tabler:heart' },
-      { text: 'Assistir o vídeo', href: '#video' },
-    ]}
-  >
-    <Fragment slot="title">
-      Um relacionamento <span class="text-accent">abençoado</span> segundo a Palavra de Deus
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Descubra os <strong>3 pilares bíblicos</strong> que transformam casamentos — mesmo quando tudo parece perdido. Uma jornada de 20 ensinos fundamentados nas Escrituras para você edificar sua casa sobre a rocha.
-    </Fragment>
-  </Hero>
-
-  <!-- Banner 1 (topo) ===================================== -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 -mt-10 mb-8">
-    <a href="#cta" class="block group" aria-label="Oferta especial Mentoria Fé">
-      <img
-        src="/banners/banner-01.svg"
-        alt="Mentoria Fé — Transforme seu relacionamento"
-        width="1140"
-        height="140"
-        class="w-full h-auto rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-[1.01]"
-        loading="eager"
-        decoding="async"
-      />
-    </a>
-  </div>
-
-  <!-- Video Section ========================================= -->
-  <section id="video" class="max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-16">
-    <div class="text-center mb-8">
-      <p class="text-base text-secondary font-bold tracking-wide uppercase mb-2">Assista agora</p>
-      <h2 class="text-3xl md:text-4xl font-bold font-heading mb-3">A mensagem que pode mudar seu lar</h2>
-      <p class="text-lg text-muted max-w-2xl mx-auto">3 minutos que podem transformar a forma como você enxerga seu relacionamento.</p>
+  <article class="relative mx-auto max-w-[1140px] px-4 sm:px-6 lg:px-8 pt-10 pb-16">
+    <!-- Kicker -->
+    <div class="text-center mb-4">
+      <span class="inline-block px-3 py-1 bg-primary/10 text-primary font-semibold text-xs uppercase tracking-widest rounded-full">Relacionamento Cristão</span>
     </div>
-    <div class="rounded-2xl overflow-hidden shadow-2xl border-2 border-accent/20">
-      <YouTube id="hFZFjoX2cGg" title="Mentoria Fé — Mensagem Completa" poster="default" />
+
+    <!-- Hero do artigo -->
+    <header class="max-w-4xl mx-auto text-center mb-8">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-page mb-6">
+        Um relacionamento <span class="text-accent">abençoado</span> segundo a Palavra de Deus
+      </h1>
+      <p class="text-lg md:text-xl text-muted leading-relaxed max-w-3xl mx-auto">
+        Os <strong>20 princípios bíblicos</strong> que estão transformando casamentos cristãos — ancorados nas Escrituras, em linguagem do nosso tempo, com aplicação imediata.
+      </p>
+
+      <!-- Meta autor -->
+      <div class="mt-8 flex items-center justify-center gap-4 text-sm text-muted">
+        <div class="flex items-center gap-2">
+          <span class="w-8 h-8 rounded-full bg-primary/15 text-primary font-bold flex items-center justify-center">EM</span>
+          <span>Por <strong class="text-page">{author}</strong></span>
+        </div>
+        <span class="text-muted/50">·</span>
+        <span>{publishDate}</span>
+        <span class="text-muted/50 hidden sm:inline">·</span>
+        <span class="hidden sm:inline">{readingTime}</span>
+      </div>
+    </header>
+
+    <!-- AD SLOT 1 — Leaderboard topo ===================== -->
+    <aside class="my-8 flex justify-center" aria-label="Publicidade">
+      <a href="#" rel="sponsored nofollow" class="block w-full max-w-[970px] transition-opacity hover:opacity-90" aria-label="Espaço publicitário">
+        <img src="/banners/ad-top-leaderboard.svg" alt="Publicidade" width="970" height="90" loading="eager" decoding="async" class="w-full h-auto" />
+      </a>
+    </aside>
+
+    <!-- Vídeo YouTube ===================================== -->
+    <figure class="max-w-3xl mx-auto my-10">
+      <div class="rounded-xl overflow-hidden shadow-xl border border-primary/10">
+        <YouTube id="hFZFjoX2cGg" title="Mentoria Fé — Mensagem Completa" poster="default" />
+      </div>
+      <figcaption class="text-center text-sm text-muted mt-3 italic">Assista: a mensagem que inspirou este artigo (3 min)</figcaption>
+    </figure>
+
+    <!-- Corpo do artigo ================================== -->
+    <div class="max-w-3xl mx-auto prose prose-lg prose-article">
+      <p class="lead-paragraph">Este não é mais um artigo de autoajuda com verniz religioso. É um guia bíblico honesto sobre o que faz um casamento cristão prosperar — e o que silenciosamente o destrói. Se você chegou até aqui, algo no seu coração está buscando mais. Continue lendo.</p>
+
+      {sections.slice(0, 7).map(s => (
+        <section class="article-section" id={`secao-${s.n}`}>
+          <h2>
+            <span class="section-number">{s.n}.</span> {s.title}
+          </h2>
+          {s.body.map(p => <p set:html={p} />)}
+          {s.verse && (
+            <blockquote class="scripture">
+              <p set:html={s.verse.text} />
+              <cite>— {s.verse.ref}</cite>
+            </blockquote>
+          )}
+        </section>
+      ))}
     </div>
-  </section>
 
-  <!-- Sobre =============================================== -->
-  <Content
-    id="sobre"
-    tagline="Sobre a Mentoria"
-    title="Por que sua casa precisa ser edificada sobre a rocha"
-    items={[
-      { title: 'Fundamento bíblico', description: 'Cada ensino é ancorado nas Escrituras — sem modismos, sem psicologia barata, apenas a Palavra viva.', icon: 'tabler:book' },
-      { title: 'Linguagem do nosso tempo', description: 'Verdades eternas traduzidas para a realidade do casal moderno — sem jargões religiosos distantes.', icon: 'tabler:message' },
-      { title: 'Aplicação imediata', description: 'Você não sai apenas inspirado — sai com ferramentas práticas para aplicar hoje mesmo no seu lar.', icon: 'tabler:target' },
-    ]}
-  >
-    <Fragment slot="content">
-      <p class="text-lg mb-4">
-        Muitos casais cristãos constroem suas casas sobre a areia das emoções. Quando as tempestades vêm — e elas sempre vêm — tudo desmorona.
-      </p>
-      <p class="text-lg">
-        <strong>A Mentoria Fé</strong> foi criada para você que deseja edificar sobre a rocha. São 20 ensinos progressivos que percorrem desde os fundamentos até os desafios mais delicados do casamento cristão.
-      </p>
-    </Fragment>
-  </Content>
+    <!-- AD SLOT 2 — Widget nativo MGID (entre seções 7-8) -->
+    <aside class="my-12 max-w-4xl mx-auto" aria-label="Publicidade nativa">
+      <a href="#" rel="sponsored nofollow" class="block transition-opacity hover:opacity-90">
+        <img src="/banners/ad-mgid-native.svg" alt="Publicidade — Conteúdo patrocinado" width="800" height="340" loading="lazy" decoding="async" class="w-full h-auto rounded-md shadow-sm" />
+      </a>
+    </aside>
 
-  <!-- 3 Pilares =========================================== -->
-  <Features
-    id="pilares"
-    tagline="Os 3 Pilares"
-    title="Toda casa abençoada está sobre três pilares"
-    subtitle="Sem essa fundação, o relacionamento oscila ao primeiro vento contrário. Com ela, você atravessa qualquer tempestade."
-    columns={3}
-    items={[
-      {
-        title: 'Aliança',
-        description: 'Não é um contrato que se quebra quando conveniente. É um pacto sagrado diante de Deus, selado por um compromisso que transcende as circunstâncias.',
-        icon: 'tabler:hearts',
-      },
-      {
-        title: 'Comunicação',
-        description: '"Falar a verdade em amor" (Efésios 4:15). Honestidade sem crueldade. Transparência sem manipulação. Escuta antes de reagir.',
-        icon: 'tabler:message-circle',
-      },
-      {
-        title: 'Comunhão',
-        description: 'Um casal que ora junto, estuda a Palavra junto e serve junto desenvolve uma intimidade que vai muito além do físico.',
-        icon: 'tabler:flower',
-      },
-    ]}
-  />
+    <div class="max-w-3xl mx-auto prose prose-lg prose-article">
+      {sections.slice(7, 14).map(s => (
+        <section class="article-section" id={`secao-${s.n}`}>
+          <h2>
+            <span class="section-number">{s.n}.</span> {s.title}
+          </h2>
+          {s.body.map(p => <p set:html={p} />)}
+          {s.verse && (
+            <blockquote class="scripture">
+              <p set:html={s.verse.text} />
+              <cite>— {s.verse.ref}</cite>
+            </blockquote>
+          )}
+        </section>
+      ))}
+    </div>
 
-  <!-- Stats =============================================== -->
-  <Stats
-    stats={[
-      { title: 'Ensinos bíblicos', amount: '20' },
-      { title: 'Casais impactados', amount: '+3.5k' },
-      { title: 'Anos de estudo', amount: '12' },
-      { title: 'Aprovação', amount: '98%' },
-    ]}
-  />
+    <!-- AD SLOT 3 — Rectangle AdSense (entre seções 14-15) -->
+    <aside class="my-12 max-w-2xl mx-auto" aria-label="Publicidade">
+      <a href="#" rel="sponsored nofollow" class="block transition-opacity hover:opacity-90">
+        <img src="/banners/ad-bottom-rect.svg" alt="Publicidade" width="728" height="250" loading="lazy" decoding="async" class="w-full h-auto rounded-md shadow-sm" />
+      </a>
+    </aside>
 
-  <!-- Banner 2 (entre meio) =============================== -->
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
-    <a href="#cta" class="block group" aria-label="Garanta sua vaga agora">
-      <img
-        src="/banners/banner-02.svg"
-        alt="Mentoria Fé — Garanta sua vaga"
-        width="1000"
-        height="300"
-        class="w-full h-auto rounded-xl shadow-xl transition-transform duration-300 group-hover:scale-[1.01]"
-        loading="lazy"
-        decoding="async"
-      />
-    </a>
-  </div>
+    <div class="max-w-3xl mx-auto prose prose-lg prose-article">
+      {sections.slice(14).map(s => (
+        <section class="article-section" id={`secao-${s.n}`}>
+          <h2>
+            <span class="section-number">{s.n}.</span> {s.title}
+          </h2>
+          {s.body.map(p => <p set:html={p} />)}
+          {s.verse && (
+            <blockquote class="scripture">
+              <p set:html={s.verse.text} />
+              <cite>— {s.verse.ref}</cite>
+            </blockquote>
+          )}
+        </section>
+      ))}
+    </div>
 
-  <!-- 20 Ensinos (FAQs pattern) =========================== -->
-  <FAQs
-    id="ensinos"
-    tagline="Os 20 ensinos"
-    title="O caminho completo do relacionamento abençoado"
-    subtitle="Cada módulo traz um ensino fundamentado nas Escrituras."
-    columns={2}
-    items={[
-      { title: '1. O Fundamento Inabalável do Amor Bíblico', description: 'O amor verdadeiro não é um sentimento — é uma decisão fundamentada na Palavra. Mateus 7:24 nos ensina a edificar sobre a rocha.' },
-      { title: '2. Por Que Seu Relacionamento Precisa de Propósito Divino', description: 'Deus projetou o casamento para refletir Seu amor pela Igreja. Sem esse propósito maior, tudo se torna centrado em si mesmo.' },
-      { title: '3. Os 3 Pilares de um Relacionamento Abençoado', description: 'Aliança, Comunicação e Comunhão. Toda casa que prospera está fundamentada nestes três pilares essenciais.' },
-      { title: '4. O Erro Fatal Que 87% dos Casais Cristãos Cometem', description: 'Negligenciam a intimidade emocional achando que espiritualidade é suficiente. Vivem como colegas de quarto piedosos.' },
-      { title: '5. Como a Oração Transforma Conflitos em Conexão', description: 'É quase impossível continuar brigando com alguém enquanto você ora por ela. A oração amolece seu coração primeiro.' },
-      { title: '6. O Poder do Perdão Que Liberta', description: '"Setenta vezes sete" (Mateus 18:22). No casamento, o perdão é oxigênio — sem ele, ressentimentos envenenam tudo.' },
-      { title: '7. Linguagens do Amor: O Que a Bíblia Já Sabia', description: 'Antes de Gary Chapman popularizar, Paulo já instruía maridos a amar suas esposas "como Cristo amou a igreja".' },
-      { title: '8. Intimidade Santa: Desfazendo Mitos Religiosos', description: 'Cantares de Salomão celebra explicitamente o prazer conjugal. A Bíblia é muito mais livre do que a teologia distorcida ensinou.' },
-      { title: '9. Quando Seu Cônjuge Não Muda', description: 'E se Deus estiver usando seu cônjuge — exatamente como ele é — para transformar VOCÊ primeiro?' },
-      { title: '10. O Papel do Homem Segundo o Coração de Deus', description: 'Ser cabeça não é ser chefe. Jesus redefiniu liderança lavando os pés dos discípulos. Liderar servindo.' },
-      { title: '11. O Chamado da Mulher Virtuosa Para Hoje', description: 'Provérbios 31 não é lista de tarefas impossíveis. É retrato de uma mulher que vive com propósito e sabedoria.' },
-      { title: '12. Criando Filhos em Meio ao Caos do Mundo', description: 'Como preparar a próxima geração quando os valores mudam tão rapidamente. Deuteronômio 6 como manual.' },
-      { title: '13. Finanças no Casamento: A Causa #1 de Brigas', description: 'Transparência financeira como ato espiritual. Mordomia, ofertas, dívidas — princípios bíblicos aplicados.' },
-      { title: '14. Quando o Passado Ameaça o Presente', description: 'Traumas, bagagens emocionais, histórias de dor. Como a cura de Cristo alcança as feridas mais profundas.' },
-      { title: '15. Amizade no Casamento: O Segredo dos 50 Anos Juntos', description: 'Casais que envelhecem juntos são amigos antes de serem amantes. O que cultivar além do romance.' },
-      { title: '16. Proteções Contra a Tentação', description: 'Práticas espirituais e estruturais para blindar seu casamento contra o que busca destruí-lo silenciosamente.' },
-      { title: '17. Quando a Igreja Machuca Seu Casamento', description: 'Legalismos, julgamentos, conselhos ruins de líderes bem-intencionados. Como filtrar sem perder a fé.' },
-      { title: '18. Reconstruindo Depois da Traição', description: 'É possível. É difícil. É sobrenatural. Como Deus restaura o que parecia irreparável.' },
-      { title: '19. Deixando um Legado Para as Próximas Gerações', description: 'Seu casamento está formando a visão que seus filhos terão do amor de Deus. O que você está transmitindo?' },
-      { title: '20. O Próximo Passo Para Seu Relacionamento', description: 'Conhecimento sem aplicação é orgulho. Os primeiros 7 dias depois da mentoria — o que fazer.' },
-    ]}
-  />
+    <!-- Tabela de recursos finais ========================= -->
+    <div class="max-w-3xl mx-auto mt-16">
+      <div class="p-8 rounded-2xl bg-primary/5 border border-primary/15">
+        <h3 class="font-heading text-2xl md:text-3xl font-bold mb-4 text-page">Para se aprofundar</h3>
+        <p class="text-muted mb-6">Textos bíblicos referenciados neste artigo, organizados para seu estudo devocional:</p>
+        <div class="grid sm:grid-cols-2 gap-3">
+          <div class="flex items-start gap-3 p-3 bg-white/40 rounded-lg">
+            <span class="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
+            <span class="text-sm">Mateus 7:24-27 — A casa sobre a rocha</span>
+          </div>
+          <div class="flex items-start gap-3 p-3 bg-white/40 rounded-lg">
+            <span class="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
+            <span class="text-sm">Efésios 5:22-33 — O casamento como figura de Cristo</span>
+          </div>
+          <div class="flex items-start gap-3 p-3 bg-white/40 rounded-lg">
+            <span class="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">3</span>
+            <span class="text-sm">Provérbios 31:10-31 — A mulher virtuosa</span>
+          </div>
+          <div class="flex items-start gap-3 p-3 bg-white/40 rounded-lg">
+            <span class="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">4</span>
+            <span class="text-sm">1 Coríntios 13 — O hino do amor</span>
+          </div>
+          <div class="flex items-start gap-3 p-3 bg-white/40 rounded-lg">
+            <span class="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">5</span>
+            <span class="text-sm">Colossenses 3:12-17 — A nova vida em Cristo</span>
+          </div>
+          <div class="flex items-start gap-3 p-3 bg-white/40 rounded-lg">
+            <span class="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">6</span>
+            <span class="text-sm">Cantares 8:6-7 — O amor é forte como a morte</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <!-- Banner 3 ============================================ -->
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 pt-12">
-    <a href="#cta" class="block group" aria-label="Quero meu lugar agora">
-      <img
-        src="/banners/banner-03.svg"
-        alt="Última chamada Mentoria Fé"
-        width="800"
-        height="280"
-        class="w-full h-auto rounded-xl shadow-xl transition-transform duration-300 group-hover:scale-[1.01]"
-        loading="lazy"
-        decoding="async"
-      />
-    </a>
-  </div>
-
-  <!-- CTA Final =========================================== -->
-  <CallToAction
-    id="cta"
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Quero Minha Vaga Agora',
-        href: 'https://pay.hotmart.com/exemplo',
-        icon: 'tabler:heart-handshake',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      Edifique sua casa sobre <span class="text-accent">a rocha</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      20 ensinos bíblicos que transformam a forma como você ama. Acesso imediato, garantia incondicional de 7 dias.
-    </Fragment>
-  </CallToAction>
+    <!-- Rodapé do artigo ================================= -->
+    <footer class="max-w-3xl mx-auto mt-16 pt-8 border-t border-primary/15 text-center">
+      <p class="text-muted text-sm italic">Se este artigo tocou seu coração, compartilhe com alguém que precisa ler. A verdade multiplicada transforma vidas.</p>
+    </footer>
+  </article>
 </Layout>
+
+<style is:global>
+  .prose-article h2 {
+    font-family: var(--aw-font-heading);
+    font-size: clamp(1.625rem, 3.5vw, 2.125rem);
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--aw-color-text-heading);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    scroll-margin-top: 80px;
+  }
+  .prose-article .section-number {
+    color: var(--aw-color-accent);
+    font-family: var(--aw-font-sans);
+    font-weight: 800;
+    font-size: 0.85em;
+    margin-right: 0.35em;
+    letter-spacing: 0.02em;
+  }
+  .prose-article p {
+    font-family: var(--aw-font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.78;
+    color: var(--aw-color-text-default);
+    margin-bottom: 1.15rem;
+  }
+  .prose-article .lead-paragraph {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: var(--aw-color-text-default);
+    font-weight: 500;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(122, 31, 58, 0.12);
+    margin-bottom: 2rem;
+  }
+  .prose-article blockquote.scripture {
+    position: relative;
+    font-family: var(--aw-font-heading);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    font-style: italic;
+    padding: 1.5rem 1.75rem 1.5rem 2.25rem;
+    margin: 1.75rem 0;
+    border-left: 4px solid var(--aw-color-accent);
+    background: rgba(201, 162, 75, 0.08);
+    border-radius: 0 8px 8px 0;
+    color: var(--aw-color-text-heading);
+  }
+  .prose-article blockquote.scripture::before {
+    content: '"';
+    position: absolute;
+    top: -0.2em;
+    left: 0.4rem;
+    font-family: Georgia, serif;
+    font-size: 3.5rem;
+    color: var(--aw-color-accent);
+    opacity: 0.35;
+    line-height: 1;
+  }
+  .prose-article blockquote.scripture p {
+    margin: 0;
+    font-style: italic;
+    color: inherit;
+  }
+  .prose-article blockquote.scripture cite {
+    display: block;
+    margin-top: 0.75rem;
+    font-family: var(--aw-font-sans);
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--aw-color-primary);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .prose-article .article-section + .article-section h2 {
+    margin-top: 3rem;
+  }
+
+  /* Responsive typography */
+  @media (max-width: 640px) {
+    .prose-article p { font-size: 1rem; line-height: 1.7; }
+    .prose-article .lead-paragraph { font-size: 1.125rem; }
+    .prose-article blockquote.scripture {
+      padding: 1.25rem 1rem 1.25rem 1.5rem;
+      font-size: 1rem;
+    }
+  }
+</style>
