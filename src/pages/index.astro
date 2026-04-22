@@ -1,6 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import NativeAdSlot from '~/components/NativeAdSlot.astro';
+import 'lite-youtube-embed/src/lite-yt-embed.css';
 
 const metadata = {
   title: 'Oração Diária — Creio em Te Senhor',
@@ -188,30 +189,18 @@ const block9 = sections.slice(16, 20);
       </div>
     </header>
 
-    <!-- VÍDEO YOUTUBE -->
+    <!-- VÍDEO YOUTUBE via lite-youtube-embed (iOS Safari friendly) -->
     <figure class="max-w-3xl mx-auto my-8 md:my-10">
-      <div class="video-wrapper relative rounded-xl overflow-hidden shadow-xl border border-primary/10" style="aspect-ratio: 16/9;">
-        <button
-          type="button"
-          class="video-facade absolute inset-0 w-full h-full cursor-pointer group block"
-          aria-label={`Clique para assistir: ${videoTitle}`}
-          data-video-id={videoId}
+      <div class="rounded-xl overflow-hidden shadow-xl border border-primary/10">
+        <lite-youtube
+          videoid={videoId}
+          playlabel={videoTitle}
+          params="rel=0&modestbranding=1&playsinline=1"
         >
-          <img
-            src={`https://i.ytimg.com/vi_webp/${videoId}/maxresdefault.webp`}
-            alt={videoTitle}
-            class="w-full h-full object-cover"
-            loading="lazy"
-            decoding="async"
-          />
-          <span class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent"></span>
-          <span class="absolute inset-0 flex items-center justify-center">
-            <span class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full bg-white/95 shadow-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-              <svg viewBox="0 0 24 24" class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 ml-1 fill-primary"><path d="M8 5v14l11-7z"/></svg>
-            </span>
-          </span>
-          <span class="absolute bottom-3 md:bottom-4 left-3 md:left-4 right-3 md:right-4 text-white text-xs md:text-sm lg:text-base font-semibold drop-shadow-lg text-left">{videoTitle}</span>
-        </button>
+          <a class="lty-playbtn" title={videoTitle} href={`https://youtube.com/watch?v=${videoId}`}>
+            <span class="lyt-visually-hidden">{videoTitle}</span>
+          </a>
+        </lite-youtube>
       </div>
       <figcaption class="text-center text-xs md:text-sm text-muted mt-3 italic">Assista a mensagem que inspirou este devocional</figcaption>
     </figure>
@@ -387,22 +376,8 @@ const block9 = sections.slice(16, 20);
 </Layout>
 
 <script>
-  document.querySelectorAll('.video-facade').forEach(btn => {
-    btn.addEventListener('click', function() {
-      const id = this.getAttribute('data-video-id');
-      const wrapper = this.parentElement;
-      const iframe = document.createElement('iframe');
-      iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&controls=0&rel=0&modestbranding=1&playsinline=1`;
-      iframe.title = this.getAttribute('aria-label') || 'YouTube video';
-      iframe.setAttribute('frameborder', '0');
-      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
-      iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
-      iframe.setAttribute('allowfullscreen', '');
-      iframe.className = 'absolute inset-0 w-full h-full';
-      wrapper.appendChild(iframe);
-      this.remove();
-    }, { once: true });
-  });
+  // lite-youtube-embed (Paul Irish) — player lazy-load leve, iOS Safari compatível
+  import 'lite-youtube-embed';
 </script>
 
 <style is:global>
