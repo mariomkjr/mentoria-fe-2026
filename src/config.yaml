@@ -1,0 +1,62 @@
+site:
+  name: Mentoria Fé
+  site: 'https://mentoria.creioemtesenhor.com'
+  base: '/'
+  trailingSlash: false
+
+metadata:
+  title:
+    default: 'Mentoria Fé | Relacionamento Abençoado Segundo a Palavra'
+    template: '%s — Mentoria Fé'
+  description: 'Descubra os princípios bíblicos para um relacionamento abençoado e duradouro. Transforme seu casamento com sabedoria divina.'
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: Mentoria Fé
+    images:
+      - url: '~/assets/images/default.png'
+        width: 1200
+        height: 628
+    type: website
+  twitter:
+    cardType: summary_large_image
+
+i18n:
+  language: pt-BR
+  textDirection: ltr
+
+apps:
+  blog:
+    isEnabled: false
+    postsPerPage: 6
+    post:
+      isEnabled: false
+      permalink: '/%slug%'
+      robots:
+        index: false
+    list:
+      isEnabled: false
+      pathname: 'blog'
+      robots:
+        index: false
+    category:
+      isEnabled: false
+      pathname: 'category'
+      robots:
+        index: false
+    tag:
+      isEnabled: false
+      pathname: 'tag'
+      robots:
+        index: false
+    isRelatedPostsEnabled: false
+    relatedPostsCount: 4
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null
+
+ui:
+  theme: 'light:only'

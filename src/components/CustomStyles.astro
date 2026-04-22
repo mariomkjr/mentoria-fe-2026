@@ -1,0 +1,55 @@
+---
+import '@fontsource-variable/inter';
+---
+
+<style is:inline>
+  @font-face {
+    font-family: 'Playfair Display';
+    src: url('/fonts/playfair-display-v30-latin-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    --aw-font-sans: 'Inter Variable', 'Inter', system-ui, sans-serif;
+    --aw-font-serif: 'Playfair Display', Georgia, serif;
+    --aw-font-heading: 'Playfair Display', Georgia, serif;
+
+    --aw-color-primary: rgb(122 31 58);
+    --aw-color-secondary: rgb(92 23 41);
+    --aw-color-accent: rgb(201 162 75);
+
+    --aw-color-text-heading: rgb(11 11 15);
+    --aw-color-text-default: rgb(30 28 32);
+    --aw-color-text-muted: rgb(30 28 32 / 70%);
+    --aw-color-bg-page: rgb(253 251 245);
+
+    --aw-color-bg-page-dark: rgb(20 12 16);
+
+    ::selection {
+      background-color: rgb(201 162 75 / 35%);
+      color: rgb(11 11 15);
+    }
+  }
+
+  .dark {
+    --aw-font-sans: 'Inter Variable', 'Inter', system-ui, sans-serif;
+    --aw-font-serif: 'Playfair Display', Georgia, serif;
+    --aw-font-heading: 'Playfair Display', Georgia, serif;
+
+    --aw-color-primary: rgb(154 58 84);
+    --aw-color-secondary: rgb(122 31 58);
+    --aw-color-accent: rgb(221 184 101);
+
+    --aw-color-text-heading: rgb(247 244 235);
+    --aw-color-text-default: rgb(229 222 206);
+    --aw-color-text-muted: rgb(229 222 206 / 70%);
+    --aw-color-bg-page: rgb(20 12 16);
+
+    ::selection {
+      background-color: rgb(221 184 101 / 35%);
+      color: rgb(247 244 235);
+    }
+  }
+</style>
