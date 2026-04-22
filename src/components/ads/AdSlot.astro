@@ -1,0 +1,150 @@
+---
+import slotsData from '~/data/ad-slots.json';
+
+interface Props {
+  id: string;
+  class?: string;
+  eager?: boolean;
+}
+
+const { id, class: className = '', eager = false } = Astro.props;
+const slot = (slotsData as any).slots[id];
+
+function pickCreative(creatives: any[]) {
+  if (!creatives || creatives.length === 0) return null;
+  const active = creatives.filter((c) => c.active !== false);
+  if (active.length === 0) return null;
+  const totalWeight = active.reduce((s, c) => s + (c.weight || 1), 0);
+  let r = Math.random() * totalWeight;
+  for (const c of active) {
+    r -= (c.weight || 1);
+    if (r <= 0) return c;
+  }
+  return active[0];
+}
+
+const creative = slot ? pickCreative(slot.creatives) : null;
+const dims = slot?.dimensions || { width: 728, height: 90 };
+const mobileDims = slot?.mobileDimensions || dims;
+---
+
+{slot && creative ? (
+  <aside
+    class:list={['ad-display-slot', `ad-display-slot--${id}`, className]}
+    data-ad-slot-id={id}
+    data-ad-advertiser={creative.advertiser}
+    aria-label="Publicidade"
+    role="complementary"
+  >
+    <span class="ad-display-slot__label">Publicidade</span>
+    <a
+      href={creative.href}
+      target="_blank"
+      rel="sponsored noopener noreferrer"
+      class="ad-display-slot__link"
+      data-ad-click
+    >
+      <picture>
+        {creative.imageMobile && (
+          <source media="(max-width: 767px)" srcset={creative.imageMobile} />
+        )}
+        <img
+          src={creative.image}
+          alt={creative.alt || 'Publicidade'}
+          width={dims.width}
+          height={dims.height}
+          loading={eager ? 'eager' : 'lazy'}
+          decoding={eager ? 'sync' : 'async'}
+          class="ad-display-slot__image"
+        />
+      </picture>
+    </a>
+  </aside>
+) : slot ? (
+  <aside
+    class:list={['ad-display-slot ad-display-slot--empty', className]}
+    data-ad-slot-id={id}
+    aria-hidden="true"
+  >
+    <span class="ad-display-slot__label">Espaço publicitário ({dims.width}x{dims.height})</span>
+  </aside>
+) : null}
+
+<style define:vars={{
+  slotW: `${dims.width}px`,
+  slotH: `${dims.height}px`,
+  mobW: `${mobileDims.width}px`,
+  mobH: `${mobileDims.height}px`,
+}}>
+  .ad-display-slot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+    max-width: var(--slotW);
+    min-height: calc(var(--slotH) + 1.25rem);
+    background: rgb(245 240 230 / 0.5);
+    border: 1px dashed rgb(201 162 75 / 0.4);
+    border-radius: 4px;
+    padding: 0.5rem;
+    box-sizing: content-box;
+  }
+  .ad-display-slot--empty {
+    min-height: calc(var(--slotH) + 1.25rem);
+    opacity: 0.4;
+  }
+  .ad-display-slot__label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgb(30 28 32 / 0.5);
+    margin-bottom: 0.25rem;
+    font-family: var(--aw-font-sans, system-ui);
+  }
+  .ad-display-slot__link { display: block; line-height: 0; }
+  .ad-display-slot__image { display: block; max-width: 100%; height: auto; }
+  :global(.dark) .ad-display-slot {
+    background: rgb(40 30 35 / 0.4);
+    border-color: rgb(221 184 101 / 0.3);
+  }
+  :global(.dark) .ad-display-slot__label { color: rgb(229 222 206 / 0.5); }
+  @media (max-width: 767px) {
+    .ad-display-slot {
+      max-width: var(--mobW);
+      min-height: calc(var(--mobH) + 1.25rem);
+    }
+  }
+</style>
+
+<script>
+  function trackAdEvent(event: string, slot: string, advertiser: string) {
+    if (typeof window === 'undefined') return;
+    const w = window as any;
+    if (w.plausible) { w.plausible('ad-' + event, { props: { slot, advertiser } }); return; }
+    if (w.gtag) { w.gtag('event', 'ad_' + event, { slot, advertiser }); return; }
+    if (!w.__ad_log) w.__ad_log = [];
+    w.__ad_log.push({ event, slot, advertiser, ts: Date.now() });
+  }
+
+  document.querySelectorAll('[data-ad-slot-id]').forEach((el) => {
+    const slotId = el.getAttribute('data-ad-slot-id');
+    const advertiser = el.getAttribute('data-ad-advertiser');
+    if (!slotId || !advertiser) return;
+
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            trackAdEvent('impression', slotId, advertiser);
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      io.observe(el);
+    }
+
+    const link = el.querySelector('a[data-ad-click]');
+    link?.addEventListener('click', () => trackAdEvent('click', slotId, advertiser));
+  });
+</script>

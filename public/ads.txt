@@ -1,0 +1,6 @@
+# ads.txt — creioemtesenhor.com
+# Publicidade manual direct (sem rede ad-tech)
+# Formato: <dominio-do-anunciante>, <ID>, DIRECT
+# Placeholder — substituir pelos anunciantes reais quando entrarem no pacote.
+#
+# creioemtesenhor.com, DEMO-001, DIRECT

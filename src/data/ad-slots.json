@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "description": "Catálogo de slots display manual direct — densidade agressiva. Editar 'creatives' pra adicionar/remover anunciantes.",
+  "slots": {
+    "post-top": {
+      "label": "Topo do post (leaderboard)",
+      "dimensions": { "width": 970, "height": 250 },
+      "mobileDimensions": { "width": 320, "height": 100 },
+      "creatives": [
+        {
+          "advertiser": "DEMO-TOP",
+          "image": "/ads/demo-970x250-top.svg",
+          "imageMobile": "/ads/demo-320x100-top.svg",
+          "href": "https://creioemtesenhor.com/parceiros?slot=post-top",
+          "alt": "Anuncie aqui — post-top",
+          "weight": 1,
+          "active": true
+        }
+      ]
+    },
+    "post-in-article-1": {
+      "label": "Dentro do post — após parágrafo 3",
+      "dimensions": { "width": 300, "height": 250 },
+      "mobileDimensions": { "width": 300, "height": 250 },
+      "creatives": [
+        {
+          "advertiser": "DEMO-MPU-1",
+          "image": "/ads/demo-300x250-a.svg",
+          "href": "https://creioemtesenhor.com/parceiros?slot=in-article-1",
+          "alt": "Anuncie aqui — in-article 1",
+          "weight": 1,
+          "active": true
+        }
+      ]
+    },
+    "post-in-article-2": {
+      "label": "Dentro do post — após parágrafo 6",
+      "dimensions": { "width": 728, "height": 90 },
+      "mobileDimensions": { "width": 300, "height": 100 },
+      "creatives": [
+        {
+          "advertiser": "DEMO-LB",
+          "image": "/ads/demo-728x90.svg",
+          "imageMobile": "/ads/demo-300x100.svg",
+          "href": "https://creioemtesenhor.com/parceiros?slot=in-article-2",
+          "alt": "Anuncie aqui — in-article 2",
+          "weight": 1,
+          "active": true
+        }
+      ]
+    },
+    "post-in-article-3": {
+      "label": "Dentro do post — após parágrafo 9",
+      "dimensions": { "width": 300, "height": 250 },
+      "mobileDimensions": { "width": 300, "height": 250 },
+      "creatives": [
+        {
+          "advertiser": "DEMO-MPU-2",
+          "image": "/ads/demo-300x250-b.svg",
+          "href": "https://creioemtesenhor.com/parceiros?slot=in-article-3",
+          "alt": "Anuncie aqui — in-article 3",
+          "weight": 1,
+          "active": true
+        }
+      ]
+    },
+    "post-end": {
+      "label": "Fim do post",
+      "dimensions": { "width": 970, "height": 250 },
+      "mobileDimensions": { "width": 320, "height": 100 },
+      "creatives": [
+        {
+          "advertiser": "DEMO-END",
+          "image": "/ads/demo-970x250-end.svg",
+          "imageMobile": "/ads/demo-320x100-end.svg",
+          "href": "https://creioemtesenhor.com/parceiros?slot=post-end",
+          "alt": "Anuncie aqui — post-end",
+          "weight": 1,
+          "active": true
+        }
+      ]
+    },
+    "sidebar-top": {
+      "label": "Sidebar — topo MPU",
+      "dimensions": { "width": 300, "height": 250 },
+      "mobileDimensions": { "width": 300, "height": 250 },
+      "creatives": [
+        {
+          "advertiser": "DEMO-SIDE-TOP",
+          "image": "/ads/demo-300x250-side.svg",
+          "href": "https://creioemtesenhor.com/parceiros?slot=sidebar-top",
+          "alt": "Anuncie aqui — sidebar top",
+          "weight": 1,
+          "active": true
+        }
+      ]
+    },
+    "sidebar-mid": {
+      "label": "Sidebar — meio half-page sticky",
+      "dimensions": { "width": 300, "height": 600 },
+      "mobileDimensions": { "width": 300, "height": 600 },
+      "creatives": [
+        {
+          "advertiser": "DEMO-SIDE-MID",
+          "image": "/ads/demo-300x600.svg",
+          "href": "https://creioemtesenhor.com/parceiros?slot=sidebar-mid",
+          "alt": "Anuncie aqui — sidebar half-page",
+          "weight": 1,
+          "active": true
+        }
+      ]
+    },
+    "sticky-footer-mobile": {
+      "label": "Banner fixo mobile rodapé",
+      "dimensions": { "width": 320, "height": 50 },
+      "mobileDimensions": { "width": 320, "height": 50 },
+      "creatives": [
+        {
+          "advertiser": "DEMO-STICKY",
+          "image": "/ads/demo-320x50.svg",
+          "href": "https://creioemtesenhor.com/parceiros?slot=sticky-footer-mobile",
+          "alt": "Anuncie aqui — sticky footer",
+          "weight": 1,
+          "active": true
+        }
+      ]
+    }
+  }
+}
