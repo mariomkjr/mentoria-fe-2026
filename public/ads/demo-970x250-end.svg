@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 970 250" width="970" height="250">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7A1F3A"/>
+      <stop offset="1" stop-color="#5C1729"/>
+    </linearGradient>
+  </defs>
+  <rect width="970" height="250" fill="url(#g)"/>
+  <rect x="8" y="8" width="954" height="234" fill="none" stroke="#C9A24B" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.6"/>
+  <text x="50%" y="45%" font-family="Georgia,serif" font-size="30" font-weight="700" fill="#FDFBF5" text-anchor="middle" dominant-baseline="middle">Anuncie Aqui — Final</text>
+  <text x="50%" y="62%" font-family="system-ui,sans-serif" font-size="14" fill="#C9A24B" text-anchor="middle" dominant-baseline="middle" letter-spacing="2">970×250</text>
+</svg>

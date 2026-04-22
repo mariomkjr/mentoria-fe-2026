@@ -1,0 +1,66 @@
+---
+import AdSlot from './AdSlot.astro';
+
+interface Props {
+  slotId?: string;
+}
+
+const { slotId = 'sticky-footer-mobile' } = Astro.props;
+---
+
+<div class="ad-sticky-footer" id="ad-sticky-footer" data-ad-sticky-footer>
+  <button class="ad-sticky-footer__close" aria-label="Fechar anúncio" data-close-ad-sticky>×</button>
+  <AdSlot id={slotId} eager={false} />
+</div>
+
+<style>
+  .ad-sticky-footer {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(253 251 245 / 0.95);
+    backdrop-filter: blur(6px);
+    border-top: 1px solid rgb(201 162 75 / 0.3);
+    padding: 0.25rem 0 0.5rem;
+    transform: translateY(0);
+    transition: transform 0.25s ease;
+  }
+  .ad-sticky-footer.is-closed { transform: translateY(110%); }
+  .ad-sticky-footer__close {
+    position: absolute; top: 0.25rem; right: 0.5rem;
+    width: 24px; height: 24px; border-radius: 50%;
+    border: 1px solid rgb(30 28 32 / 0.3);
+    background: rgb(255 255 255 / 0.9);
+    color: rgb(30 28 32);
+    font-size: 18px; line-height: 1;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+  }
+  :global(.dark) .ad-sticky-footer {
+    background: rgb(20 12 16 / 0.95);
+    border-top-color: rgb(221 184 101 / 0.3);
+  }
+  :global(.dark) .ad-sticky-footer__close {
+    background: rgb(40 30 35 / 0.9);
+    color: rgb(229 222 206);
+    border-color: rgb(229 222 206 / 0.3);
+  }
+  @media (min-width: 768px) { .ad-sticky-footer { display: none; } }
+</style>
+
+<script>
+  const el = document.querySelector('[data-ad-sticky-footer]');
+  const btn = document.querySelector('[data-close-ad-sticky]');
+  if (el && btn) {
+    if (sessionStorage.getItem('ad-sticky-footer-closed') === '1') {
+      el.classList.add('is-closed');
+    }
+    btn.addEventListener('click', () => {
+      el.classList.add('is-closed');
+      sessionStorage.setItem('ad-sticky-footer-closed', '1');
+    });
+  }
+</script>

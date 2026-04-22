@@ -1,0 +1,22 @@
+---
+---
+
+<aside class="ad-sticky-sidebar" aria-label="Sidebar publicidade">
+  <div class="ad-sticky-sidebar__inner">
+    <slot />
+  </div>
+</aside>
+
+<style>
+  .ad-sticky-sidebar { display: none; }
+  .ad-sticky-sidebar__inner {
+    position: sticky;
+    top: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  @media (min-width: 1024px) {
+    .ad-sticky-sidebar { display: block; width: 300px; flex-shrink: 0; }
+  }
+</style>

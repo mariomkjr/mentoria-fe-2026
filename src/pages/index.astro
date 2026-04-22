@@ -1,6 +1,8 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import NativeAdSlot from '~/components/NativeAdSlot.astro';
+import AdBanner from '~/components/ads/AdBanner.astro';
+import StickyFooter from '~/components/ads/StickyFooter.astro';
 import 'lite-youtube-embed/src/lite-yt-embed.css';
 
 const metadata = {
@@ -160,6 +162,9 @@ const block9 = sections.slice(16, 20);
 ---
 
 <Layout metadata={metadata}>
+  <!-- DISPLAY AD: post-top (970x250 desk / 320x100 mob) -->
+  <AdBanner id="post-top" eager class="mx-auto max-w-[1140px] px-4" />
+
   <article class="relative mx-auto max-w-[1140px] px-4 sm:px-6 lg:px-8 pt-8 md:pt-12 pb-16">
     <!-- Kicker -->
     <div class="text-center mb-4">
@@ -372,7 +377,13 @@ const block9 = sections.slice(16, 20);
     <footer class="max-w-3xl mx-auto mt-12 md:mt-16 pt-8 border-t border-primary/15 text-center">
       <p class="text-muted text-sm italic">Se esta leitura tocou seu coração, compartilhe com alguém que precisa reaprender a orar. A Palavra multiplicada transforma vidas.</p>
     </footer>
+
+    <!-- DISPLAY AD: post-end (970x250 desk / 320x100 mob) -->
+    <AdBanner id="post-end" class="max-w-[1140px] mx-auto mt-10" />
   </article>
+
+  <!-- DISPLAY AD: sticky-footer-mobile (320x50, fechável) -->
+  <StickyFooter />
 </Layout>
 
 <script>

@@ -1,0 +1,87 @@
+---
+interface Props {
+  interval?: number;
+  slotIds?: string[];
+}
+
+const { interval = 3, slotIds = [] } = Astro.props;
+const slotsJson = slotIds.length > 0 ? JSON.stringify(slotIds) : '[]';
+---
+
+<div class="in-article-ads-wrap" data-in-article-ads data-interval={interval} data-slot-ids={slotsJson}>
+  <slot />
+</div>
+
+<script>
+  import slotsData from '~/data/ad-slots.json';
+
+  const wraps = document.querySelectorAll('[data-in-article-ads]');
+  wraps.forEach((wrap) => {
+    const interval = parseInt(wrap.getAttribute('data-interval') || '3', 10);
+    const slotIds: string[] = JSON.parse(wrap.getAttribute('data-slot-ids') || '[]');
+    if (slotIds.length === 0) return;
+
+    const paragraphs = Array.from(wrap.querySelectorAll(':scope > p'));
+    let slotIdx = 0;
+    paragraphs.forEach((p, i) => {
+      if ((i + 1) % interval === 0 && slotIdx < slotIds.length) {
+        const slotId = slotIds[slotIdx++];
+        const slot = (slotsData as any).slots[slotId];
+        if (!slot) return;
+        const active = (slot.creatives || []).filter((c: any) => c.active !== false);
+        const dims = slot.dimensions || { width: 728, height: 90 };
+        const container = document.createElement('div');
+        container.style.margin = '2rem 0';
+        container.style.minHeight = dims.height + 40 + 'px';
+
+        if (active.length === 0) {
+          container.innerHTML = `
+            <aside class="ad-display-slot ad-display-slot--empty" style="margin:0 auto;max-width:${dims.width}px;min-height:${dims.height + 20}px;display:flex;align-items:center;justify-content:center;background:rgb(245 240 230 / 0.5);border:1px dashed rgb(201 162 75 / 0.4);border-radius:4px;opacity:0.4;" aria-hidden="true">
+              <span style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:rgb(30 28 32 / 0.5);">Espaço publicitário (${dims.width}x${dims.height})</span>
+            </aside>`;
+        } else {
+          const totalWeight = active.reduce((s: number, c: any) => s + (c.weight || 1), 0);
+          let r = Math.random() * totalWeight;
+          let creative = active[0];
+          for (const c of active) {
+            r -= (c.weight || 1);
+            if (r <= 0) { creative = c; break; }
+          }
+          container.innerHTML = `
+            <aside class="ad-display-slot ad-display-slot--${slotId}" data-ad-slot-id="${slotId}" data-ad-advertiser="${creative.advertiser}" aria-label="Publicidade" style="margin:0 auto;max-width:${dims.width}px;padding:0.5rem;background:rgb(245 240 230 / 0.5);border:1px dashed rgb(201 162 75 / 0.4);border-radius:4px;text-align:center;">
+              <span style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:rgb(30 28 32 / 0.5);display:block;margin-bottom:0.25rem;">Publicidade</span>
+              <a href="${creative.href}" target="_blank" rel="sponsored noopener noreferrer" data-ad-click style="display:inline-block;line-height:0;">
+                <img src="${creative.image}" alt="${creative.alt || 'Publicidade'}" width="${dims.width}" height="${dims.height}" loading="lazy" decoding="async" style="max-width:100%;height:auto;display:block;" />
+              </a>
+            </aside>`;
+          trackImpressionAndClick(container, slotId, creative.advertiser);
+        }
+        p.after(container);
+      }
+    });
+  });
+
+  function trackAdEvent(event: string, slot: string, advertiser: string) {
+    const w = window as any;
+    if (w.plausible) return w.plausible('ad-' + event, { props: { slot, advertiser } });
+    if (w.gtag) return w.gtag('event', 'ad_' + event, { slot, advertiser });
+    if (!w.__ad_log) w.__ad_log = [];
+    w.__ad_log.push({ event, slot, advertiser, ts: Date.now() });
+  }
+
+  function trackImpressionAndClick(el: HTMLElement, slotId: string, advertiser: string) {
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            trackAdEvent('impression', slotId, advertiser);
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      io.observe(el);
+    }
+    const link = el.querySelector('a[data-ad-click]');
+    link?.addEventListener('click', () => trackAdEvent('click', slotId, advertiser));
+  }
+</script>
