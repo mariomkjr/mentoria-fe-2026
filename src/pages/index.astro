@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import NativeAdSlot from '~/components/NativeAdSlot.astro';
 import AdBanner from '~/components/ads/AdBanner.astro';
+import AdSlot from '~/components/ads/AdSlot.astro';
 import StickyFooter from '~/components/ads/StickyFooter.astro';
 import 'lite-youtube-embed/src/lite-yt-embed.css';
 
@@ -163,9 +164,11 @@ const block9 = sections.slice(16, 20);
 
 <Layout metadata={metadata}>
   <!-- DISPLAY AD: post-top (970x250 desk / 320x100 mob) -->
-  <AdBanner id="post-top" eager class="mx-auto max-w-[1140px] px-4" />
+  <AdBanner id="post-top" eager class="mx-auto max-w-[1140px] xl:max-w-[1500px] px-4" />
 
-  <article class="relative mx-auto max-w-[1140px] px-4 sm:px-6 lg:px-8 pt-8 md:pt-12 pb-16">
+  <article class="relative mx-auto max-w-[1140px] xl:max-w-[1500px] px-4 sm:px-6 lg:px-8 pt-8 md:pt-12 pb-16">
+    <div class="xl:grid xl:grid-cols-[1fr_320px] xl:gap-10">
+    <div class="xl:min-w-0">
     <!-- Kicker -->
     <div class="text-center mb-4">
       <span class="inline-block px-3 py-1 bg-primary/10 text-primary font-semibold text-[11px] md:text-xs uppercase tracking-widest rounded-full">Devocional · Oração</span>
@@ -235,6 +238,9 @@ const block9 = sections.slice(16, 20);
     <!-- AD #2 · Single hero -->
     <NativeAdSlot cards={adSingleHero1} variant="single-hero" />
 
+    <!-- DISPLAY AD: post-in-article-2 (728x90 / 300x100 mob) -->
+    <AdBanner id="post-in-article-2" class="max-w-3xl mx-auto" />
+
     <div class="max-w-3xl mx-auto prose prose-lg prose-article">
       {block2.map(s => (
         <section class="article-section" id={`secao-${s.n}`}>
@@ -280,6 +286,9 @@ const block9 = sections.slice(16, 20);
     <!-- AD #5 · Single hero -->
     <NativeAdSlot cards={adSingleHero2} variant="single-hero" />
 
+    <!-- DISPLAY AD: post-in-article-1 (300x250 MPU) -->
+    <AdBanner id="post-in-article-1" class="max-w-3xl mx-auto" />
+
     <div class="max-w-3xl mx-auto prose prose-lg prose-article">
       {block5.map(s => (
         <section class="article-section" id={`secao-${s.n}`}>
@@ -292,6 +301,9 @@ const block9 = sections.slice(16, 20);
 
     <!-- AD #6 · Inline horizontal -->
     <NativeAdSlot cards={adInline2} variant="inline-horizontal" />
+
+    <!-- DISPLAY AD: post-in-article-3 (300x250 MPU) -->
+    <AdBanner id="post-in-article-3" class="max-w-3xl mx-auto" />
 
     <div class="max-w-3xl mx-auto prose prose-lg prose-article">
       {block6.map(s => (
@@ -380,6 +392,16 @@ const block9 = sections.slice(16, 20);
 
     <!-- DISPLAY AD: post-end (970x250 desk / 320x100 mob) -->
     <AdBanner id="post-end" class="max-w-[1140px] mx-auto mt-10" />
+    </div><!-- /xl:min-w-0 col main -->
+
+    <!-- STICKY SIDEBAR desktop >=1280px -->
+    <aside class="hidden xl:block" aria-label="Sidebar publicidade">
+      <div class="sticky top-24 flex flex-col gap-6 pt-8">
+        <AdSlot id="sidebar-top" />
+        <AdSlot id="sidebar-mid" />
+      </div>
+    </aside>
+    </div><!-- /xl:grid -->
   </article>
 
   <!-- DISPLAY AD: sticky-footer-mobile (320x50, fechável) -->
