@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 780" role="img" aria-label="Você também pode gostar — 6 matérias recomendadas">
+  <defs>
+    <linearGradient id="bg-a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7A1F3A"/><stop offset="1" stop-color="#5C1729"/></linearGradient>
+    <linearGradient id="bg-b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1E3A8A"/><stop offset="1" stop-color="#3B82F6"/></linearGradient>
+    <linearGradient id="bg-c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#064E3B"/><stop offset="1" stop-color="#10B981"/></linearGradient>
+    <linearGradient id="bg-d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7C2D12"/><stop offset="1" stop-color="#EA580C"/></linearGradient>
+    <linearGradient id="bg-e" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4C1D95"/><stop offset="1" stop-color="#A855F7"/></linearGradient>
+    <linearGradient id="bg-f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#831843"/><stop offset="1" stop-color="#EC4899"/></linearGradient>
+  </defs>
+
+  <rect width="1140" height="780" fill="#F8F5EE" rx="12"/>
+
+  <!-- Header -->
+  <g transform="translate(32 32)">
+    <rect x="0" y="0" width="6" height="30" rx="3" fill="#C9A24B"/>
+    <text x="20" y="22" font-family="'Playfair Display', Georgia, serif" font-size="22" font-weight="700" fill="#0B0B0F">Você também vai gostar</text>
+  </g>
+  <text x="1108" y="42" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="11" fill="#7A1F3A" letter-spacing="2" font-weight="700">CONTEÚDO PATROCINADO</text>
+  <line x1="32" y1="70" x2="1108" y2="70" stroke="#E5DCC5" stroke-width="1"/>
+
+  <!-- Grid 3 x 2 -->
+  <g transform="translate(32 96)">
+    <!-- Card 1 -->
+    <g>
+      <rect width="350" height="320" fill="#FFFFFF" stroke="#E5DCC5" rx="10"/>
+      <rect width="350" height="180" fill="url(#bg-a)" rx="10"/>
+      <rect x="16" y="16" width="74" height="22" rx="11" fill="#C9A24B"/>
+      <text x="53" y="32" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#0B0B0F">CASAMENTO</text>
+      <g transform="translate(175 100)" opacity="0.35">
+        <path d="M-2 -36 L-2 16 L2 16 L2 -36 Z" fill="#FFFFFF"/>
+        <path d="M-16 -20 L-16 -16 L16 -16 L16 -20 Z" fill="#FFFFFF"/>
+      </g>
+      <text x="20" y="216" font-family="'Playfair Display', Georgia, serif" font-size="18" font-weight="700" fill="#0B0B0F">As 3 orações que</text>
+      <text x="20" y="240" font-family="'Playfair Display', Georgia, serif" font-size="18" font-weight="700" fill="#0B0B0F">transformam casamentos em</text>
+      <text x="20" y="264" font-family="'Playfair Display', Georgia, serif" font-size="18" font-weight="700" fill="#0B0B0F">apenas 30 dias</text>
+      <text x="20" y="294" font-family="Inter, Arial, sans-serif" font-size="13" fill="#5C5755">casal-abencoado.com.br</text>
+      <text x="330" y="294" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="12" fill="#9A3A54" font-weight="600">Ler mais →</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(368 0)">
+      <rect width="350" height="320" fill="#FFFFFF" stroke="#E5DCC5" rx="10"/>
+      <rect width="350" height="180" fill="url(#bg-b)" rx="10"/>
+      <rect x="16" y="16" width="74" height="22" rx="11" fill="#C9A24B"/>
+      <text x="53" y="32" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#0B0B0F">FAMÍLIA</text>
+      <g transform="translate(175 100)" opacity="0.35">
+        <circle r="24" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+        <path d="M-10 -2 L-2 8 L14 -10" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <text x="20" y="216" font-family="'Playfair Display', Georgia, serif" font-size="18" font-weight="700" fill="#0B0B0F">Pastor famoso revela o</text>
+      <text x="20" y="240" font-family="'Playfair Display', Georgia, serif" font-size="18" font-weight="700" fill="#0B0B0F">segredo para criar filhos</text>
+      <text x="20" y="264" font-family="'Playfair Display', Georgia, serif" font-size="18" font-weight="700" fill="#0B0B0F">na fé hoje em dia</text>
+      <text x="20" y="294" font-family="Inter, Arial, sans-serif" font-size="13" fill="#5C5755">portaldafamiliacrista.com</text>
+      <text x="330" y="294" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="12" fill="#9A3A54" font-weight="600">Ler mais →</text>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(736 0)">
+      <rect width="340" height="320" fill="#FFFFFF" stroke="#E5DCC5" rx="10"/>
+      <rect width="340" height="180" fill="url(#bg-c)" rx="10"/>
+      <rect x="16" y="16" width="90" height="22" rx="11" fill="#C9A24B"/>
+      <text x="61" y="32" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#0B0B0F">DEVOCIONAL</text>
+      <g transform="translate(170 100)" opacity="0.35">
+        <path d="M-18 -18 L18 18 M18 -18 L-18 18" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+      </g>
+      <text x="20" y="216" font-family="'Playfair Display', Georgia, serif" font-size="18" font-weight="700" fill="#0B0B0F">9 promessas bíblicas</text>
+      <text x="20" y="240" font-family="'Playfair Display', Georgia, serif" font-size="18" font-weight="700" fill="#0B0B0F">para casais que estão</text>
+      <text x="20" y="264" font-family="'Playfair Display', Georgia, serif" font-size="18" font-weight="700" fill="#0B0B0F">passando por crise</text>
+      <text x="20" y="294" font-family="Inter, Arial, sans-serif" font-size="13" fill="#5C5755">devocional-diario.net</text>
+      <text x="320" y="294" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="12" fill="#9A3A54" font-weight="600">Ler mais →</text>
+    </g>
+
+    <!-- Card 4 -->
+    <g transform="translate(0 348)">
+      <rect width="350" height="320" fill="#FFFFFF" stroke="#E5DCC5" rx="10"/>
+      <rect width="350" height="180" fill="url(#bg-d)" rx="10"/>
+      <rect x="16" y="16" width="74" height="22" rx="11" fill="#C9A24B"/>
+      <text x="53" y="32" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#0B0B0F">ORAÇÃO</text>
+      <g transform="translate(175 100)" opacity="0.35">
+        <path d="M0 -28 C-8 -28 -14 -22 -14 -14 L-14 4 C-14 12 -8 18 0 18 C8 18 14 12 14 4 L14 -14 C14 -22 8 -28 0 -28 Z" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+      </g>
+      <text x="20" y="216" font-family="'Playfair Display', Georgia, serif" font-size="18" font-weight="700" fill="#0B0B0F">A oração da meia-noite</text>
+      <text x="20" y="240" font-family="'Playfair Display', Georgia, serif" font-size="18" font-weight="700" fill="#0B0B0F">que derrubou muralhas em</text>
+      <text x="20" y="264" font-family="'Playfair Display', Georgia, serif" font-size="18" font-weight="700" fill="#0B0B0F">casamentos fracassados</text>
+      <text x="20" y="294" font-family="Inter, Arial, sans-serif" font-size="13" fill="#5C5755">oracao-poderosa.com</text>
+      <text x="330" y="294" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="12" fill="#9A3A54" font-weight="600">Ler mais →</text>
+    </g>
+
+    <!-- Card 5 -->
+    <g transform="translate(368 348)">
+      <rect width="350" height="320" fill="#FFFFFF" stroke="#E5DCC5" rx="10"/>
+      <rect width="350" height="180" fill="url(#bg-e)" rx="10"/>
+      <rect x="16" y="16" width="74" height="22" rx="11" fill="#C9A24B"/>
+      <text x="53" y="32" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#0B0B0F">FINANÇAS</text>
+      <g transform="translate(175 100)" opacity="0.35">
+        <circle r="26" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+        <text y="7" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="700" fill="#FFFFFF">$</text>
+      </g>
+      <text x="20" y="216" font-family="'Playfair Display', Georgia, serif" font-size="18" font-weight="700" fill="#0B0B0F">Como sair das dívidas em</text>
+      <text x="20" y="240" font-family="'Playfair Display', Georgia, serif" font-size="18" font-weight="700" fill="#0B0B0F">casal usando princípios</text>
+      <text x="20" y="264" font-family="'Playfair Display', Georgia, serif" font-size="18" font-weight="700" fill="#0B0B0F">bíblicos (passo a passo)</text>
+      <text x="20" y="294" font-family="Inter, Arial, sans-serif" font-size="13" fill="#5C5755">financas-crista.com.br</text>
+      <text x="330" y="294" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="12" fill="#9A3A54" font-weight="600">Ler mais →</text>
+    </g>
+
+    <!-- Card 6 -->
+    <g transform="translate(736 348)">
+      <rect width="340" height="320" fill="#FFFFFF" stroke="#E5DCC5" rx="10"/>
+      <rect width="340" height="180" fill="url(#bg-f)" rx="10"/>
+      <rect x="16" y="16" width="110" height="22" rx="11" fill="#C9A24B"/>
+      <text x="71" y="32" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#0B0B0F">RECONSTRUÇÃO</text>
+      <g transform="translate(170 100)" opacity="0.35">
+        <path d="M-20 -2 L0 -18 L20 -2 L20 16 L-20 16 Z" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+      </g>
+      <text x="20" y="216" font-family="'Playfair Display', Georgia, serif" font-size="18" font-weight="700" fill="#0B0B0F">Ela perdoou o marido</text>
+      <text x="20" y="240" font-family="'Playfair Display', Georgia, serif" font-size="18" font-weight="700" fill="#0B0B0F">depois de 3 traições: o</text>
+      <text x="20" y="264" font-family="'Playfair Display', Georgia, serif" font-size="18" font-weight="700" fill="#0B0B0F">milagre que mudou tudo</text>
+      <text x="20" y="294" font-family="Inter, Arial, sans-serif" font-size="13" fill="#5C5755">testemunhos-de-fe.com</text>
+      <text x="320" y="294" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="12" fill="#9A3A54" font-weight="600">Ler mais →</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <g transform="translate(0 720)">
+    <rect x="32" y="0" width="1076" height="40" fill="#F2ECE0" rx="6"/>
+    <text x="46" y="26" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#7A1F3A">PATROCINADO</text>
+    <text x="140" y="26" font-family="Inter, Arial, sans-serif" font-size="11" fill="#5C5755">Conteúdo recomendado por parceiros — clique para visitar · Ads by MGID / Adskeeper</text>
+    <text x="1094" y="26" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="10" fill="#9A3A54">Por que estou vendo isso?</text>
+  </g>
+</svg>

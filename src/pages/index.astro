@@ -1,6 +1,5 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import { YouTube } from 'astro-embed';
 
 const metadata = {
   title: 'Mentoria Fé | Relacionamento Abençoado Segundo a Palavra',
@@ -10,6 +9,8 @@ const metadata = {
 const author = 'Pr. Elias Martins';
 const publishDate = '21 de abril de 2026';
 const readingTime = '18 min de leitura';
+const videoId = 'TnjLGU-wLmU';
+const videoTitle = 'Mentoria Fé — A mensagem completa';
 
 const sections = [
   { n: 1, title: 'O Fundamento Inabalável do Amor Bíblico', verse: { text: 'Todo aquele, pois, que escuta estas minhas palavras e as pratica, será comparado a um homem prudente que edificou a sua casa sobre a rocha.', ref: 'Mateus 7:24' }, body: [
@@ -112,6 +113,17 @@ const sections = [
     'Escolha algo hoje. Pequeno. Concreto. Faça antes de dormir. Porque o caminho de mil quilômetros começa sempre com um passo de fé.',
   ]},
 ];
+
+// Grupos de seções entre slots de anúncio
+const block1 = sections.slice(0, 2);   // 1-2
+const block2 = sections.slice(2, 3);   // 3
+const block3 = sections.slice(3, 5);   // 4-5
+const block4 = sections.slice(5, 7);   // 6-7
+const block5 = sections.slice(7, 9);   // 8-9
+const block6 = sections.slice(9, 11);  // 10-11
+const block7 = sections.slice(11, 14); // 12-13-14
+const block8 = sections.slice(14, 16); // 15-16
+const block9 = sections.slice(16, 20); // 17-18-19-20
 ---
 
 <Layout metadata={metadata}>
@@ -121,7 +133,7 @@ const sections = [
       <span class="inline-block px-3 py-1 bg-primary/10 text-primary font-semibold text-xs uppercase tracking-widest rounded-full">Relacionamento Cristão</span>
     </div>
 
-    <!-- Hero do artigo -->
+    <!-- Hero -->
     <header class="max-w-4xl mx-auto text-center mb-8">
       <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-page mb-6">
         Um relacionamento <span class="text-accent">abençoado</span> segundo a Palavra de Deus
@@ -130,8 +142,7 @@ const sections = [
         Os <strong>20 princípios bíblicos</strong> que estão transformando casamentos cristãos — ancorados nas Escrituras, em linguagem do nosso tempo, com aplicação imediata.
       </p>
 
-      <!-- Meta autor -->
-      <div class="mt-8 flex items-center justify-center gap-4 text-sm text-muted">
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-muted">
         <div class="flex items-center gap-2">
           <span class="w-8 h-8 rounded-full bg-primary/15 text-primary font-bold flex items-center justify-center">EM</span>
           <span>Por <strong class="text-page">{author}</strong></span>
@@ -143,129 +154,237 @@ const sections = [
       </div>
     </header>
 
-    <!-- AD SLOT 1 — Leaderboard topo ===================== -->
-    <aside class="my-8 flex justify-center" aria-label="Publicidade">
-      <a href="#" rel="sponsored nofollow" class="block w-full max-w-[970px] transition-opacity hover:opacity-90" aria-label="Espaço publicitário">
-        <img src="/banners/ad-top-leaderboard.svg" alt="Publicidade" width="970" height="90" loading="eager" decoding="async" class="w-full h-auto" />
+    <!-- ===== VÍDEO YOUTUBE (façade lazy, controls=0) ===== -->
+    <figure class="max-w-3xl mx-auto my-10">
+      <div class="video-wrapper relative rounded-xl overflow-hidden shadow-xl border border-primary/10" style="aspect-ratio: 16/9;">
+        <button
+          type="button"
+          class="video-facade absolute inset-0 w-full h-full cursor-pointer group block"
+          aria-label={`Clique para assistir: ${videoTitle}`}
+          data-video-id={videoId}
+        >
+          <img
+            src={`https://i.ytimg.com/vi_webp/${videoId}/maxresdefault.webp`}
+            alt={videoTitle}
+            class="w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></span>
+          <span class="absolute inset-0 flex items-center justify-center">
+            <span class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white/95 shadow-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+              <svg viewBox="0 0 24 24" class="w-10 h-10 md:w-12 md:h-12 ml-1 fill-primary"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+          </span>
+          <span class="absolute bottom-4 left-4 right-4 text-white text-sm md:text-base font-semibold drop-shadow-lg text-left">{videoTitle}</span>
+        </button>
+      </div>
+      <figcaption class="text-center text-sm text-muted mt-3 italic">Assista a mensagem que inspirou este artigo</figcaption>
+    </figure>
+
+    <!-- ===== AD SLOT #1 · Grande — 6 matérias recomendadas (abaixo do vídeo) ===== -->
+    <aside class="my-10" aria-label="Conteúdo patrocinado">
+      <a href="#" rel="sponsored nofollow" class="block transition-opacity hover:opacity-95">
+        <img src="/banners/native-recommended-6cards.svg" alt="Você também vai gostar — conteúdo patrocinado" width="1140" height="780" loading="lazy" decoding="async" class="w-full h-auto rounded-xl shadow-md" />
       </a>
     </aside>
 
-    <!-- Vídeo YouTube ===================================== -->
-    <figure class="max-w-3xl mx-auto my-10">
-      <div class="rounded-xl overflow-hidden shadow-xl border border-primary/10">
-        <YouTube id="hFZFjoX2cGg" title="Mentoria Fé — Mensagem Completa" poster="default" />
-      </div>
-      <figcaption class="text-center text-sm text-muted mt-3 italic">Assista: a mensagem que inspirou este artigo (3 min)</figcaption>
-    </figure>
-
-    <!-- Corpo do artigo ================================== -->
+    <!-- Lead paragraph -->
     <div class="max-w-3xl mx-auto prose prose-lg prose-article">
       <p class="lead-paragraph">Este não é mais um artigo de autoajuda com verniz religioso. É um guia bíblico honesto sobre o que faz um casamento cristão prosperar — e o que silenciosamente o destrói. Se você chegou até aqui, algo no seu coração está buscando mais. Continue lendo.</p>
 
-      {sections.slice(0, 7).map(s => (
+      {block1.map(s => (
         <section class="article-section" id={`secao-${s.n}`}>
-          <h2>
-            <span class="section-number">{s.n}.</span> {s.title}
-          </h2>
+          <h2><span class="section-number">{s.n}.</span> {s.title}</h2>
           {s.body.map(p => <p set:html={p} />)}
-          {s.verse && (
-            <blockquote class="scripture">
-              <p set:html={s.verse.text} />
-              <cite>— {s.verse.ref}</cite>
-            </blockquote>
-          )}
+          {s.verse && <blockquote class="scripture"><p set:html={s.verse.text} /><cite>— {s.verse.ref}</cite></blockquote>}
         </section>
       ))}
     </div>
 
-    <!-- AD SLOT 2 — Widget nativo MGID (entre seções 7-8) -->
-    <aside class="my-12 max-w-4xl mx-auto" aria-label="Publicidade nativa">
-      <a href="#" rel="sponsored nofollow" class="block transition-opacity hover:opacity-90">
-        <img src="/banners/ad-mgid-native.svg" alt="Publicidade — Conteúdo patrocinado" width="800" height="340" loading="lazy" decoding="async" class="w-full h-auto rounded-md shadow-sm" />
+    <!-- ===== AD SLOT #2 · Native inline horizontal ===== -->
+    <aside class="my-10 max-w-3xl mx-auto" aria-label="Matéria patrocinada">
+      <a href="#" rel="sponsored nofollow" class="block transition-opacity hover:opacity-95">
+        <img src="/banners/native-inline-horizontal.svg" alt="Matéria patrocinada" width="820" height="240" loading="lazy" decoding="async" class="w-full h-auto rounded-xl shadow-md" />
       </a>
     </aside>
 
     <div class="max-w-3xl mx-auto prose prose-lg prose-article">
-      {sections.slice(7, 14).map(s => (
+      {block2.map(s => (
         <section class="article-section" id={`secao-${s.n}`}>
-          <h2>
-            <span class="section-number">{s.n}.</span> {s.title}
-          </h2>
+          <h2><span class="section-number">{s.n}.</span> {s.title}</h2>
           {s.body.map(p => <p set:html={p} />)}
-          {s.verse && (
-            <blockquote class="scripture">
-              <p set:html={s.verse.text} />
-              <cite>— {s.verse.ref}</cite>
-            </blockquote>
-          )}
+          {s.verse && <blockquote class="scripture"><p set:html={s.verse.text} /><cite>— {s.verse.ref}</cite></blockquote>}
         </section>
       ))}
     </div>
 
-    <!-- AD SLOT 3 — Rectangle AdSense (entre seções 14-15) -->
-    <aside class="my-12 max-w-2xl mx-auto" aria-label="Publicidade">
-      <a href="#" rel="sponsored nofollow" class="block transition-opacity hover:opacity-90">
-        <img src="/banners/ad-bottom-rect.svg" alt="Publicidade" width="728" height="250" loading="lazy" decoding="async" class="w-full h-auto rounded-md shadow-sm" />
+    <!-- ===== AD SLOT #3 · Display billboard ===== -->
+    <aside class="my-10 flex justify-center" aria-label="Publicidade">
+      <a href="#" rel="sponsored nofollow" class="block w-full max-w-[970px] transition-opacity hover:opacity-95">
+        <img src="/banners/display-leaderboard-large.svg" alt="Publicidade — Display 970x250" width="970" height="250" loading="lazy" decoding="async" class="w-full h-auto rounded-xl" />
       </a>
     </aside>
 
     <div class="max-w-3xl mx-auto prose prose-lg prose-article">
-      {sections.slice(14).map(s => (
+      {block3.map(s => (
         <section class="article-section" id={`secao-${s.n}`}>
-          <h2>
-            <span class="section-number">{s.n}.</span> {s.title}
-          </h2>
+          <h2><span class="section-number">{s.n}.</span> {s.title}</h2>
           {s.body.map(p => <p set:html={p} />)}
-          {s.verse && (
-            <blockquote class="scripture">
-              <p set:html={s.verse.text} />
-              <cite>— {s.verse.ref}</cite>
-            </blockquote>
-          )}
+          {s.verse && <blockquote class="scripture"><p set:html={s.verse.text} /><cite>— {s.verse.ref}</cite></blockquote>}
         </section>
       ))}
     </div>
 
-    <!-- Tabela de recursos finais ========================= -->
-    <div class="max-w-3xl mx-auto mt-16">
+    <!-- ===== AD SLOT #4 · Native 3 cards ===== -->
+    <aside class="my-10 max-w-3xl mx-auto" aria-label="Matérias relacionadas">
+      <a href="#" rel="sponsored nofollow" class="block transition-opacity hover:opacity-95">
+        <img src="/banners/native-3cards-row.svg" alt="Matérias relacionadas patrocinadas" width="820" height="400" loading="lazy" decoding="async" class="w-full h-auto rounded-xl shadow-md" />
+      </a>
+    </aside>
+
+    <div class="max-w-3xl mx-auto prose prose-lg prose-article">
+      {block4.map(s => (
+        <section class="article-section" id={`secao-${s.n}`}>
+          <h2><span class="section-number">{s.n}.</span> {s.title}</h2>
+          {s.body.map(p => <p set:html={p} />)}
+          {s.verse && <blockquote class="scripture"><p set:html={s.verse.text} /><cite>— {s.verse.ref}</cite></blockquote>}
+        </section>
+      ))}
+    </div>
+
+    <!-- ===== AD SLOT #5 · Native single big ===== -->
+    <aside class="my-10 max-w-3xl mx-auto" aria-label="Matéria patrocinada em destaque">
+      <a href="#" rel="sponsored nofollow" class="block transition-opacity hover:opacity-95">
+        <img src="/banners/native-single-big.svg" alt="Matéria patrocinada em destaque" width="820" height="420" loading="lazy" decoding="async" class="w-full h-auto rounded-xl shadow-md" />
+      </a>
+    </aside>
+
+    <div class="max-w-3xl mx-auto prose prose-lg prose-article">
+      {block5.map(s => (
+        <section class="article-section" id={`secao-${s.n}`}>
+          <h2><span class="section-number">{s.n}.</span> {s.title}</h2>
+          {s.body.map(p => <p set:html={p} />)}
+          {s.verse && <blockquote class="scripture"><p set:html={s.verse.text} /><cite>— {s.verse.ref}</cite></blockquote>}
+        </section>
+      ))}
+    </div>
+
+    <!-- ===== AD SLOT #6 · Native inline horizontal ===== -->
+    <aside class="my-10 max-w-3xl mx-auto" aria-label="Matéria patrocinada">
+      <a href="#" rel="sponsored nofollow" class="block transition-opacity hover:opacity-95">
+        <img src="/banners/native-inline-horizontal.svg" alt="Matéria patrocinada" width="820" height="240" loading="lazy" decoding="async" class="w-full h-auto rounded-xl shadow-md" />
+      </a>
+    </aside>
+
+    <div class="max-w-3xl mx-auto prose prose-lg prose-article">
+      {block6.map(s => (
+        <section class="article-section" id={`secao-${s.n}`}>
+          <h2><span class="section-number">{s.n}.</span> {s.title}</h2>
+          {s.body.map(p => <p set:html={p} />)}
+          {s.verse && <blockquote class="scripture"><p set:html={s.verse.text} /><cite>— {s.verse.ref}</cite></blockquote>}
+        </section>
+      ))}
+    </div>
+
+    <!-- ===== AD SLOT #7 · Display billboard ===== -->
+    <aside class="my-10 flex justify-center" aria-label="Publicidade">
+      <a href="#" rel="sponsored nofollow" class="block w-full max-w-[970px] transition-opacity hover:opacity-95">
+        <img src="/banners/display-leaderboard-large.svg" alt="Publicidade — Display 970x250" width="970" height="250" loading="lazy" decoding="async" class="w-full h-auto rounded-xl" />
+      </a>
+    </aside>
+
+    <div class="max-w-3xl mx-auto prose prose-lg prose-article">
+      {block7.map(s => (
+        <section class="article-section" id={`secao-${s.n}`}>
+          <h2><span class="section-number">{s.n}.</span> {s.title}</h2>
+          {s.body.map(p => <p set:html={p} />)}
+          {s.verse && <blockquote class="scripture"><p set:html={s.verse.text} /><cite>— {s.verse.ref}</cite></blockquote>}
+        </section>
+      ))}
+    </div>
+
+    <!-- ===== AD SLOT #8 · Native single big ===== -->
+    <aside class="my-10 max-w-3xl mx-auto" aria-label="Matéria patrocinada em destaque">
+      <a href="#" rel="sponsored nofollow" class="block transition-opacity hover:opacity-95">
+        <img src="/banners/native-single-big.svg" alt="Matéria patrocinada em destaque" width="820" height="420" loading="lazy" decoding="async" class="w-full h-auto rounded-xl shadow-md" />
+      </a>
+    </aside>
+
+    <div class="max-w-3xl mx-auto prose prose-lg prose-article">
+      {block8.map(s => (
+        <section class="article-section" id={`secao-${s.n}`}>
+          <h2><span class="section-number">{s.n}.</span> {s.title}</h2>
+          {s.body.map(p => <p set:html={p} />)}
+          {s.verse && <blockquote class="scripture"><p set:html={s.verse.text} /><cite>— {s.verse.ref}</cite></blockquote>}
+        </section>
+      ))}
+    </div>
+
+    <!-- ===== AD SLOT #9 · Native 3 cards ===== -->
+    <aside class="my-10 max-w-3xl mx-auto" aria-label="Matérias relacionadas">
+      <a href="#" rel="sponsored nofollow" class="block transition-opacity hover:opacity-95">
+        <img src="/banners/native-3cards-row.svg" alt="Matérias relacionadas patrocinadas" width="820" height="400" loading="lazy" decoding="async" class="w-full h-auto rounded-xl shadow-md" />
+      </a>
+    </aside>
+
+    <div class="max-w-3xl mx-auto prose prose-lg prose-article">
+      {block9.map(s => (
+        <section class="article-section" id={`secao-${s.n}`}>
+          <h2><span class="section-number">{s.n}.</span> {s.title}</h2>
+          {s.body.map(p => <p set:html={p} />)}
+          {s.verse && <blockquote class="scripture"><p set:html={s.verse.text} /><cite>— {s.verse.ref}</cite></blockquote>}
+        </section>
+      ))}
+    </div>
+
+    <!-- ===== AD SLOT #10 · Final — 6 matérias recomendadas ===== -->
+    <aside class="my-12" aria-label="Conteúdo patrocinado">
+      <a href="#" rel="sponsored nofollow" class="block transition-opacity hover:opacity-95">
+        <img src="/banners/native-recommended-6cards.svg" alt="Você também vai gostar — conteúdo patrocinado" width="1140" height="780" loading="lazy" decoding="async" class="w-full h-auto rounded-xl shadow-md" />
+      </a>
+    </aside>
+
+    <!-- Tabela de aprofundamento -->
+    <div class="max-w-3xl mx-auto mt-10">
       <div class="p-8 rounded-2xl bg-primary/5 border border-primary/15">
         <h3 class="font-heading text-2xl md:text-3xl font-bold mb-4 text-page">Para se aprofundar</h3>
         <p class="text-muted mb-6">Textos bíblicos referenciados neste artigo, organizados para seu estudo devocional:</p>
         <div class="grid sm:grid-cols-2 gap-3">
-          <div class="flex items-start gap-3 p-3 bg-white/40 rounded-lg">
-            <span class="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
-            <span class="text-sm">Mateus 7:24-27 — A casa sobre a rocha</span>
-          </div>
-          <div class="flex items-start gap-3 p-3 bg-white/40 rounded-lg">
-            <span class="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
-            <span class="text-sm">Efésios 5:22-33 — O casamento como figura de Cristo</span>
-          </div>
-          <div class="flex items-start gap-3 p-3 bg-white/40 rounded-lg">
-            <span class="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">3</span>
-            <span class="text-sm">Provérbios 31:10-31 — A mulher virtuosa</span>
-          </div>
-          <div class="flex items-start gap-3 p-3 bg-white/40 rounded-lg">
-            <span class="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">4</span>
-            <span class="text-sm">1 Coríntios 13 — O hino do amor</span>
-          </div>
-          <div class="flex items-start gap-3 p-3 bg-white/40 rounded-lg">
-            <span class="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">5</span>
-            <span class="text-sm">Colossenses 3:12-17 — A nova vida em Cristo</span>
-          </div>
-          <div class="flex items-start gap-3 p-3 bg-white/40 rounded-lg">
-            <span class="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">6</span>
-            <span class="text-sm">Cantares 8:6-7 — O amor é forte como a morte</span>
-          </div>
+          <div class="flex items-start gap-3 p-3 bg-white/40 rounded-lg"><span class="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">1</span><span class="text-sm">Mateus 7:24-27 — A casa sobre a rocha</span></div>
+          <div class="flex items-start gap-3 p-3 bg-white/40 rounded-lg"><span class="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span><span class="text-sm">Efésios 5:22-33 — O casamento como figura de Cristo</span></div>
+          <div class="flex items-start gap-3 p-3 bg-white/40 rounded-lg"><span class="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">3</span><span class="text-sm">Provérbios 31:10-31 — A mulher virtuosa</span></div>
+          <div class="flex items-start gap-3 p-3 bg-white/40 rounded-lg"><span class="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">4</span><span class="text-sm">1 Coríntios 13 — O hino do amor</span></div>
+          <div class="flex items-start gap-3 p-3 bg-white/40 rounded-lg"><span class="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">5</span><span class="text-sm">Colossenses 3:12-17 — A nova vida em Cristo</span></div>
+          <div class="flex items-start gap-3 p-3 bg-white/40 rounded-lg"><span class="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">6</span><span class="text-sm">Cantares 8:6-7 — O amor é forte como a morte</span></div>
         </div>
       </div>
     </div>
 
-    <!-- Rodapé do artigo ================================= -->
     <footer class="max-w-3xl mx-auto mt-16 pt-8 border-t border-primary/15 text-center">
       <p class="text-muted text-sm italic">Se este artigo tocou seu coração, compartilhe com alguém que precisa ler. A verdade multiplicada transforma vidas.</p>
     </footer>
   </article>
 </Layout>
+
+<script>
+  document.querySelectorAll('.video-facade').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const id = this.getAttribute('data-video-id');
+      const wrapper = this.parentElement;
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&controls=0&rel=0&modestbranding=1&playsinline=1`;
+      iframe.title = this.getAttribute('aria-label') || 'YouTube video';
+      iframe.setAttribute('frameborder', '0');
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+      iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.className = 'absolute inset-0 w-full h-full';
+      wrapper.appendChild(iframe);
+      this.remove();
+    }, { once: true });
+  });
+</script>
 
 <style is:global>
   .prose-article h2 {
@@ -326,11 +445,7 @@ const sections = [
     opacity: 0.35;
     line-height: 1;
   }
-  .prose-article blockquote.scripture p {
-    margin: 0;
-    font-style: italic;
-    color: inherit;
-  }
+  .prose-article blockquote.scripture p { margin: 0; font-style: italic; color: inherit; }
   .prose-article blockquote.scripture cite {
     display: block;
     margin-top: 0.75rem;
@@ -342,17 +457,11 @@ const sections = [
     letter-spacing: 0.02em;
     text-transform: uppercase;
   }
-  .prose-article .article-section + .article-section h2 {
-    margin-top: 3rem;
-  }
+  .prose-article .article-section + .article-section h2 { margin-top: 3rem; }
 
-  /* Responsive typography */
   @media (max-width: 640px) {
     .prose-article p { font-size: 1rem; line-height: 1.7; }
     .prose-article .lead-paragraph { font-size: 1.125rem; }
-    .prose-article blockquote.scripture {
-      padding: 1.25rem 1rem 1.25rem 1.5rem;
-      font-size: 1rem;
-    }
+    .prose-article blockquote.scripture { padding: 1.25rem 1rem 1.25rem 1.5rem; font-size: 1rem; }
   }
 </style>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" role="img" aria-label="Matérias relacionadas — 3 sugestões patrocinadas">
+  <defs>
+    <linearGradient id="t1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#831843"/><stop offset="1" stop-color="#DB2777"/></linearGradient>
+    <linearGradient id="t2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7A1F3A"/><stop offset="1" stop-color="#C9A24B"/></linearGradient>
+    <linearGradient id="t3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1E40AF"/><stop offset="1" stop-color="#0EA5E9"/></linearGradient>
+  </defs>
+  <rect width="820" height="400" fill="#FAF7EE" rx="12"/>
+
+  <!-- Header -->
+  <g transform="translate(24 24)">
+    <rect x="0" y="0" width="5" height="26" rx="2" fill="#C9A24B"/>
+    <text x="16" y="20" font-family="'Playfair Display', Georgia, serif" font-size="20" font-weight="700" fill="#0B0B0F">Matérias que podem interessar</text>
+    <text x="796" y="20" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="11" fill="#9A3A54" letter-spacing="2" font-weight="700">PATROCINADO</text>
+  </g>
+  <line x1="24" y1="62" x2="796" y2="62" stroke="#E5DCC5"/>
+
+  <!-- 3 Cards -->
+  <g transform="translate(24 80)">
+    <!-- Card 1 -->
+    <g>
+      <rect width="248" height="290" fill="#FFFFFF" stroke="#E5DCC5" rx="10"/>
+      <rect width="248" height="148" fill="url(#t1)" rx="10"/>
+      <rect x="12" y="12" width="70" height="20" rx="10" fill="#FFFFFF" opacity="0.95"/>
+      <text x="47" y="26" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700" fill="#831843">CASAMENTO</text>
+      <text x="14" y="178" font-family="'Playfair Display', Georgia, serif" font-size="15" font-weight="700" fill="#0B0B0F">5 coisas que mulheres cristãs</text>
+      <text x="14" y="198" font-family="'Playfair Display', Georgia, serif" font-size="15" font-weight="700" fill="#0B0B0F">NUNCA deveriam aceitar no</text>
+      <text x="14" y="218" font-family="'Playfair Display', Georgia, serif" font-size="15" font-weight="700" fill="#0B0B0F">casamento (a #3 choca)</text>
+      <text x="14" y="248" font-family="Inter, Arial, sans-serif" font-size="12" fill="#5C5755">mulher-virtuosa.com.br</text>
+      <line x1="14" y1="258" x2="234" y2="258" stroke="#E5DCC5"/>
+      <text x="14" y="276" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#7A1F3A">Ler agora →</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(262 0)">
+      <rect width="248" height="290" fill="#FFFFFF" stroke="#E5DCC5" rx="10"/>
+      <rect width="248" height="148" fill="url(#t2)" rx="10"/>
+      <rect x="12" y="12" width="60" height="20" rx="10" fill="#FFFFFF" opacity="0.95"/>
+      <text x="42" y="26" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700" fill="#7A1F3A">ORAÇÃO</text>
+      <text x="14" y="178" font-family="'Playfair Display', Georgia, serif" font-size="15" font-weight="700" fill="#0B0B0F">Pastor de Minas revela:</text>
+      <text x="14" y="198" font-family="'Playfair Display', Georgia, serif" font-size="15" font-weight="700" fill="#0B0B0F">"oração de 2 minutos" que</text>
+      <text x="14" y="218" font-family="'Playfair Display', Georgia, serif" font-size="15" font-weight="700" fill="#0B0B0F">salvou meu casamento</text>
+      <text x="14" y="248" font-family="Inter, Arial, sans-serif" font-size="12" fill="#5C5755">portaldopastor.net</text>
+      <line x1="14" y1="258" x2="234" y2="258" stroke="#E5DCC5"/>
+      <text x="14" y="276" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#7A1F3A">Ler agora →</text>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(524 0)">
+      <rect width="248" height="290" fill="#FFFFFF" stroke="#E5DCC5" rx="10"/>
+      <rect width="248" height="148" fill="url(#t3)" rx="10"/>
+      <rect x="12" y="12" width="70" height="20" rx="10" fill="#FFFFFF" opacity="0.95"/>
+      <text x="47" y="26" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700" fill="#1E40AF">FAMÍLIA</text>
+      <text x="14" y="178" font-family="'Playfair Display', Georgia, serif" font-size="15" font-weight="700" fill="#0B0B0F">Ela ensinou filhos a orar e</text>
+      <text x="14" y="198" font-family="'Playfair Display', Georgia, serif" font-size="15" font-weight="700" fill="#0B0B0F">o resultado vai te emocionar</text>
+      <text x="14" y="218" font-family="'Playfair Display', Georgia, serif" font-size="15" font-weight="700" fill="#0B0B0F">(veja em vídeo)</text>
+      <text x="14" y="248" font-family="Inter, Arial, sans-serif" font-size="12" fill="#5C5755">familia-na-fe.com</text>
+      <line x1="14" y1="258" x2="234" y2="258" stroke="#E5DCC5"/>
+      <text x="14" y="276" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#7A1F3A">Assistir vídeo →</text>
+    </g>
+  </g>
+</svg>
