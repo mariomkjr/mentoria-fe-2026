@@ -166,26 +166,23 @@ const block9 = sections.slice(16, 20);
   <!-- DISPLAY AD: post-top (970x250 desk / 320x100 mob) -->
   <AdBanner id="post-top" eager class="mx-auto max-w-[1140px] xl:max-w-[1500px] px-4" />
 
-  <article class="relative mx-auto max-w-[1140px] xl:max-w-[1500px] px-4 sm:px-6 lg:px-8 pt-8 md:pt-12 pb-16">
+  <article class="relative mx-auto max-w-[1140px] xl:max-w-[1500px] px-4 sm:px-6 lg:px-8 pt-4 md:pt-12 pb-16">
     <div class="xl:grid xl:grid-cols-[1fr_320px] xl:gap-10">
     <div class="xl:min-w-0">
     <!-- Kicker -->
-    <div class="text-center mb-4">
+    <div class="text-center mb-2 md:mb-4">
       <span class="inline-block px-3 py-1 bg-primary/10 text-primary font-semibold text-[11px] md:text-xs uppercase tracking-widest rounded-full">Devocional · Oração</span>
     </div>
 
     <!-- Hero -->
-    <header class="max-w-4xl mx-auto text-center mb-8">
-      <h1 class="font-heading text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-page mb-5 md:mb-6">
+    <header class="max-w-4xl mx-auto text-center mb-4 md:mb-8">
+      <h1 class="font-heading text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-page mb-3 md:mb-6">
         <span class="text-accent">Oração</span> <span class="hidden sm:inline">Diária: </span><span class="sm:hidden">Diária</span><br class="sm:hidden"/>
         <span class="hidden sm:inline">O hábito silencioso que sustenta tudo o mais</span>
         <span class="sm:hidden block text-[1.5rem] mt-2">O hábito que sustenta tudo</span>
       </h1>
-      <p class="text-base md:text-lg lg:text-xl text-muted leading-relaxed max-w-3xl mx-auto">
-        Um guia devocional completo sobre oração — desde os <strong>fundamentos bíblicos</strong> até o método prático que você pode começar a praticar <strong>ainda hoje</strong>.
-      </p>
 
-      <div class="mt-6 md:mt-8 flex flex-wrap items-center justify-center gap-x-3 md:gap-x-4 gap-y-2 text-xs md:text-sm text-muted">
+      <div class="mt-3 md:mt-8 flex flex-wrap items-center justify-center gap-x-3 md:gap-x-4 gap-y-2 text-xs md:text-sm text-muted">
         <div class="flex items-center gap-2">
           <span class="w-8 h-8 rounded-full bg-primary/15 text-primary font-bold flex items-center justify-center text-xs">✦</span>
           <span>Por <strong class="text-page">{author}</strong></span>
@@ -198,7 +195,7 @@ const block9 = sections.slice(16, 20);
     </header>
 
     <!-- VÍDEO YOUTUBE via lite-youtube-embed (iOS Safari friendly) -->
-    <figure class="max-w-3xl mx-auto my-8 md:my-10">
+    <figure class="max-w-3xl mx-auto my-4 md:my-10">
       <div class="rounded-xl overflow-hidden shadow-xl border border-primary/10">
         <lite-youtube
           videoid={videoId}
