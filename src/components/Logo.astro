@@ -1,9 +1,21 @@
 ---
-import { SITE } from 'astrowind:config';
+// Logo completa: Creio em Te Senhor
 ---
 
-<span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
->
-  🚀 {SITE?.name}
-</span>
+<a href="/" class="logo-mark inline-block no-underline" aria-label="Creio em Te Senhor — Início">
+  <!-- Logo completa SVG: símbolo + wordmark integrados -->
+  <img
+    src="/logo/creio-logo-full.svg"
+    alt="Creio em Te Senhor"
+    class="h-10 md:h-12 w-auto"
+    width="280"
+    height="60"
+  />
+</a>
+
+<style>
+  .logo-mark:hover {
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+  }
+</style>

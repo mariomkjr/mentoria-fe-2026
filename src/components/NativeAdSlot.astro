@@ -1,0 +1,180 @@
+---
+// Slot de anúncio nativo responsivo — simula widgets MGID / Adskeeper / Taboola
+// Grid 4 colunas desktop, 2 tablet, 1 mobile
+// Placeholder até integrar script real do Adskeeper/MGID
+interface AdCard {
+  category: string;
+  categoryColor?: string; // classes tailwind, ex: 'from-primary to-primary-dark'
+  title: string;
+  snippet: string;
+  source: string;
+  rating?: string;
+  readTime?: string;
+  gradient: string; // classe de gradient
+}
+
+interface Props {
+  heading?: string;
+  sublabel?: string;
+  cards: AdCard[];
+  variant?: 'grid' | 'single-hero' | 'inline-horizontal';
+  widgetId?: string; // para mostrar no footer do slot
+}
+
+const {
+  heading = 'Você também vai gostar',
+  sublabel = 'Histórias e reflexões que nossos leitores estão lendo agora',
+  cards,
+  variant = 'grid',
+  widgetId = '1975709',
+} = Astro.props;
+---
+
+{variant === 'grid' && (
+  <aside class="ad-native-slot my-10" aria-label="Conteúdo patrocinado">
+    <div class="bg-[#F8F5EE] rounded-2xl p-5 md:p-8 border border-[#E5DCC5]">
+      <!-- Header -->
+      <div class="flex items-start justify-between gap-4 mb-5">
+        <div class="flex items-start gap-3 flex-1">
+          <span class="w-1.5 h-10 rounded-full bg-accent flex-shrink-0 mt-0.5"></span>
+          <div>
+            <h3 class="font-heading text-xl md:text-2xl font-bold text-page leading-tight">{heading}</h3>
+            <p class="text-xs md:text-sm text-muted mt-1">{sublabel}</p>
+          </div>
+        </div>
+        <span class="text-[10px] md:text-xs font-bold tracking-widest text-primary shrink-0 mt-1 hidden sm:block">CONTEÚDO PATROCINADO</span>
+      </div>
+      <div class="border-t border-[#E5DCC5] mb-5"></div>
+
+      <!-- Cards responsivos -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
+        {cards.map((card) => (
+          <a
+            href="#"
+            rel="sponsored nofollow"
+            class="group flex flex-col bg-white rounded-xl border border-[#E5DCC5] overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+          >
+            <!-- Thumbnail -->
+            <div class={`relative aspect-[16/10] bg-gradient-to-br ${card.gradient} overflow-hidden`}>
+              <!-- Cruz decorativa -->
+              <svg class="absolute inset-0 w-full h-full opacity-20" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                <rect x="48" y="20" width="4" height="60" fill="#FDFBF5"/>
+                <rect x="30" y="40" width="40" height="4" fill="#FDFBF5"/>
+              </svg>
+              <span class="absolute top-3 left-3 bg-white/95 text-primary text-[10px] md:text-xs font-extrabold tracking-wider px-2.5 py-1 rounded-full shadow">{card.category}</span>
+            </div>
+
+            <!-- Conteúdo -->
+            <div class="p-4 flex-1 flex flex-col">
+              <h4 class="font-heading text-base md:text-lg font-bold text-page leading-snug mb-2 line-clamp-3 group-hover:text-primary transition-colors">{card.title}</h4>
+              <p class="text-xs md:text-sm text-muted leading-relaxed mb-3 line-clamp-2 flex-1">{card.snippet}</p>
+              <div class="flex items-center justify-between text-[11px] md:text-xs text-muted border-t border-[#F0E9D8] pt-2.5 mt-auto">
+                <span class="font-semibold text-primary truncate">{card.source}</span>
+                <span class="shrink-0 ml-2">
+                  {card.rating && <span>★ {card.rating}</span>}
+                  {card.readTime && <span class="ml-2">· {card.readTime}</span>}
+                </span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- Footer slot -->
+      <div class="mt-5 flex flex-wrap items-center justify-between gap-2 text-[10px] md:text-xs text-muted/90 pt-4 border-t border-[#E5DCC5]">
+        <span>
+          <strong class="text-primary">Patrocinado</strong> · Conteúdo sugerido pelos parceiros
+        </span>
+        <span class="opacity-70">widget · {widgetId} · Adskeeper/MGID</span>
+      </div>
+    </div>
+  </aside>
+)}
+
+{variant === 'single-hero' && (
+  <aside class="ad-native-slot my-10 max-w-4xl mx-auto" aria-label="Matéria patrocinada em destaque">
+    <a href="#" rel="sponsored nofollow" class="block bg-white rounded-2xl border border-[#E5DCC5] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+      <div class="flex flex-col md:flex-row">
+        <div class={`relative md:w-[45%] aspect-video md:aspect-auto bg-gradient-to-br ${cards[0].gradient} flex-shrink-0`}>
+          <svg class="absolute inset-0 w-full h-full opacity-25" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <rect x="48" y="18" width="4" height="64" fill="#FDFBF5"/>
+            <rect x="28" y="42" width="44" height="4" fill="#FDFBF5"/>
+          </svg>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <span class="w-16 h-16 md:w-20 md:h-20 bg-white/95 rounded-full shadow-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+              <svg viewBox="0 0 24 24" class="w-8 h-8 md:w-10 md:h-10 ml-1 fill-primary"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+          </div>
+          <span class="absolute top-4 left-4 bg-accent text-ink text-xs font-extrabold tracking-wider px-3 py-1.5 rounded-full">• PATROCINADO</span>
+        </div>
+        <div class="p-6 md:p-8 flex-1">
+          <span class="inline-block bg-primary text-cream text-xs font-bold tracking-wider uppercase px-3 py-1 rounded mb-4">{cards[0].category}</span>
+          <h3 class="font-heading text-xl md:text-2xl lg:text-3xl font-bold text-page leading-tight mb-3 md:mb-4 group-hover:text-primary transition-colors">{cards[0].title}</h3>
+          <p class="text-sm md:text-base text-muted leading-relaxed mb-4 md:mb-5 line-clamp-4">{cards[0].snippet}</p>
+          <div class="flex flex-wrap items-center gap-3 md:gap-4 text-xs md:text-sm text-muted mb-5">
+            <span class="font-semibold text-primary">{cards[0].source}</span>
+            {cards[0].rating && <span>★ {cards[0].rating}</span>}
+            {cards[0].readTime && <span>📖 {cards[0].readTime}</span>}
+          </div>
+          <span class="inline-flex items-center gap-2 bg-primary text-cream font-bold text-sm md:text-base px-5 py-2.5 rounded-full group-hover:bg-primary-dark transition-colors">
+            Ler história completa
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+  </aside>
+)}
+
+{variant === 'inline-horizontal' && (
+  <aside class="ad-native-slot my-10 max-w-4xl mx-auto" aria-label="Matéria patrocinada">
+    <div class="flex items-center gap-2 mb-2 text-[11px] md:text-xs font-bold tracking-widest">
+      <span class="text-primary">PATROCINADO</span>
+      <span class="text-muted/60">·</span>
+      <span class="text-muted">Conteúdo do parceiro</span>
+    </div>
+    <a href="#" rel="sponsored nofollow" class="block bg-white rounded-xl border border-[#E5DCC5] overflow-hidden hover:shadow-lg transition-all duration-300 group">
+      <div class="flex flex-col sm:flex-row">
+        <div class={`relative sm:w-[40%] aspect-video sm:aspect-auto bg-gradient-to-br ${cards[0].gradient} flex-shrink-0`}>
+          <svg class="absolute inset-0 w-full h-full opacity-25" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <rect x="48" y="20" width="4" height="60" fill="#FDFBF5"/>
+            <rect x="30" y="40" width="40" height="4" fill="#FDFBF5"/>
+          </svg>
+        </div>
+        <div class="p-5 md:p-6 flex-1">
+          <span class="inline-block bg-[#F2ECE0] text-primary text-[10px] md:text-xs font-extrabold tracking-wider uppercase px-2.5 py-1 rounded mb-3">{cards[0].category}</span>
+          <h3 class="font-heading text-lg md:text-xl lg:text-2xl font-bold text-page leading-snug mb-2 md:mb-3 group-hover:text-primary transition-colors">{cards[0].title}</h3>
+          <p class="text-sm md:text-base text-muted leading-relaxed mb-3 line-clamp-3">{cards[0].snippet}</p>
+          <div class="flex items-center justify-between text-xs md:text-sm">
+            <span class="font-semibold text-primary">{cards[0].source}</span>
+            <span class="text-muted">
+              {cards[0].rating && <span>★ {cards[0].rating}</span>}
+              {cards[0].readTime && <span class="ml-2">· {cards[0].readTime}</span>}
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </aside>
+)}
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .line-clamp-4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>

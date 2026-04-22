@@ -1,19 +1,19 @@
 site:
-  name: Mentoria Fé
+  name: Creio em Te Senhor
   site: 'https://mentoria.creioemtesenhor.com'
   base: '/'
   trailingSlash: false
 
 metadata:
   title:
-    default: 'Mentoria Fé | Relacionamento Abençoado Segundo a Palavra'
-    template: '%s — Mentoria Fé'
-  description: 'Descubra os princípios bíblicos para um relacionamento abençoado e duradouro. Transforme seu casamento com sabedoria divina.'
+    default: 'Oração Diária — Creio em Te Senhor'
+    template: '%s — Creio em Te Senhor'
+  description: 'Devocional diário, meditações sobre oração e textos bíblicos que fortalecem sua fé no dia a dia.'
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: Mentoria Fé
+    site_name: Creio em Te Senhor
     images:
       - url: '~/assets/images/default.png'
         width: 1200

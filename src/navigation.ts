@@ -1,9 +1,10 @@
 export const headerData = {
   links: [
     { text: 'Início', href: '/' },
-    { text: 'Casamento', href: '#secao-1' },
-    { text: 'Família', href: '#secao-12' },
-    { text: 'Devocional', href: '#secao-5' },
+    { text: 'Oração', href: '#hero' },
+    { text: 'Salmos', href: '#secao-8' },
+    { text: 'Promessas', href: '#secao-14' },
+    { text: 'Testemunhos', href: '#secao-18' },
   ],
   actions: [],
 };
@@ -11,19 +12,19 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Tópicos',
+      title: 'Temas',
       links: [
-        { text: 'Os 3 Pilares', href: '#secao-3' },
-        { text: 'Oração no Casamento', href: '#secao-5' },
-        { text: 'Perdão', href: '#secao-6' },
-        { text: 'Finanças', href: '#secao-13' },
+        { text: 'Oração Diária', href: '#hero' },
+        { text: 'Pai Nosso', href: '#secao-3' },
+        { text: 'Salmos para orar', href: '#secao-8' },
+        { text: 'Quando falta fé', href: '#secao-10' },
       ],
     },
     {
       title: 'Contato',
       links: [
-        { text: 'Fale Conosco', href: 'mailto:contato@creioemtesenhor.com' },
-        { text: 'Enviar sugestão', href: '#' },
+        { text: 'Fale conosco', href: 'mailto:contato@creioemtesenhor.com' },
+        { text: 'Enviar testemunho', href: '#' },
       ],
     },
     {
@@ -42,6 +43,6 @@ export const footerData = {
     { ariaLabel: 'Whatsapp', icon: 'tabler:brand-whatsapp', href: '#' },
   ],
   footNote: `
-    <span class="font-semibold">Creio em Te Senhor</span> · Reflexões bíblicas sobre relacionamento e família · <a class="text-primary hover:underline" href="https://creioemtesenhor.com">creioemtesenhor.com</a>
+    <span class="font-semibold">Creio em Te Senhor</span> · Devocional diário, oração e Palavra · <a class="text-primary hover:underline" href="https://creioemtesenhor.com">creioemtesenhor.com</a>
   `,
 };
