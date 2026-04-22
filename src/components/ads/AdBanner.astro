@@ -19,6 +19,9 @@ const { id, eager = false, class: className = '' } = Astro.props;
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 1rem 0;
+    padding: 0.25rem 0;
+  }
+  @media (min-width: 768px) {
+    .ad-display-banner { padding: 1rem 0; }
   }
 </style>

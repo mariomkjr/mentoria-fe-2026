@@ -81,7 +81,7 @@ const mobileDims = slot?.mobileDimensions || dims;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 2rem auto;
+    margin: 0.5rem auto;
     max-width: var(--slotW);
     min-height: calc(var(--slotH) + 1.25rem);
     background: rgb(245 240 230 / 0.5);
@@ -89,6 +89,9 @@ const mobileDims = slot?.mobileDimensions || dims;
     border-radius: 4px;
     padding: 0.5rem;
     box-sizing: content-box;
+  }
+  @media (min-width: 768px) {
+    .ad-display-slot { margin: 2rem auto; }
   }
   .ad-display-slot--empty {
     min-height: calc(var(--slotH) + 1.25rem);

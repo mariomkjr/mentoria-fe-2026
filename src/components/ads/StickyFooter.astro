@@ -25,9 +25,10 @@ const { slotId = 'sticky-footer-mobile' } = Astro.props;
     backdrop-filter: blur(6px);
     border-top: 1px solid rgb(201 162 75 / 0.3);
     padding: 0.25rem 0 0.5rem;
-    transform: translateY(0);
-    transition: transform 0.25s ease;
+    transform: translateY(110%);
+    transition: transform 0.3s ease;
   }
+  .ad-sticky-footer.is-visible { transform: translateY(0); }
   .ad-sticky-footer.is-closed { transform: translateY(110%); }
   .ad-sticky-footer__close {
     position: absolute; top: 0.25rem; right: 0.5rem;
@@ -55,10 +56,23 @@ const { slotId = 'sticky-footer-mobile' } = Astro.props;
   const el = document.querySelector('[data-ad-sticky-footer]');
   const btn = document.querySelector('[data-close-ad-sticky]');
   if (el && btn) {
-    if (sessionStorage.getItem('ad-sticky-footer-closed') === '1') {
-      el.classList.add('is-closed');
-    }
+    const closed = sessionStorage.getItem('ad-sticky-footer-closed') === '1';
+    if (closed) el.classList.add('is-closed');
+
+    const revealAfter = 400;
+    let revealed = false;
+    const onScroll = () => {
+      if (revealed || closed) return;
+      if (window.scrollY >= revealAfter) {
+        el.classList.add('is-visible');
+        revealed = true;
+        window.removeEventListener('scroll', onScroll);
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+
     btn.addEventListener('click', () => {
+      el.classList.remove('is-visible');
       el.classList.add('is-closed');
       sessionStorage.setItem('ad-sticky-footer-closed', '1');
     });
