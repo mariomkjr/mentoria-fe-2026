@@ -1,150 +1,184 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import NativeAdSlot from '~/components/NativeAdSlot.astro';
 
 const metadata = {
-  title: 'Mentoria Fé | Relacionamento Abençoado Segundo a Palavra',
+  title: 'Oração Diária — Creio em Te Senhor',
   ignoreTitleTemplate: true,
+  description: 'Devocional diário, meditações sobre oração e textos bíblicos que fortalecem sua fé no dia a dia.',
 };
 
-const author = 'Pr. Elias Martins';
+const author = 'Equipe Creio em Te Senhor';
 const publishDate = '21 de abril de 2026';
 const readingTime = '18 min de leitura';
 const videoId = 'TnjLGU-wLmU';
-const videoTitle = 'Mentoria Fé — A mensagem completa';
+const videoTitle = 'Oração Diária — A mensagem que abriu os olhos de milhares';
 
 const sections = [
-  { n: 1, title: 'O Fundamento Inabalável do Amor Bíblico', verse: { text: 'Todo aquele, pois, que escuta estas minhas palavras e as pratica, será comparado a um homem prudente que edificou a sua casa sobre a rocha.', ref: 'Mateus 7:24' }, body: [
-    'O amor verdadeiro não é apenas um sentimento — é uma decisão fundamentada na Palavra de Deus. Quando Jesus disse "Amai-vos uns aos outros como eu vos amei" (João 13:34), Ele não estava falando de uma emoção passageira, mas de um compromisso inabalável que transforma relacionamentos.',
-    'Muitos casais constroem suas casas sobre a areia das emoções. Quando as tempestades vêm — e elas sempre vêm — tudo desmorona. Mas aqueles que edificam sobre a rocha da Palavra permanecem firmes, mesmo quando os ventos sopram com força.',
+  { n: 1, title: 'Por Que Orar Se Deus Já Sabe de Tudo?', verse: { text: 'Clama a mim, e responder-te-ei, e anunciar-te-ei coisas grandes e firmes, que não sabes.', ref: 'Jeremias 33:3' }, body: [
+    'Essa é talvez a pergunta mais honesta que alguém já fez sobre oração. Se Deus é onisciente, se Ele conhece nossos pensamentos antes mesmo de formularmos palavras, qual o sentido de falar com Ele?',
+    'A resposta é surpreendente: a oração não existe para informar Deus sobre nossa vida. Ela existe para nos trazer à presença Dele. Quando oramos, não estamos alimentando Seu conhecimento — estamos alimentando nossa comunhão.',
+    'Um pai que ama seu filho não precisa que o filho relate cada conquista. Mesmo assim, quando o filho chega correndo para contar algo, o coração do pai se enche. A oração é esse correr para o Pai.',
   ]},
-  { n: 2, title: 'Por Que Seu Relacionamento Precisa de Propósito Divino', verse: { text: 'E os dois serão uma só carne. Assim, já não são mais dois, mas uma só carne.', ref: 'Marcos 10:8' }, body: [
-    'Deus criou o casamento com um propósito maior do que simplesmente fazer duas pessoas felizes. Ele projetou a união conjugal para refletir Seu amor pela Igreja, para criar um ambiente onde filhos possam crescer conhecendo a Deus, e para que dois se tornem um em missão.',
-    'Sem esse propósito maior, os relacionamentos se tornam centrados em si mesmos. Cada parceiro busca apenas sua própria satisfação, e quando ela não vem, a frustração toma conta. Mas quando um casal entende que existe algo maior — um chamado divino — as pequenas diferenças perdem importância diante da grandeza da missão.',
+  { n: 2, title: 'Os 5 Elementos de Toda Oração Cristã', body: [
+    'Quando Jesus ensinou Seus discípulos a orar, Ele não deu uma fórmula rígida — mas apontou cinco elementos essenciais que aparecem em praticamente toda oração bíblica autêntica.',
+    '<strong>1. Adoração</strong> — reconhecer quem Deus é. <strong>2. Confissão</strong> — trazer nossos pecados à luz. <strong>3. Gratidão</strong> — lembrar das bênçãos. <strong>4. Súplica</strong> — apresentar necessidades. <strong>5. Submissão</strong> — render nossa vontade à Dele.',
+    'Nenhuma oração precisa ter todos esses elementos toda vez. Mas quando sua vida de oração está desequilibrada — só pedindo, só reclamando, só agradecendo — algo importante fica faltando.',
   ]},
-  { n: 3, title: 'Os 3 Pilares de um Relacionamento Abençoado', body: [
-    'Todo relacionamento que prospera sob a bênção de Deus está fundamentado em três pilares essenciais:',
-    '<strong>1. Aliança</strong> — Não é um contrato que pode ser quebrado quando conveniente. É um pacto sagrado diante de Deus, selado por um compromisso que transcende as circunstâncias.',
-    '<strong>2. Comunicação</strong> — A Palavra nos ensina a falar a verdade em amor (Efésios 4:15). Isso significa honestidade sem crueldade, transparência sem manipulação.',
-    '<strong>3. Comunhão</strong> — Um casal que ora junto, estuda a Palavra junto e serve junto desenvolve uma intimidade que vai além do físico.',
-    'Quando um desses pilares está fraco, todo o relacionamento fica instável. A boa notícia é que, com Deus, qualquer pilar pode ser restaurado.',
+  { n: 3, title: 'Desvendando o Pai Nosso: A Oração Que Jesus Ensinou', verse: { text: 'Portanto, vós orareis assim: Pai nosso, que estás nos céus, santificado seja o teu nome.', ref: 'Mateus 6:9' }, body: [
+    'O Pai Nosso não é uma fórmula mágica para ser repetida sem pensar. É um modelo — um esqueleto de oração que Jesus deixou para que seus discípulos pudessem preencher com suas próprias palavras.',
+    '<strong>"Pai nosso que estás nos céus"</strong> — começamos reconhecendo a relação de filiação e a santidade divina. <strong>"Santificado seja o teu nome"</strong> — antes dos nossos desejos, o nome Dele vem em primeiro lugar.',
+    '<strong>"Venha o teu reino"</strong> — pedimos que Sua vontade prevaleça antes da nossa. <strong>"O pão nosso de cada dia"</strong> — dependência diária de Deus. <strong>"Perdoa-nos... assim como perdoamos"</strong> — perdão recebido vira perdão oferecido.',
   ]},
-  { n: 4, title: 'O Erro Fatal Que 87% dos Casais Cristãos Cometem', verse: { text: 'Vós, maridos, amai vossa mulher, como também Cristo amou a igreja e a si mesmo se entregou por ela.', ref: 'Efésios 5:25' }, body: [
-    'Aqui está uma verdade que poucos pregadores falam: muitos casais cristãos negligenciam a intimidade emocional achando que espiritualidade é suficiente.',
-    'Eles oram juntos, vão à igreja juntos, mas não conversam de verdade. Não compartilham seus medos, suas dúvidas, seus sonhos. Com o tempo, vivem como colegas de quarto piedosos, mas distantes.',
-    'Deus criou Adão e Eva para serem "uma só carne" — isso inclui união espiritual, emocional E física. Negligenciar qualquer uma dessas dimensões é viver abaixo do plano de Deus para o casamento.',
+  { n: 4, title: 'Oração no Secreto ou em Voz Alta: O Que é Melhor?', verse: { text: 'Tu, porém, quando orares, entra no teu aposento e, fechada a porta, orarás a teu Pai que vê o que está oculto.', ref: 'Mateus 6:6' }, body: [
+    'Jesus foi claro ao ensinar que a oração do secreto é o alicerce. É ali — longe dos olhos humanos — que Deus molda quem realmente somos. Se sua vida de oração depende do público, ela já está contaminada.',
+    'Mas isso não significa que toda oração precisa ser silenciosa. Há momentos em que orar em voz alta fortalece nossa própria fé — ouvimos com os próprios ouvidos aquilo que declaramos. Os salmistas gritavam, gemiam, cantavam.',
+    'A regra é simples: oração pública sem oração privada vira teatro. Oração privada sem oração pública fica estéril. As duas se alimentam.',
   ]},
-  { n: 5, title: 'Como a Oração Transforma Conflitos em Conexão', body: [
-    'Todo casal discute. A questão não é se vocês terão conflitos, mas como irão resolvê-los. E aqui está um segredo poderoso: é quase impossível continuar brigando com alguém enquanto você ora por ela.',
-    'Quando você leva seu cônjuge diante do trono de Deus, algo muda em você primeiro. Seu coração se amolece. Sua perspectiva se amplia. Você começa a ver seu parceiro como Deus o vê — uma pessoa imperfeita, sim, mas amada e em processo de transformação.',
-    'A oração não muda apenas as circunstâncias. Ela muda você. E quando você muda, seu relacionamento muda.',
+  { n: 5, title: 'Quando as Palavras Faltam: Orando Com Gemidos', verse: { text: 'E, da mesma maneira, também o Espírito ajuda as nossas fraquezas; porque não sabemos o que havemos de pedir como convém, mas o mesmo Espírito intercede por nós com gemidos inexprimíveis.', ref: 'Romanos 8:26' }, body: [
+    'Há momentos em que a dor é tão profunda que nenhuma frase organizada sai. Você quer orar, mas só consegue chorar. Esse, segundo Paulo, é o tipo de oração que o próprio Espírito Santo assume.',
+    'Deus entende seus gemidos. Ele decodifica lágrimas. Quando você não sabe o que pedir, o céu continua ouvindo. A ausência de palavras não é ausência de oração — muitas vezes é a oração mais verdadeira que existe.',
+    'Fique na presença Dele mesmo sem saber o que falar. Respire. Chore. Espere. O Espírito está orando em você, com gemidos que seus ouvidos não alcançam, mas que chegam perfeitos aos ouvidos do Pai.',
   ]},
-  { n: 6, title: 'O Poder do Perdão Que Liberta', verse: { text: 'Suportai-vos uns aos outros, perdoai-vos mutuamente, caso alguém tenha motivo de queixa contra outrem. Assim como o Senhor vos perdoou, assim também perdoai vós.', ref: 'Colossenses 3:13' }, body: [
-    'Pedro perguntou a Jesus quantas vezes deveria perdoar seu irmão. "Até sete vezes?" A resposta de Jesus foi revolucionária: "Não te digo até sete vezes, mas até setenta vezes sete" (Mateus 18:22).',
-    'No casamento, o perdão não é opcional — é o oxigênio do relacionamento. Sem ele, ressentimentos se acumulam como toxinas, envenenando cada interação.',
-    'Perdoar não significa fingir que a ofensa não aconteceu. Significa escolher não usar aquela dívida como arma. É liberar o outro do tribunal do seu coração e entregá-lo ao único Juiz justo.',
+  { n: 6, title: 'Orar Com a Bíblia Aberta: O Método Que Muda Tudo', body: [
+    'Um dos segredos melhor guardados sobre vida de oração poderosa está na integração com a Palavra. Ler a Bíblia e orar não são dois hábitos separados — são um mesmo movimento.',
+    'Método simples: abra um Salmo. Leia devagar. Pare a cada verso. Transforme-o em oração. "Senhor, Tu és meu pastor..." Pare. Diga a Ele o que significa ter Ele como seu pastor. Continue. "Nada me faltará..." Pare. Confesse se você tem acreditado nisso ou não.',
+    'Orar com a Bíblia impede que suas orações se resumam às suas próprias preocupações. A Palavra expande seu horizonte — você começa a orar por coisas que antes nem imaginava pedir.',
   ]},
-  { n: 7, title: 'Linguagens do Amor: O Que a Bíblia Já Sabia', body: [
-    'Antes de Gary Chapman popularizar as cinco linguagens do amor, a Bíblia já ensinava esse princípio: cada pessoa recebe e expressa amor de maneira diferente.',
-    'Quando Paulo instrui maridos a amarem suas esposas "como Cristo amou a igreja", ele descreve um amor que se adapta, que serve, que entende as necessidades do outro. Cristo não amou a Igreja de uma única forma — Ele ensinou, curou, consolou, confrontou, sacrificou-se.',
-    'Descobrir como seu cônjuge recebe amor é um ato de humildade. Significa sair do seu modo padrão e aprender uma nova "língua" para expressar o que você sente.',
+  { n: 7, title: 'O Lugar e a Hora: Existe Oração Melhor Que a Outra?', body: [
+    'A resposta bíblica curta é: não. Daniel orava três vezes ao dia. Davi pela manhã. Jesus, antes do amanhecer. Paulo exorta a "orar sem cessar". Não há uma hora sagrada única.',
+    'Mas existe uma hora melhor para VOCÊ — e descobrir isso é fundamental. Para alguns, o silêncio da madrugada. Para outros, o fim do dia quando a casa dorme. Para terceiros, intervalos ao longo do trabalho.',
+    'O importante é criar um ritmo. Nossa vida espiritual, como nossa vida física, precisa de ritmo. Refeições espirituais regulares. Deus não pede muito — pede consistência.',
   ]},
-  { n: 8, title: 'Intimidade Santa: Desfazendo Mitos Religiosos', verse: { text: 'Bebe a água da tua própria cisterna e das correntes do teu poço.', ref: 'Provérbios 5:15' }, body: [
-    'Por séculos, uma teologia distorcida ensinou que o prazer físico no casamento era algo tolerado, não celebrado. Mas isso não é o que as Escrituras ensinam.',
-    'O livro de Cantares de Salomão é uma celebração explícita da intimidade conjugal. A esposa descreve a beleza do corpo do seu amado. O marido responde com igual admiração.',
-    'A intimidade sexual dentro do casamento é um presente de Deus — não apenas para procriação, mas para conexão, prazer e expressão do amor mútuo.',
+  { n: 8, title: 'Os Salmos Que Você Precisa Orar em Cada Estado de Alma', verse: { text: 'Com a minha voz clamei ao Senhor, e ele me respondeu do seu santo monte.', ref: 'Salmo 3:4' }, body: [
+    'Os Salmos são o livro de orações da humanidade. Em seus 150 capítulos, você encontra oração para toda dor, toda alegria, todo medo. Martinho Lutero chamou o Saltério de "a pequena Bíblia".',
+    '<strong>Quando está ansioso:</strong> Salmo 23, 46, 91. <strong>Quando se sente abandonado:</strong> Salmo 22, 42, 88. <strong>Quando quer agradecer:</strong> Salmo 100, 103, 150. <strong>Quando pecou:</strong> Salmo 51, 32. <strong>Quando enfrenta inimigos:</strong> Salmo 3, 27, 35.',
+    'Não espere "inspiração" para orar. Abra o Salmo certo para o seu momento e ore as palavras que já foram pronunciadas por milhões antes de você.',
   ]},
-  { n: 9, title: 'Quando Seu Cônjuge Não Muda (E Você Está Cansado de Esperar)', body: [
-    'Uma das orações mais dolorosas é aquela que parece não ser respondida: "Senhor, muda meu cônjuge." Você já orou isso? Meses, talvez anos, esperando uma transformação que não vem.',
-    'Aqui está uma perspectiva diferente: e se Deus estiver usando seu cônjuge exatamente como ele é para transformar VOCÊ?',
-    'Isso não significa aceitar abuso ou negligência grave. Significa reconhecer que, muitas vezes, o refinamento do nosso caráter acontece através das pessoas mais próximas.',
+  { n: 9, title: 'Muitas Palavras Vãs: O Que Jesus Condenou na Oração', verse: { text: 'E, orando, não useis de vãs repetições, como os gentios, que pensam que pelo seu muito falar serão ouvidos.', ref: 'Mateus 6:7' }, body: [
+    'Jesus condenou a oração mecânica. Palavras bonitas que não vêm do coração. Mantras repetidos esperando que a quantidade compense a frieza. Ele foi direto: "Vosso Pai sabe do que tendes necessidade antes de vós pedirdes."',
+    'Isso não significa que orações longas sejam ruins — Jesus mesmo orou a noite toda em Getsêmani. Significa que Deus não responde por volume de palavras. Ele responde ao coração.',
+    'Uma oração sincera de 30 segundos pesa mais do que uma oração formal de trinta minutos. A questão é: você estava realmente ali? Ou só marcando o cartão de "orei hoje"?',
   ]},
-  { n: 10, title: 'O Papel do Homem Segundo o Coração de Deus', verse: { text: 'Maridos, amai vossa mulher, como também Cristo amou a igreja e a si mesmo se entregou por ela.', ref: 'Efésios 5:25' }, body: [
-    'Ser cabeça do lar não significa ser chefe. Jesus redefiniu liderança quando lavou os pés dos discípulos. O homem que lidera como Cristo lidera servindo.',
-    'Isso significa: tomar iniciativa na busca pela comunhão com Deus, assumir responsabilidade pelo clima emocional do lar, proteger sua família — física, emocional e espiritualmente, e amar sua esposa sacrificialmente.',
+  { n: 10, title: 'Quando a Fé Está em Crise: Orar Mesmo Sem Sentir', body: [
+    'Todo cristão enfrenta isso. Momentos — dias, semanas, às vezes meses — em que orar parece falar com o teto. Deus parece distante. A fé, fria. E você se pergunta: vale a pena continuar?',
+    'A resposta bíblica é: sim. E mais — esses são exatamente os momentos em que orar é mais importante. O salmista gritava "até quando, Senhor?" mesmo sem sentir. Jó orou do meio das cinzas. Jesus orou suando sangue.',
+    'Oração não é sentimento. Sentimento é bônus. Oração é ato de fé. Quando você continua orando sem sentir nada, está dizendo a Deus: "eu creio mesmo quando não sinto". Esse tipo de oração tem um perfume especial no céu.',
   ]},
-  { n: 11, title: 'O Chamado da Mulher Virtuosa Para Hoje', verse: { text: 'Enganosa é a graça, e vã, a formosura, mas a mulher que teme ao Senhor, essa será louvada.', ref: 'Provérbios 31:30' }, body: [
-    'Provérbios 31 não é uma lista de tarefas impossíveis. É um retrato de uma mulher que vive com propósito, sabedoria e generosidade.',
-    'Ela trabalha com diligência. Administra seu lar com competência. Fala com sabedoria. Seus filhos e seu marido a honram — não porque ela seja perfeita, mas porque ela teme ao Senhor.',
-    'A mulher virtuosa de hoje enfrenta desafios diferentes, mas o princípio é o mesmo: uma vida ancorada em Deus produz frutos que atravessam gerações.',
+  { n: 11, title: 'Oração Intercessória: O Ministério Mais Esquecido', verse: { text: 'Confessai as vossas culpas uns aos outros e orai uns pelos outros, para que sareis.', ref: 'Tiago 5:16' }, body: [
+    'Interceder é carregar outra pessoa nos braços até o trono de Deus. Não é "lembrar de alguém". É colocar o corpo (ou a alma) no lugar de outro diante do Pai.',
+    'A Bíblia é cheia de intercessores: Abraão intercedeu por Sodoma. Moisés, pelo povo rebelde. Jesus, por Pedro antes de ele cair. Paulo, por suas igrejas. Uma lista de pessoas cuja oração mudou o rumo de outras vidas.',
+    'Quem você tem carregado? Tenha uma lista. Poucos nomes. Ore por eles diariamente, com persistência. Um dia, quando a eternidade se abrir, você talvez descubra que aquela pessoa foi transformada exatamente porque alguém insistiu em orar por ela.',
   ]},
-  { n: 12, title: 'Criando Filhos em Meio ao Caos do Mundo', body: [
-    'Nunca foi tão desafiador criar filhos cristãos. A cultura ao redor empurra valores que se opõem radicalmente à Palavra. E, no entanto, Deus nos confiou essa missão.',
-    'Deuteronômio 6:6-7 é claro: as palavras de Deus devem estar no seu coração primeiro, e então você as ensina ao seu filho — andando, deitando, levantando, em cada circunstância cotidiana.',
-    'Seus filhos não precisam de pais perfeitos. Precisam de pais autênticos, que conhecem a graça e a estendem ao lar.',
+  { n: 12, title: 'Jejum e Oração: O Combustível Esquecido', body: [
+    'Em boa parte do cristianismo moderno, o jejum virou peça de museu. E, no entanto, Jesus disse "quando jejuardes" — não "se jejuardes". Ele pressupôs que seus discípulos jejuariam.',
+    'Jejum não é dieta espiritual. Não é forma de "dobrar Deus". É expressão física de uma oração. Quando você sente a fome, se lembra do que importa mais. O estômago vazio ensina a alma sobre dependência.',
+    'Comece pequeno. Pule uma refeição. Dedique esse tempo à oração. Ou, em situações mais urgentes, um dia inteiro. Deus honra o coração que se coloca diante Dele com fome — de comida e de resposta.',
   ]},
-  { n: 13, title: 'Finanças no Casamento: A Causa #1 de Brigas', body: [
-    'Pesquisas mostram: dinheiro é a maior fonte de conflito em casamentos — cristãos ou não. E a raiz quase sempre é espiritual.',
-    'A Bíblia fala mais sobre dinheiro do que sobre oração. Jesus sabia que a forma como administramos recursos revela o que está no centro do coração.',
-    'Transparência financeira é um ato espiritual. Dívidas, mordomia, ofertas, prioridades — tudo isso é território sagrado no casamento.',
+  { n: 13, title: 'Orando Com os Seus Filhos: Legado Que Atravessa Gerações', body: [
+    'Ensinar filhos a orar é o maior presente espiritual que um pai pode dar. Antes da doutrina, antes da memorização de versículos, antes do catecismo — simplesmente orar junto.',
+    'Comece cedo. Deixe-os ouvirem você orando. Ore em voz alta pelas crianças, sobre as crianças, com as crianças. Na hora de dormir. Antes da escola. Quando se machucam.',
+    'Não se preocupe em parecer teologicamente perfeito. Filhos aprendem oração não pelo conteúdo, mas pela autenticidade. Eles lembrarão por toda a vida de uma mãe que se ajoelhou para orar pelo seu dia escolar.',
   ]},
-  { n: 14, title: 'Quando o Passado Ameaça o Presente', body: [
-    'Todos nós carregamos bagagens. Traumas da infância, relacionamentos anteriores, feridas que nunca cicatrizaram direito. E essas feridas têm um jeito curioso de aparecer no casamento.',
-    'A boa notícia é que o evangelho alcança as raízes. Cristo não oferece apenas perdão — Ele oferece cura. E essa cura pode chegar até os lugares mais escondidos da nossa alma.',
-    'Terapia cristã, direção espiritual, grupos de apoio bíblicos — Deus usa meios variados para nos trazer inteireza.',
+  { n: 14, title: 'As Promessas Bíblicas Sobre Oração Que Você Precisa Conhecer', verse: { text: 'E tudo quanto pedirdes em oração, crendo, o recebereis.', ref: 'Mateus 21:22' }, body: [
+    'A Bíblia transborda de promessas sobre oração. Conhecê-las fortalece sua fé quando os dias ficam difíceis.',
+    '<strong>Mateus 7:7</strong> — Pedi e dar-se-vos-á. <strong>Lucas 18:1</strong> — Importunar sem desanimar. <strong>João 14:13</strong> — O que pedirdes em meu nome, isso farei. <strong>Tiago 1:5</strong> — Se falta sabedoria, peça. <strong>1 João 5:14</strong> — Se pedirmos segundo Sua vontade, ele nos ouve.',
+    'Essas promessas não são cheques em branco para desejos egoístas. Estão condicionadas ao caráter de Deus e à Sua vontade. Mas para o coração que busca conhecer Sua vontade — elas são o combustível mais poderoso que existe.',
   ]},
-  { n: 15, title: 'Amizade no Casamento: O Segredo dos 50 Anos Juntos', body: [
-    'Pergunte a um casal que está junto há 50 anos qual é o segredo. Raramente será "nós nos apaixonamos todos os dias". A resposta mais comum: "nós nos tornamos melhores amigos".',
-    'A paixão vai e volta. A atração física muda com os anos. Mas a amizade — aquela que compartilha piadas internas, sustenta na dor, celebra nas vitórias — essa endurece com o tempo.',
-    'Cultive amizade. Ria junto. Crie rituais simples. Tenha curiosidade contínua sobre quem seu cônjuge está se tornando.',
+  { n: 15, title: 'Oração Antes de Dormir: Encerrando o Dia Aos Pés Dele', body: [
+    'A forma como você encerra o dia molda como você começa o próximo. Ir para a cama sem orar é deixar o dia passar sem colocar uma pedra final de gratidão e entrega.',
+    'Três passos simples antes de dormir: <strong>(1)</strong> agradeça por três coisas específicas do dia que passou. <strong>(2)</strong> confesse algo que você sabe que não agradou a Deus. <strong>(3)</strong> entregue o próximo dia nas mãos do Pai antes mesmo dele chegar.',
+    'Dormir depois dessa oração é diferente. O corpo relaxa. A alma aquieta. Você adormece sabendo que o universo não depende de você se preocupar mais.',
   ]},
-  { n: 16, title: 'Proteções Contra a Tentação', body: [
-    'Nenhum casamento é imune. Todos estamos sujeitos a tentações — e o inimigo conhece os pontos fracos de cada um.',
-    'Proteções espirituais: oração diária juntos, estudo bíblico, comunhão com outros casais cristãos maduros.',
-    'Proteções estruturais: limites claros em amizades com o sexo oposto, transparência digital, evitar situações de risco. Não são regras legalistas — são abrigos em tempo de tempestade.',
+  { n: 16, title: 'Orando Pela Vontade de Deus, Não Pela Sua', verse: { text: 'Pai, se queres, passa de mim este cálice; todavia, não se faça a minha vontade, mas a tua.', ref: 'Lucas 22:42' }, body: [
+    'A maior oração já registrada na história terminou com "seja feita a tua vontade". Se Jesus submeteu Sua vontade em Getsêmani, que dizer de nós?',
+    'Isso não significa que não podemos pedir. Podemos — e devemos — apresentar tudo a Deus. Mas sempre com uma cláusula invisível: "se for Sua vontade". Porque o que parece bom para nós pode ser justamente o que nos destruiria.',
+    'Essa entrega não é passiva. É a mais ativa de todas as submissões. Significa querer o melhor de Deus mais do que querer nosso melhor. E, curiosamente, quando alinhamos nossa vontade com a Dele, descobrimos que era ali que a alegria verdadeira estava o tempo todo.',
   ]},
-  { n: 17, title: 'Quando a Igreja Machuca Seu Casamento', body: [
-    'Poucas coisas doem mais do que ser ferido no lugar onde você esperava cura. Legalismos que culpam, conselhos pastorais equivocados, comunidades que preferem julgar a acompanhar.',
-    'Se isso aconteceu com você, saiba: Deus não é igual à igreja imperfeita. A Palavra permanece verdadeira mesmo quando seus representantes falham.',
-    'Busque uma comunidade saudável. Existem. Cure-se. Não abandone a fé por causa de feridos que também precisam de graça.',
+  { n: 17, title: 'Quando Deus Parece Não Responder: Aprendendo a Esperar', body: [
+    'Há orações que parecem voltar pelo correio marcadas "sem resposta". Você orou por saúde e ela piorou. Orou por um relacionamento e ele ruiu. Orou por conversão e a pessoa se afastou mais.',
+    'A Bíblia é honesta sobre isso. Jó gritou com Deus por 37 capítulos antes de uma resposta. Davi escreveu "até quando?" em pelo menos cinco Salmos. Paulo pediu três vezes a retirada do espinho e ouviu "basta-te a minha graça".',
+    'Silêncio de Deus não é ausência de Deus. Às vezes é Sua forma de nos formar. Continue orando. Continue esperando. A resposta pode estar no próximo capítulo da sua vida — ou pode ser a própria Sua presença, que você só descobre quando aprende a esperar.',
   ]},
-  { n: 18, title: 'Reconstruindo Depois da Traição', body: [
-    'Traição é um tipo específico de morte. Morre a confiança, morre a inocência da relação, morre a narrativa que vocês construíram juntos.',
-    'Reconstruir não é voltar ao que era. É construir algo novo, sobre fundações diferentes. Com arrependimento genuíno, transparência radical, tempo de cura e, frequentemente, acompanhamento profissional.',
-    'É possível? Sim. Muitos casamentos que sobreviveram à traição dizem ser mais profundos hoje do que antes da crise. Deus ressuscita — inclusive casamentos.',
+  { n: 18, title: 'Testemunhos: Orações Que Mudaram Vidas Reais', body: [
+    'Uma mãe orou 11 anos pela conversão do filho drogado. No último ano de sua vida, enquanto ela estava no hospital, o filho entrou no quarto de cabeça baixa. "Mãe, eu aceitei Jesus." Ela morreu em paz três semanas depois.',
+    'Um homem orava todo dia, no mesmo banco da igreja, pela salvação da esposa. Por 22 anos. Um dia, numa pregação qualquer, a esposa se levantou sozinha. "Vou me entregar ao Senhor." Ele chorou por horas.',
+    'Essas histórias não são exceção. São o padrão dos céus. A oração que persevera é sempre ouvida. Nem sempre no nosso tempo. Nem sempre da forma que imaginamos. Mas sempre — sempre — ouvida.',
   ]},
-  { n: 19, title: 'Deixando um Legado Para as Próximas Gerações', body: [
-    'Seu casamento não é apenas seu. Ele forma a visão que seus filhos terão do amor. É a tela onde eles aprenderão como Deus se relaciona com Sua Igreja.',
-    'Que legado você está escrevendo? Não nas palavras que prega, mas nos gestos cotidianos que testemunham.',
-    'Cada casal cristão tem o poder de interromper ciclos destrutivos e iniciar novas heranças — de fé, de amor, de perseverança.',
+  { n: 19, title: 'Criando um Altar em Casa: O Espaço Físico da Oração', body: [
+    'Você não precisa de um templo para orar. Mas ter um espaço reservado — por menor que seja — ajuda. Um cantinho. Uma cadeira. Um tapete.',
+    'Coisas simples: uma Bíblia aberta. Um caderno para anotar as orações respondidas. Talvez uma vela. O importante é que, ao entrar ali, seu corpo já saiba: é hora de falar com Deus.',
+    'Com o tempo, aquele lugar começa a ser lembrado como terra santa do seu dia. Você sentará naquele cantinho com uma gratidão especial. E seus filhos, vendo, aprenderão que Deus é real — porque tem um lugar na casa reservado para Ele.',
   ]},
-  { n: 20, title: 'O Próximo Passo Para Seu Relacionamento', body: [
-    'Conhecimento sem aplicação é orgulho. Ler este artigo sem agir é apenas sentir-se virtuoso por um momento.',
-    'Então, qual será seu próximo passo? Uma conversa adiada? Um pedido de perdão pendente? Um compromisso de oração junto? Uma noite marcada para reconectar?',
-    'Escolha algo hoje. Pequeno. Concreto. Faça antes de dormir. Porque o caminho de mil quilômetros começa sempre com um passo de fé.',
+  { n: 20, title: 'Começando Hoje: O Primeiro Passo de Uma Nova Vida de Oração', body: [
+    'Ler sobre oração sem orar é como ler sobre água sem beber. Não adianta.',
+    'Seu próximo passo precisa ser concreto. Não amanhã — hoje. Escolha uma hora. Escolha um lugar. Escolha um tempo realista — 5 minutos, se é isso que você consegue. Comece.',
+    'Não tente orar como o pastor. Não tente orar como o livro. Apenas fale com Deus, como falaria com o pai mais bondoso que existe. Porque é exatamente o que Ele é. E Ele está esperando por você — ainda hoje.',
   ]},
 ];
 
-// Grupos de seções entre slots de anúncio
-const block1 = sections.slice(0, 2);   // 1-2
-const block2 = sections.slice(2, 3);   // 3
-const block3 = sections.slice(3, 5);   // 4-5
-const block4 = sections.slice(5, 7);   // 6-7
-const block5 = sections.slice(7, 9);   // 8-9
-const block6 = sections.slice(9, 11);  // 10-11
-const block7 = sections.slice(11, 14); // 12-13-14
-const block8 = sections.slice(14, 16); // 15-16
-const block9 = sections.slice(16, 20); // 17-18-19-20
+// Cards para os 10 slots de anúncio nativo (variados)
+const adCards1 = [
+  { category: 'TESTEMUNHO', title: 'Mulher orou 11 anos e o que aconteceu emocionou a igreja inteira', snippet: 'Ela quase desistiu, mas insistiu na madrugada. O desfecho deixou até pastor sem palavras.', source: 'testemunhos-de-fe.com', rating: '4.9', readTime: '14 min', gradient: 'from-[#7A1F3A] to-[#5C1729]' },
+  { category: 'ORAÇÃO', title: '3 orações de madrugada que estão transformando vidas no Brasil', snippet: 'O método simples que uma missionária compartilhou e já viralizou nos grupos cristãos.', source: 'oracao-viva.com.br', rating: '4.8', readTime: '9 min', gradient: 'from-[#1E3A8A] to-[#3B82F6]' },
+  { category: 'SALMOS', title: '7 Salmos que você precisa orar em toda noite difícil', snippet: 'Lista preparada por teóloga cristã com versículos comentados para dormir em paz.', source: 'devocional-diario.net', rating: '4.9', readTime: '11 min', gradient: 'from-[#064E3B]  to-[#10B981]' },
+  { category: 'CASAMENTO', title: 'Casal revela o hábito de oração que reacendeu o casamento em 30 dias', snippet: 'Depois de 12 anos juntos, encontraram no Pai Nosso o que nenhuma terapia resolveu.', source: 'casal-abencoado.com.br', rating: '4.7', readTime: '16 min', gradient: 'from-[#831843] to-[#EC4899]' },
+];
+
+const adCards2 = [
+  { category: 'JEJUM', title: 'Como fazer seu primeiro jejum bíblico (passo a passo seguro)', snippet: 'Nutricionista cristã explica o método e os benefícios espirituais de jejuar como Ester.', source: 'vida-no-espirito.com', rating: '4.8', readTime: '13 min', gradient: 'from-[#7C2D12] to-[#EA580C]' },
+  { category: 'FINANÇAS', title: 'Família sai de 80 mil em dívidas depois de aplicar este princípio de Provérbios', snippet: 'Educador financeiro cristão ensina o método do envelope aplicado ao dízimo e oferta.', source: 'financas-crista.com.br', rating: '4.9', readTime: '22 min', gradient: 'from-[#4C1D95] to-[#A855F7]' },
+  { category: 'FAMÍLIA', title: 'O que fazer quando o filho se afasta de Deus (guia completo)', snippet: 'Carta aberta de uma mãe que viveu esse inferno — e o que deu certo quando tudo falhou.', source: 'familia-na-fe.com', rating: '4.8', readTime: '15 min', gradient: 'from-[#064E3B] to-[#10B981]' },
+  { category: 'SAÚDE', title: 'A receita de chá bíblico que está curando insônia e ansiedade', snippet: 'Inspirada na tradição dos monges, essa combinação de ervas tem causado espanto em médicos.', source: 'saude-biblica.net', rating: '4.6', readTime: '8 min', gradient: 'from-[#831843] to-[#DB2777]' },
+];
+
+const adSingleHero1 = [{ category: 'HISTÓRIA REAL', title: 'Mulher relata como oração diária na madrugada mudou sua vida financeira em 90 dias', snippet: 'Endividada, desempregada e sem esperança, ela decidiu experimentar um método de oração descrito em Mateus 6 — e começou a ver mudanças que a própria pastora não conseguiu explicar. Em pouco mais de três meses, sua realidade foi completamente transformada.', source: 'testemunhos-de-fe.com.br', rating: '4.8', readTime: '12 min', gradient: 'from-[#7A1F3A] via-[#9A3A54] to-[#5C1729]' }];
+
+const adSingleHero2 = [{ category: 'ORAÇÃO', title: 'Pastor revela oração de 2 minutos que está desbloqueando bênçãos em casais cristãos', snippet: 'Baseada em um princípio esquecido do livro de Colossenses, essa oração simples tem deixado líderes impressionados. Mais de 47 mil casais já testaram e os relatos estão impressionantes.', source: 'portaldopastor.net', rating: '4.9', readTime: '9 min', gradient: 'from-[#4C1D95] via-[#7A1F3A] to-[#A855F7]' }];
+
+const adInline1 = [{ category: 'PROMESSAS', title: 'Estas 12 promessas bíblicas sobre oração quase foram perdidas na tradução', snippet: 'Teólogo mostra o que dizem os manuscritos originais em grego e hebraico — a diferença muda completamente o sentido de alguns versículos famosos sobre pedir e receber.', source: 'palavra-viva.com.br', rating: '4.8', readTime: '18 min', gradient: 'from-[#7A1F3A] to-[#C9A24B]' }];
+
+const adInline2 = [{ category: 'DEVOCIONAL', title: 'O que este monge brasileiro descobriu sobre Pai Nosso está viralizando', snippet: 'Ele estudou a oração por 14 anos em arquivos antigos — e o que encontrou está deixando cristãos de várias denominações maravilhados.', source: 'monastério-virtual.com', rating: '4.7', readTime: '21 min', gradient: 'from-[#064E3B] to-[#7A1F3A]' }];
+
+const adFinal = [
+  { category: 'VOCAÇÃO', title: 'Como descobrir o chamado de Deus para sua vida (teste bíblico grátis)', snippet: 'Pastor desenvolveu um teste inspirado em princípios bíblicos que milhões já fizeram — descubra em 5 minutos.', source: 'vocacao-crista.com', rating: '4.9', readTime: '5 min', gradient: 'from-[#1E40AF] to-[#7A1F3A]' },
+  { category: 'SALMO', title: 'O Salmo 91 orado de joelhos: o que aconteceu com esta família é inexplicável', snippet: 'Por 40 dias seguidos, eles oraram juntos o Salmo 91 às 6 da manhã. O relato está rodando em todas as igrejas.', source: 'milagres-hoje.com', rating: '4.8', readTime: '13 min', gradient: 'from-[#7A1F3A] to-[#DDB865]' },
+  { category: 'SAÚDE', title: 'Médico cristão explica o que a oração faz no cérebro (estudo comprova)', snippet: 'Pesquisa publicada numa revista médica mostrou alterações mensuráveis em áreas do cérebro de pessoas que oram diariamente.', source: 'ciencia-e-fe.net', rating: '4.9', readTime: '17 min', gradient: 'from-[#064E3B] to-[#10B981]' },
+  { category: 'ORAÇÃO', title: 'Mãe ensinou o filho de 5 anos a orar assim — e a transformação surpreendeu os pais', snippet: 'Com um truque simples que ela aprendeu com a avó, a criança passou a orar todas as noites — e os pais começaram a notar mudanças.', source: 'pais-que-oram.com', rating: '4.7', readTime: '10 min', gradient: 'from-[#831843] to-[#EC4899]' },
+];
+
+const block1 = sections.slice(0, 2);
+const block2 = sections.slice(2, 3);
+const block3 = sections.slice(3, 5);
+const block4 = sections.slice(5, 7);
+const block5 = sections.slice(7, 9);
+const block6 = sections.slice(9, 11);
+const block7 = sections.slice(11, 14);
+const block8 = sections.slice(14, 16);
+const block9 = sections.slice(16, 20);
 ---
 
 <Layout metadata={metadata}>
-  <article class="relative mx-auto max-w-[1140px] px-4 sm:px-6 lg:px-8 pt-10 pb-16">
+  <article class="relative mx-auto max-w-[1140px] px-4 sm:px-6 lg:px-8 pt-8 md:pt-12 pb-16">
     <!-- Kicker -->
     <div class="text-center mb-4">
-      <span class="inline-block px-3 py-1 bg-primary/10 text-primary font-semibold text-xs uppercase tracking-widest rounded-full">Relacionamento Cristão</span>
+      <span class="inline-block px-3 py-1 bg-primary/10 text-primary font-semibold text-[11px] md:text-xs uppercase tracking-widest rounded-full">Devocional · Oração</span>
     </div>
 
     <!-- Hero -->
     <header class="max-w-4xl mx-auto text-center mb-8">
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-page mb-6">
-        Um relacionamento <span class="text-accent">abençoado</span> segundo a Palavra de Deus
+      <h1 class="font-heading text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-page mb-5 md:mb-6">
+        <span class="text-accent">Oração</span> <span class="hidden sm:inline">Diária: </span><span class="sm:hidden">Diária</span><br class="sm:hidden"/>
+        <span class="hidden sm:inline">O hábito silencioso que sustenta tudo o mais</span>
+        <span class="sm:hidden block text-[1.5rem] mt-2">O hábito que sustenta tudo</span>
       </h1>
-      <p class="text-lg md:text-xl text-muted leading-relaxed max-w-3xl mx-auto">
-        Os <strong>20 princípios bíblicos</strong> que estão transformando casamentos cristãos — ancorados nas Escrituras, em linguagem do nosso tempo, com aplicação imediata.
+      <p class="text-base md:text-lg lg:text-xl text-muted leading-relaxed max-w-3xl mx-auto">
+        Um guia devocional completo sobre oração — desde os <strong>fundamentos bíblicos</strong> até o método prático que você pode começar a praticar <strong>ainda hoje</strong>.
       </p>
 
-      <div class="mt-8 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-muted">
+      <div class="mt-6 md:mt-8 flex flex-wrap items-center justify-center gap-x-3 md:gap-x-4 gap-y-2 text-xs md:text-sm text-muted">
         <div class="flex items-center gap-2">
-          <span class="w-8 h-8 rounded-full bg-primary/15 text-primary font-bold flex items-center justify-center">EM</span>
+          <span class="w-8 h-8 rounded-full bg-primary/15 text-primary font-bold flex items-center justify-center text-xs">✦</span>
           <span>Por <strong class="text-page">{author}</strong></span>
         </div>
         <span class="text-muted/50">·</span>
@@ -154,8 +188,8 @@ const block9 = sections.slice(16, 20); // 17-18-19-20
       </div>
     </header>
 
-    <!-- ===== VÍDEO YOUTUBE (façade lazy, controls=0) ===== -->
-    <figure class="max-w-3xl mx-auto my-10">
+    <!-- VÍDEO YOUTUBE -->
+    <figure class="max-w-3xl mx-auto my-8 md:my-10">
       <div class="video-wrapper relative rounded-xl overflow-hidden shadow-xl border border-primary/10" style="aspect-ratio: 16/9;">
         <button
           type="button"
@@ -170,28 +204,30 @@ const block9 = sections.slice(16, 20); // 17-18-19-20
             loading="lazy"
             decoding="async"
           />
-          <span class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></span>
+          <span class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent"></span>
           <span class="absolute inset-0 flex items-center justify-center">
-            <span class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white/95 shadow-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-              <svg viewBox="0 0 24 24" class="w-10 h-10 md:w-12 md:h-12 ml-1 fill-primary"><path d="M8 5v14l11-7z"/></svg>
+            <span class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full bg-white/95 shadow-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+              <svg viewBox="0 0 24 24" class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 ml-1 fill-primary"><path d="M8 5v14l11-7z"/></svg>
             </span>
           </span>
-          <span class="absolute bottom-4 left-4 right-4 text-white text-sm md:text-base font-semibold drop-shadow-lg text-left">{videoTitle}</span>
+          <span class="absolute bottom-3 md:bottom-4 left-3 md:left-4 right-3 md:right-4 text-white text-xs md:text-sm lg:text-base font-semibold drop-shadow-lg text-left">{videoTitle}</span>
         </button>
       </div>
-      <figcaption class="text-center text-sm text-muted mt-3 italic">Assista a mensagem que inspirou este artigo</figcaption>
+      <figcaption class="text-center text-xs md:text-sm text-muted mt-3 italic">Assista a mensagem que inspirou este devocional</figcaption>
     </figure>
 
-    <!-- ===== AD SLOT #1 · Grande — 6 matérias recomendadas (abaixo do vídeo) ===== -->
-    <aside class="my-10" aria-label="Conteúdo patrocinado">
-      <a href="#" rel="sponsored nofollow" class="block transition-opacity hover:opacity-95">
-        <img src="/banners/native-recommended-6cards.svg" alt="Você também vai gostar — conteúdo patrocinado" width="1140" height="780" loading="lazy" decoding="async" class="w-full h-auto rounded-xl shadow-md" />
-      </a>
-    </aside>
+    <!-- AD #1 · Grid 4 cards abaixo do vídeo -->
+    <NativeAdSlot
+      heading="Você também vai gostar"
+      sublabel="Histórias e reflexões que os leitores estão devorando agora"
+      cards={adCards1}
+      variant="grid"
+      widgetId="1975709"
+    />
 
-    <!-- Lead paragraph -->
+    <!-- Lead + Bloco 1 (seções 1-2) -->
     <div class="max-w-3xl mx-auto prose prose-lg prose-article">
-      <p class="lead-paragraph">Este não é mais um artigo de autoajuda com verniz religioso. É um guia bíblico honesto sobre o que faz um casamento cristão prosperar — e o que silenciosamente o destrói. Se você chegou até aqui, algo no seu coração está buscando mais. Continue lendo.</p>
+      <p class="lead-paragraph">A oração é o hábito mais transformador da vida cristã — e o mais negligenciado. Não por falta de vontade. Por falta de saber como. Este guia devocional foi escrito para quem quer reaprender, do zero, o que significa conversar com Deus todos os dias.</p>
 
       {block1.map(s => (
         <section class="article-section" id={`secao-${s.n}`}>
@@ -202,12 +238,8 @@ const block9 = sections.slice(16, 20); // 17-18-19-20
       ))}
     </div>
 
-    <!-- ===== AD SLOT #2 · Native inline horizontal ===== -->
-    <aside class="my-10 max-w-3xl mx-auto" aria-label="Matéria patrocinada">
-      <a href="#" rel="sponsored nofollow" class="block transition-opacity hover:opacity-95">
-        <img src="/banners/native-inline-horizontal.svg" alt="Matéria patrocinada" width="820" height="240" loading="lazy" decoding="async" class="w-full h-auto rounded-xl shadow-md" />
-      </a>
-    </aside>
+    <!-- AD #2 · Single hero -->
+    <NativeAdSlot cards={adSingleHero1} variant="single-hero" />
 
     <div class="max-w-3xl mx-auto prose prose-lg prose-article">
       {block2.map(s => (
@@ -219,12 +251,8 @@ const block9 = sections.slice(16, 20); // 17-18-19-20
       ))}
     </div>
 
-    <!-- ===== AD SLOT #3 · Display billboard ===== -->
-    <aside class="my-10 flex justify-center" aria-label="Publicidade">
-      <a href="#" rel="sponsored nofollow" class="block w-full max-w-[970px] transition-opacity hover:opacity-95">
-        <img src="/banners/display-leaderboard-large.svg" alt="Publicidade — Display 970x250" width="970" height="250" loading="lazy" decoding="async" class="w-full h-auto rounded-xl" />
-      </a>
-    </aside>
+    <!-- AD #3 · Inline horizontal -->
+    <NativeAdSlot cards={adInline1} variant="inline-horizontal" />
 
     <div class="max-w-3xl mx-auto prose prose-lg prose-article">
       {block3.map(s => (
@@ -236,12 +264,14 @@ const block9 = sections.slice(16, 20); // 17-18-19-20
       ))}
     </div>
 
-    <!-- ===== AD SLOT #4 · Native 3 cards ===== -->
-    <aside class="my-10 max-w-3xl mx-auto" aria-label="Matérias relacionadas">
-      <a href="#" rel="sponsored nofollow" class="block transition-opacity hover:opacity-95">
-        <img src="/banners/native-3cards-row.svg" alt="Matérias relacionadas patrocinadas" width="820" height="400" loading="lazy" decoding="async" class="w-full h-auto rounded-xl shadow-md" />
-      </a>
-    </aside>
+    <!-- AD #4 · Grid 4 cards -->
+    <NativeAdSlot
+      heading="Matérias que estão bombando agora"
+      sublabel="Os artigos mais comentados da semana em vida cristã"
+      cards={adCards2}
+      variant="grid"
+      widgetId="1887212"
+    />
 
     <div class="max-w-3xl mx-auto prose prose-lg prose-article">
       {block4.map(s => (
@@ -253,12 +283,8 @@ const block9 = sections.slice(16, 20); // 17-18-19-20
       ))}
     </div>
 
-    <!-- ===== AD SLOT #5 · Native single big ===== -->
-    <aside class="my-10 max-w-3xl mx-auto" aria-label="Matéria patrocinada em destaque">
-      <a href="#" rel="sponsored nofollow" class="block transition-opacity hover:opacity-95">
-        <img src="/banners/native-single-big.svg" alt="Matéria patrocinada em destaque" width="820" height="420" loading="lazy" decoding="async" class="w-full h-auto rounded-xl shadow-md" />
-      </a>
-    </aside>
+    <!-- AD #5 · Single hero -->
+    <NativeAdSlot cards={adSingleHero2} variant="single-hero" />
 
     <div class="max-w-3xl mx-auto prose prose-lg prose-article">
       {block5.map(s => (
@@ -270,12 +296,8 @@ const block9 = sections.slice(16, 20); // 17-18-19-20
       ))}
     </div>
 
-    <!-- ===== AD SLOT #6 · Native inline horizontal ===== -->
-    <aside class="my-10 max-w-3xl mx-auto" aria-label="Matéria patrocinada">
-      <a href="#" rel="sponsored nofollow" class="block transition-opacity hover:opacity-95">
-        <img src="/banners/native-inline-horizontal.svg" alt="Matéria patrocinada" width="820" height="240" loading="lazy" decoding="async" class="w-full h-auto rounded-xl shadow-md" />
-      </a>
-    </aside>
+    <!-- AD #6 · Inline horizontal -->
+    <NativeAdSlot cards={adInline2} variant="inline-horizontal" />
 
     <div class="max-w-3xl mx-auto prose prose-lg prose-article">
       {block6.map(s => (
@@ -287,12 +309,14 @@ const block9 = sections.slice(16, 20); // 17-18-19-20
       ))}
     </div>
 
-    <!-- ===== AD SLOT #7 · Display billboard ===== -->
-    <aside class="my-10 flex justify-center" aria-label="Publicidade">
-      <a href="#" rel="sponsored nofollow" class="block w-full max-w-[970px] transition-opacity hover:opacity-95">
-        <img src="/banners/display-leaderboard-large.svg" alt="Publicidade — Display 970x250" width="970" height="250" loading="lazy" decoding="async" class="w-full h-auto rounded-xl" />
-      </a>
-    </aside>
+    <!-- AD #7 · Grid 4 cards -->
+    <NativeAdSlot
+      heading="Testemunhos que estão tocando corações"
+      sublabel="Histórias reais de pessoas comuns que tiveram vidas transformadas pela fé"
+      cards={adCards1}
+      variant="grid"
+      widgetId="1888111"
+    />
 
     <div class="max-w-3xl mx-auto prose prose-lg prose-article">
       {block7.map(s => (
@@ -304,12 +328,8 @@ const block9 = sections.slice(16, 20); // 17-18-19-20
       ))}
     </div>
 
-    <!-- ===== AD SLOT #8 · Native single big ===== -->
-    <aside class="my-10 max-w-3xl mx-auto" aria-label="Matéria patrocinada em destaque">
-      <a href="#" rel="sponsored nofollow" class="block transition-opacity hover:opacity-95">
-        <img src="/banners/native-single-big.svg" alt="Matéria patrocinada em destaque" width="820" height="420" loading="lazy" decoding="async" class="w-full h-auto rounded-xl shadow-md" />
-      </a>
-    </aside>
+    <!-- AD #8 · Single hero -->
+    <NativeAdSlot cards={adSingleHero1} variant="single-hero" />
 
     <div class="max-w-3xl mx-auto prose prose-lg prose-article">
       {block8.map(s => (
@@ -321,12 +341,8 @@ const block9 = sections.slice(16, 20); // 17-18-19-20
       ))}
     </div>
 
-    <!-- ===== AD SLOT #9 · Native 3 cards ===== -->
-    <aside class="my-10 max-w-3xl mx-auto" aria-label="Matérias relacionadas">
-      <a href="#" rel="sponsored nofollow" class="block transition-opacity hover:opacity-95">
-        <img src="/banners/native-3cards-row.svg" alt="Matérias relacionadas patrocinadas" width="820" height="400" loading="lazy" decoding="async" class="w-full h-auto rounded-xl shadow-md" />
-      </a>
-    </aside>
+    <!-- AD #9 · Inline horizontal -->
+    <NativeAdSlot cards={adInline1} variant="inline-horizontal" />
 
     <div class="max-w-3xl mx-auto prose prose-lg prose-article">
       {block9.map(s => (
@@ -338,31 +354,34 @@ const block9 = sections.slice(16, 20); // 17-18-19-20
       ))}
     </div>
 
-    <!-- ===== AD SLOT #10 · Final — 6 matérias recomendadas ===== -->
-    <aside class="my-12" aria-label="Conteúdo patrocinado">
-      <a href="#" rel="sponsored nofollow" class="block transition-opacity hover:opacity-95">
-        <img src="/banners/native-recommended-6cards.svg" alt="Você também vai gostar — conteúdo patrocinado" width="1140" height="780" loading="lazy" decoding="async" class="w-full h-auto rounded-xl shadow-md" />
-      </a>
-    </aside>
+    <!-- AD #10 · Grid final -->
+    <NativeAdSlot
+      heading="Para continuar sua jornada"
+      sublabel="Selecionamos mais 4 leituras que aprofundam o que você acabou de ler"
+      cards={adFinal}
+      variant="grid"
+      widgetId="1975709"
+    />
 
     <!-- Tabela de aprofundamento -->
-    <div class="max-w-3xl mx-auto mt-10">
-      <div class="p-8 rounded-2xl bg-primary/5 border border-primary/15">
-        <h3 class="font-heading text-2xl md:text-3xl font-bold mb-4 text-page">Para se aprofundar</h3>
-        <p class="text-muted mb-6">Textos bíblicos referenciados neste artigo, organizados para seu estudo devocional:</p>
+    <div class="max-w-3xl mx-auto mt-10 md:mt-14">
+      <div class="p-6 md:p-8 rounded-2xl bg-primary/5 border border-primary/15">
+        <h3 class="font-heading text-2xl md:text-3xl font-bold mb-3 md:mb-4 text-page">Para se aprofundar</h3>
+        <p class="text-muted mb-6 text-sm md:text-base">Textos bíblicos sobre oração organizados para seu estudo devocional — uma referência por dia durante uma semana.</p>
         <div class="grid sm:grid-cols-2 gap-3">
-          <div class="flex items-start gap-3 p-3 bg-white/40 rounded-lg"><span class="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">1</span><span class="text-sm">Mateus 7:24-27 — A casa sobre a rocha</span></div>
-          <div class="flex items-start gap-3 p-3 bg-white/40 rounded-lg"><span class="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span><span class="text-sm">Efésios 5:22-33 — O casamento como figura de Cristo</span></div>
-          <div class="flex items-start gap-3 p-3 bg-white/40 rounded-lg"><span class="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">3</span><span class="text-sm">Provérbios 31:10-31 — A mulher virtuosa</span></div>
-          <div class="flex items-start gap-3 p-3 bg-white/40 rounded-lg"><span class="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">4</span><span class="text-sm">1 Coríntios 13 — O hino do amor</span></div>
-          <div class="flex items-start gap-3 p-3 bg-white/40 rounded-lg"><span class="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">5</span><span class="text-sm">Colossenses 3:12-17 — A nova vida em Cristo</span></div>
-          <div class="flex items-start gap-3 p-3 bg-white/40 rounded-lg"><span class="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">6</span><span class="text-sm">Cantares 8:6-7 — O amor é forte como a morte</span></div>
+          <div class="flex items-start gap-3 p-3 bg-white/50 rounded-lg"><span class="w-7 h-7 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">1</span><span class="text-sm">Mateus 6:5-15 — O Pai Nosso como modelo</span></div>
+          <div class="flex items-start gap-3 p-3 bg-white/50 rounded-lg"><span class="w-7 h-7 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span><span class="text-sm">Lucas 11:5-13 — O amigo importuno</span></div>
+          <div class="flex items-start gap-3 p-3 bg-white/50 rounded-lg"><span class="w-7 h-7 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">3</span><span class="text-sm">Lucas 18:1-8 — A viúva persistente</span></div>
+          <div class="flex items-start gap-3 p-3 bg-white/50 rounded-lg"><span class="w-7 h-7 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">4</span><span class="text-sm">Romanos 8:26-27 — O Espírito intercede</span></div>
+          <div class="flex items-start gap-3 p-3 bg-white/50 rounded-lg"><span class="w-7 h-7 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">5</span><span class="text-sm">Filipenses 4:6-7 — A paz que excede</span></div>
+          <div class="flex items-start gap-3 p-3 bg-white/50 rounded-lg"><span class="w-7 h-7 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">6</span><span class="text-sm">Tiago 5:13-18 — A oração que muito pode</span></div>
+          <div class="flex items-start gap-3 p-3 bg-white/50 rounded-lg sm:col-span-2"><span class="w-7 h-7 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">7</span><span class="text-sm">1 Tessalonicenses 5:16-18 — Orai sem cessar</span></div>
         </div>
       </div>
     </div>
 
-    <footer class="max-w-3xl mx-auto mt-16 pt-8 border-t border-primary/15 text-center">
-      <p class="text-muted text-sm italic">Se este artigo tocou seu coração, compartilhe com alguém que precisa ler. A verdade multiplicada transforma vidas.</p>
+    <footer class="max-w-3xl mx-auto mt-12 md:mt-16 pt-8 border-t border-primary/15 text-center">
+      <p class="text-muted text-sm italic">Se esta leitura tocou seu coração, compartilhe com alguém que precisa reaprender a orar. A Palavra multiplicada transforma vidas.</p>
     </footer>
   </article>
 </Layout>
@@ -389,9 +408,9 @@ const block9 = sections.slice(16, 20); // 17-18-19-20
 <style is:global>
   .prose-article h2 {
     font-family: var(--aw-font-heading);
-    font-size: clamp(1.625rem, 3.5vw, 2.125rem);
+    font-size: clamp(1.5rem, 3.2vw, 2.125rem);
     font-weight: 700;
-    line-height: 1.25;
+    line-height: 1.2;
     color: var(--aw-color-text-heading);
     margin-top: 2.5rem;
     margin-bottom: 1rem;
@@ -413,7 +432,7 @@ const block9 = sections.slice(16, 20); // 17-18-19-20
     margin-bottom: 1.15rem;
   }
   .prose-article .lead-paragraph {
-    font-size: 1.25rem;
+    font-size: clamp(1.1rem, 2vw, 1.25rem);
     line-height: 1.7;
     color: var(--aw-color-text-default);
     font-weight: 500;
@@ -424,10 +443,10 @@ const block9 = sections.slice(16, 20); // 17-18-19-20
   .prose-article blockquote.scripture {
     position: relative;
     font-family: var(--aw-font-heading);
-    font-size: 1.125rem;
+    font-size: clamp(1rem, 2vw, 1.125rem);
     line-height: 1.6;
     font-style: italic;
-    padding: 1.5rem 1.75rem 1.5rem 2.25rem;
+    padding: 1.25rem 1.25rem 1.25rem 2rem;
     margin: 1.75rem 0;
     border-left: 4px solid var(--aw-color-accent);
     background: rgba(201, 162, 75, 0.08);
@@ -438,9 +457,9 @@ const block9 = sections.slice(16, 20); // 17-18-19-20
     content: '"';
     position: absolute;
     top: -0.2em;
-    left: 0.4rem;
+    left: 0.3rem;
     font-family: Georgia, serif;
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: var(--aw-color-accent);
     opacity: 0.35;
     line-height: 1;
@@ -451,7 +470,7 @@ const block9 = sections.slice(16, 20); // 17-18-19-20
     margin-top: 0.75rem;
     font-family: var(--aw-font-sans);
     font-style: normal;
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     font-weight: 600;
     color: var(--aw-color-primary);
     letter-spacing: 0.02em;
@@ -461,7 +480,7 @@ const block9 = sections.slice(16, 20); // 17-18-19-20
 
   @media (max-width: 640px) {
     .prose-article p { font-size: 1rem; line-height: 1.7; }
-    .prose-article .lead-paragraph { font-size: 1.125rem; }
-    .prose-article blockquote.scripture { padding: 1.25rem 1rem 1.25rem 1.5rem; font-size: 1rem; }
+    .prose-article blockquote.scripture { padding: 1rem 1rem 1rem 1.5rem; font-size: 0.98rem; }
+    .prose-article .article-section + .article-section h2 { margin-top: 2.25rem; }
   }
 </style>
