@@ -4,7 +4,6 @@ import NativeAdSlot from '~/components/NativeAdSlot.astro';
 import AdBanner from '~/components/ads/AdBanner.astro';
 import AdSlot from '~/components/ads/AdSlot.astro';
 import StickyFooter from '~/components/ads/StickyFooter.astro';
-import 'lite-youtube-embed/src/lite-yt-embed.css';
 
 const metadata = {
   title: 'Oração Diária — Creio em Te Senhor',
@@ -194,18 +193,18 @@ const block9 = sections.slice(16, 20);
       </div>
     </header>
 
-    <!-- VÍDEO YOUTUBE via lite-youtube-embed (iOS Safari friendly) -->
+    <!-- VÍDEO via Bunny Stream (iframe.mediadelivery.net) -->
     <figure class="max-w-3xl mx-auto mt-2 mb-4 md:my-10">
-      <div class="rounded-xl overflow-hidden shadow-xl border border-primary/10">
-        <lite-youtube
-          videoid={videoId}
-          playlabel={videoTitle}
-          params="rel=0&modestbranding=1&playsinline=1"
-        >
-          <a class="lty-playbtn" title={videoTitle} href={`https://youtube.com/watch?v=${videoId}`}>
-            <span class="lyt-visually-hidden">{videoTitle}</span>
-          </a>
-        </lite-youtube>
+      <div class="relative rounded-xl overflow-hidden shadow-xl border border-primary/10" style="aspect-ratio: 16 / 9;">
+        <iframe
+          src="https://iframe.mediadelivery.net/embed/643085/6a95065d-45fe-444e-b7eb-5926315425e4"
+          title={videoTitle}
+          loading="lazy"
+          allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen
+          class="absolute inset-0 w-full h-full"
+          frameborder="0"
+        ></iframe>
       </div>
       <figcaption class="text-center text-xs md:text-sm text-muted mt-3 italic">Assista a mensagem que inspirou este devocional</figcaption>
     </figure>
@@ -439,11 +438,6 @@ const block9 = sections.slice(16, 20);
   <!-- DISPLAY AD: sticky-footer-mobile (320x50, fechável) -->
   <StickyFooter />
 </Layout>
-
-<script>
-  // lite-youtube-embed (Paul Irish) — player lazy-load leve, iOS Safari compatível
-  import 'lite-youtube-embed';
-</script>
 
 <style is:global>
   .prose-article h2 {
