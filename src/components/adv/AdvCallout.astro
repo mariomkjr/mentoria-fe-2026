@@ -1,0 +1,67 @@
+---
+interface Props {
+  title?: string;
+  variant?: 'note' | 'warning' | 'info';
+}
+const { title = 'NOTE QUE:', variant = 'note' } = Astro.props;
+---
+
+<aside class:list={['adv-callout', `adv-callout--${variant}`]}>
+  <div class="adv-callout__title">{title}</div>
+  <div class="adv-callout__body">
+    <slot />
+  </div>
+</aside>
+
+<style>
+  .adv-callout {
+    margin: 2rem 0;
+    padding: 1.5rem 1.75rem;
+    border-radius: 12px;
+    border-left: 4px solid rgb(201 162 75);
+    background: rgb(201 162 75 / 0.1);
+  }
+  .adv-callout--warning {
+    border-color: rgb(122 31 58);
+    background: rgb(122 31 58 / 0.06);
+  }
+  .adv-callout--info {
+    border-color: rgb(99 102 241);
+    background: rgb(99 102 241 / 0.07);
+  }
+  .adv-callout__title {
+    font-family: var(--aw-font-heading, 'Playfair Display', Georgia, serif);
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: rgb(122 31 58);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.6rem;
+  }
+  .adv-callout--warning .adv-callout__title { color: rgb(122 31 58); }
+  .adv-callout__body :global(p) {
+    margin: 0 0 0.75rem;
+    font-size: 1.02rem;
+    line-height: 1.65;
+    color: rgb(30 28 32 / 0.92);
+  }
+  .adv-callout__body :global(p:last-child) { margin-bottom: 0; }
+  .adv-callout__body :global(ul) {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+  .adv-callout__body :global(li) {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    color: rgb(30 28 32 / 0.92);
+  }
+  .adv-callout__body :global(strong) {
+    color: rgb(122 31 58);
+    font-weight: 700;
+  }
+  :global(.dark) .adv-callout { background: rgb(221 184 101 / 0.08); border-color: rgb(221 184 101); }
+  :global(.dark) .adv-callout__title { color: rgb(221 184 101); }
+  :global(.dark) .adv-callout__body :global(p),
+  :global(.dark) .adv-callout__body :global(li) { color: rgb(229 222 206 / 0.92); }
+  :global(.dark) .adv-callout__body :global(strong) { color: rgb(221 184 101); }
+</style>

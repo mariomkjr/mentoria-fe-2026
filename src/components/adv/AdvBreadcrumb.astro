@@ -1,0 +1,59 @@
+---
+interface Crumb {
+  label: string;
+  href?: string;
+}
+interface Props {
+  items: Crumb[];
+}
+const { items } = Astro.props;
+---
+
+<nav class="adv-bc" aria-label="Breadcrumb">
+  <ol>
+    {items.map((c, i) => (
+      <li>
+        {c.href && i < items.length - 1 ? (
+          <a href={c.href}>{c.label}</a>
+        ) : (
+          <span>{c.label}</span>
+        )}
+        {i < items.length - 1 && <span class="sep" aria-hidden="true">›</span>}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<style>
+  .adv-bc {
+    font-size: 0.78rem;
+    color: rgb(30 28 32 / 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 1.25rem;
+  }
+  .adv-bc ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .adv-bc li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .adv-bc a {
+    color: rgb(122 31 58);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .adv-bc a:hover { text-decoration: underline; }
+  .adv-bc span:not(.sep) { color: rgb(30 28 32 / 0.55); font-weight: 500; }
+  .adv-bc .sep { color: rgb(30 28 32 / 0.3); }
+  :global(.dark) .adv-bc { color: rgb(229 222 206 / 0.55); }
+  :global(.dark) .adv-bc a { color: rgb(221 184 101); }
+  :global(.dark) .adv-bc span:not(.sep) { color: rgb(229 222 206 / 0.6); }
+</style>

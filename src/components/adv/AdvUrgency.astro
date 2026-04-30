@@ -1,0 +1,72 @@
+---
+interface Props {
+  message?: string;
+  ends?: string;
+  highlight?: string;
+}
+const {
+  message = 'Oferta especial por tempo limitado',
+  ends,
+  highlight,
+} = Astro.props;
+---
+
+<aside class="adv-urg">
+  <span class="adv-urg__pulse" aria-hidden="true"></span>
+  <div class="adv-urg__txt">
+    <strong>{message}</strong>
+    {highlight && <span class="adv-urg__hl">{highlight}</span>}
+    {ends && <span class="adv-urg__ends">Termina em {ends}</span>}
+  </div>
+</aside>
+
+<style>
+  .adv-urg {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: linear-gradient(135deg, rgb(234 88 12 / 0.1), rgb(220 38 38 / 0.08));
+    border: 1px solid rgb(234 88 12 / 0.35);
+    border-radius: 10px;
+    padding: 0.85rem 1.1rem;
+    margin: 1.25rem 0;
+  }
+  .adv-urg__pulse {
+    width: 10px;
+    height: 10px;
+    background: rgb(220 38 38);
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 0 rgb(220 38 38 / 0.6);
+    animation: pulseDot 1.6s infinite;
+  }
+  @keyframes pulseDot {
+    0% { box-shadow: 0 0 0 0 rgb(220 38 38 / 0.7); }
+    70% { box-shadow: 0 0 0 12px rgb(220 38 38 / 0); }
+    100% { box-shadow: 0 0 0 0 rgb(220 38 38 / 0); }
+  }
+  .adv-urg__txt {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem 0.8rem;
+    font-size: 0.92rem;
+    color: rgb(30 28 32);
+  }
+  .adv-urg__txt strong {
+    font-weight: 700;
+    color: rgb(180 30 25);
+  }
+  .adv-urg__hl {
+    font-weight: 700;
+    color: rgb(122 31 58);
+  }
+  .adv-urg__ends {
+    color: rgb(30 28 32 / 0.65);
+    font-size: 0.85rem;
+  }
+  :global(.dark) .adv-urg { color: rgb(229 222 206); }
+  :global(.dark) .adv-urg__txt { color: rgb(229 222 206); }
+  :global(.dark) .adv-urg__hl { color: rgb(221 184 101); }
+  :global(.dark) .adv-urg__ends { color: rgb(229 222 206 / 0.65); }
+</style>

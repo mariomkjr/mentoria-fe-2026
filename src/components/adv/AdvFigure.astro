@@ -1,0 +1,48 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  caption?: string;
+  side?: 'full' | 'left' | 'right';
+}
+const { src, alt, caption, side = 'full' } = Astro.props;
+---
+
+<figure class:list={['adv-figure', `adv-figure--${side}`]}>
+  <img src={src} alt={alt} loading="lazy" decoding="async" />
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>
+
+<style>
+  .adv-figure {
+    margin: 2rem 0;
+  }
+  .adv-figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    box-shadow: 0 4px 18px rgb(122 31 58 / 0.12);
+  }
+  .adv-figure figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.82rem;
+    color: rgb(30 28 32 / 0.6);
+    text-align: center;
+    font-style: italic;
+    line-height: 1.5;
+  }
+  @media (min-width: 768px) {
+    .adv-figure--left {
+      float: left;
+      width: 45%;
+      margin: 0.5rem 1.5rem 1rem 0;
+    }
+    .adv-figure--right {
+      float: right;
+      width: 45%;
+      margin: 0.5rem 0 1rem 1.5rem;
+    }
+  }
+  :global(.dark) .adv-figure figcaption { color: rgb(229 222 206 / 0.6); }
+</style>

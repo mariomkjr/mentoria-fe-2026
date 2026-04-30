@@ -11,10 +11,22 @@
   .ad-sticky-sidebar { display: none; }
   .ad-sticky-sidebar__inner {
     position: sticky;
-    top: 6rem;
+    top: 5rem;
+    max-height: calc(100vh - 5.5rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.25rem;
+    padding-right: 0.25rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(201 162 75 / 0.4) transparent;
+  }
+  .ad-sticky-sidebar__inner::-webkit-scrollbar { width: 4px; }
+  .ad-sticky-sidebar__inner::-webkit-scrollbar-track { background: transparent; }
+  .ad-sticky-sidebar__inner::-webkit-scrollbar-thumb {
+    background: rgb(201 162 75 / 0.35);
+    border-radius: 2px;
   }
   @media (min-width: 1024px) {
     .ad-sticky-sidebar { display: block; width: 300px; flex-shrink: 0; }

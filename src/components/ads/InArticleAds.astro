@@ -42,9 +42,7 @@ const slotsJson = slotIds.length > 0 ? JSON.stringify(slotIds) : '[]';
 
         if (active.length === 0) {
           container.innerHTML = `
-            <aside class="ad-display-slot ad-display-slot--empty" style="margin:0 auto;max-width:${dims.width}px;min-height:${dims.height + 20}px;display:flex;align-items:center;justify-content:center;background:rgb(245 240 230 / 0.5);border:1px dashed rgb(201 162 75 / 0.4);border-radius:4px;opacity:0.4;" aria-hidden="true">
-              <span style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:rgb(30 28 32 / 0.5);">Espaço publicitário (${dims.width}x${dims.height})</span>
-            </aside>`;
+            <aside class="ad-display-slot ad-display-slot--empty" style="margin:0 auto;width:100%;max-width:${dims.width}px;aspect-ratio:${dims.width} / ${dims.height};background:rgb(245 240 230 / 0.4);border-radius:6px;opacity:0.3;" aria-hidden="true"></aside>`;
         } else {
           const totalWeight = active.reduce((s: number, c: any) => s + (c.weight || 1), 0);
           let r = Math.random() * totalWeight;
@@ -54,10 +52,9 @@ const slotsJson = slotIds.length > 0 ? JSON.stringify(slotIds) : '[]';
             if (r <= 0) { creative = c; break; }
           }
           container.innerHTML = `
-            <aside class="ad-display-slot ad-display-slot--${slotId}" data-ad-slot-id="${slotId}" data-ad-advertiser="${creative.advertiser}" aria-label="Publicidade" style="margin:0 auto;max-width:${dims.width}px;padding:0.5rem;background:rgb(245 240 230 / 0.5);border:1px dashed rgb(201 162 75 / 0.4);border-radius:4px;text-align:center;">
-              <span style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:rgb(30 28 32 / 0.5);display:block;margin-bottom:0.25rem;">Publicidade</span>
-              <a href="${creative.href}" target="_blank" rel="sponsored noopener noreferrer" data-ad-click style="display:inline-block;line-height:0;">
-                <img src="${creative.image}" alt="${creative.alt || 'Publicidade'}" width="${dims.width}" height="${dims.height}" loading="lazy" decoding="async" style="max-width:100%;height:auto;display:block;" />
+            <aside class="ad-display-slot ad-display-slot--${slotId}" data-ad-slot-id="${slotId}" data-ad-advertiser="${creative.advertiser}" style="margin:1.5rem auto;width:100%;max-width:${dims.width}px;text-align:center;">
+              <a href="${creative.href}" target="_blank" rel="sponsored noopener noreferrer" data-ad-click style="display:block;line-height:0;border-radius:8px;overflow:hidden;width:100%;">
+                <img src="${creative.image}" alt="${creative.alt || ''}" width="${dims.width}" height="${dims.height}" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;" />
               </a>
             </aside>`;
           trackImpressionAndClick(container, slotId, creative.advertiser);

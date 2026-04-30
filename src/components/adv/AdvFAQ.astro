@@ -1,0 +1,82 @@
+---
+interface QA {
+  q: string;
+  a: string;
+}
+interface Props {
+  title?: string;
+  items: QA[];
+}
+const { title = 'Perguntas frequentes', items } = Astro.props;
+---
+
+<section class="adv-faq">
+  <h3 class="adv-faq__title">{title}</h3>
+  <div class="adv-faq__list">
+    {items.map((it, i) => (
+      <details class="adv-faq__item" open={i === 0}>
+        <summary>
+          <span class="adv-faq__q">{it.q}</span>
+          <svg viewBox="0 0 24 24" class="adv-faq__icon" aria-hidden="true">
+            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <p class="adv-faq__a" set:html={it.a} />
+      </details>
+    ))}
+  </div>
+</section>
+
+<style>
+  .adv-faq { margin: 2.5rem 0; }
+  .adv-faq__title {
+    font-family: var(--aw-font-heading, 'Playfair Display', Georgia, serif);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: rgb(11 11 15);
+    margin: 0 0 1.25rem;
+  }
+  .adv-faq__list {
+    border-top: 1px solid rgb(201 162 75 / 0.3);
+  }
+  .adv-faq__item {
+    border-bottom: 1px solid rgb(201 162 75 / 0.3);
+    padding: 0.25rem 0;
+  }
+  .adv-faq__item summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.1rem 0.25rem;
+    font-weight: 600;
+    color: rgb(11 11 15);
+    font-size: 1.02rem;
+    line-height: 1.4;
+  }
+  .adv-faq__item summary::-webkit-details-marker { display: none; }
+  .adv-faq__q { flex: 1; }
+  .adv-faq__icon {
+    width: 18px;
+    height: 18px;
+    color: rgb(122 31 58);
+    transition: transform 0.2s;
+    flex-shrink: 0;
+  }
+  .adv-faq__item[open] .adv-faq__icon { transform: rotate(180deg); }
+  .adv-faq__a {
+    margin: 0 0 1rem;
+    padding: 0 0.25rem;
+    font-size: 0.98rem;
+    line-height: 1.65;
+    color: rgb(30 28 32 / 0.85);
+  }
+  :global(.dark) .adv-faq__title { color: rgb(247 244 235); }
+  :global(.dark) .adv-faq__list,
+  :global(.dark) .adv-faq__item { border-color: rgb(221 184 101 / 0.25); }
+  :global(.dark) .adv-faq__item summary { color: rgb(247 244 235); }
+  :global(.dark) .adv-faq__icon { color: rgb(221 184 101); }
+  :global(.dark) .adv-faq__a { color: rgb(229 222 206 / 0.85); }
+</style>

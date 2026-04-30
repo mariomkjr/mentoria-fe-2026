@@ -32,6 +32,8 @@ function pickCreative(creatives: any[]) {
 const creative = slot ? pickCreative(slot.creatives) : null;
 const dims = slot?.dimensions || { width: 728, height: 90 };
 const mobileDims = slot?.mobileDimensions || dims;
+const aspect = `${dims.width} / ${dims.height}`;
+const aspectMobile = `${mobileDims.width} / ${mobileDims.height}`;
 ---
 
 {slot && creative ? (
@@ -39,10 +41,8 @@ const mobileDims = slot?.mobileDimensions || dims;
     class:list={['ad-display-slot', `ad-display-slot--${id}`, className]}
     data-ad-slot-id={id}
     data-ad-advertiser={creative.advertiser}
-    aria-label="Publicidade"
     role="complementary"
   >
-    <span class="ad-display-slot__label">Publicidade</span>
     <a
       href={creative.href}
       target="_blank"
@@ -56,7 +56,7 @@ const mobileDims = slot?.mobileDimensions || dims;
         )}
         <img
           src={creative.image}
-          alt={creative.alt || 'Publicidade'}
+          alt={creative.alt || ''}
           width={dims.width}
           height={dims.height}
           loading={eager ? 'eager' : 'lazy'}
@@ -71,57 +71,53 @@ const mobileDims = slot?.mobileDimensions || dims;
     class:list={['ad-display-slot ad-display-slot--empty', className]}
     data-ad-slot-id={id}
     aria-hidden="true"
-  >
-    <span class="ad-display-slot__label">Espaço publicitário ({dims.width}x{dims.height})</span>
-  </aside>
+  ></aside>
 ) : null}
 
 <style define:vars={{
   slotW: `${dims.width}px`,
   slotH: `${dims.height}px`,
-  mobW: `${mobileDims.width}px`,
-  mobH: `${mobileDims.height}px`,
+  aspect: aspect,
+  aspectMobile: aspectMobile,
 }}>
   .ad-display-slot {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0.5rem auto;
+    margin: 1rem auto;
+    width: 100%;
     max-width: var(--slotW);
-    min-height: calc(var(--slotH) + 1.25rem);
-    background: rgb(245 240 230 / 0.5);
-    border: 1px dashed rgb(201 162 75 / 0.4);
-    border-radius: 4px;
-    padding: 0.5rem;
-    box-sizing: content-box;
+    box-sizing: border-box;
   }
   @media (min-width: 768px) {
-    .ad-display-slot { margin: 2rem auto; }
+    .ad-display-slot { margin: 1.75rem auto; }
   }
   .ad-display-slot--empty {
-    min-height: calc(var(--slotH) + 1.25rem);
-    opacity: 0.4;
+    aspect-ratio: var(--aspect);
+    background: rgb(245 240 230 / 0.4);
+    border-radius: 6px;
+    opacity: 0.3;
   }
-  .ad-display-slot__label {
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: rgb(30 28 32 / 0.5);
-    margin-bottom: 0.25rem;
-    font-family: var(--aw-font-sans, system-ui);
+  .ad-display-slot__link {
+    display: block;
+    line-height: 0;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
   }
-  .ad-display-slot__link { display: block; line-height: 0; }
-  .ad-display-slot__image { display: block; max-width: 100%; height: auto; }
-  :global(.dark) .ad-display-slot {
-    background: rgb(40 30 35 / 0.4);
-    border-color: rgb(221 184 101 / 0.3);
+  .ad-display-slot__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
   }
-  :global(.dark) .ad-display-slot__label { color: rgb(229 222 206 / 0.5); }
   @media (max-width: 767px) {
     .ad-display-slot {
-      max-width: var(--mobW);
-      min-height: calc(var(--mobH) + 1.25rem);
+      max-width: 100%;
+      padding: 0 0.5rem;
+    }
+    .ad-display-slot--empty {
+      aspect-ratio: var(--aspectMobile);
     }
   }
 </style>

@@ -1,0 +1,122 @@
+---
+interface Props {
+  name: string;
+  age?: number | string;
+  city?: string;
+  rating?: number;
+  text: string;
+  timestamp?: string;
+  avatarColor?: string;
+}
+const {
+  name,
+  age,
+  city,
+  rating = 5,
+  text,
+  timestamp = 'há 2 dias',
+  avatarColor,
+} = Astro.props;
+
+const palette = ['#7A1F3A', '#C9A24B', '#5C1729', '#9A3A54', '#1E3A8A', '#064E3B', '#4C1D95', '#831843'];
+const colorIdx = name.split('').reduce((a, c) => a + c.charCodeAt(0), 0) % palette.length;
+const bgColor = avatarColor || palette[colorIdx];
+const initial = name.trim().charAt(0).toUpperCase();
+const stars = Array.from({ length: 5 }, (_, i) => i < rating);
+---
+
+<article class="adv-test">
+  <div class="adv-test__avatar" style={`background:${bgColor}`}>
+    <span>{initial}</span>
+  </div>
+  <div class="adv-test__body">
+    <header class="adv-test__head">
+      <strong class="adv-test__name">
+        {name}{age && <span>, {age}</span>}
+      </strong>
+      <span class="adv-test__stars" aria-label={`Avaliação ${rating} de 5`}>
+        {stars.map((on) => (
+          <svg viewBox="0 0 24 24" class:list={[on && 'on']} aria-hidden="true">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/>
+          </svg>
+        ))}
+      </span>
+    </header>
+    {city && <p class="adv-test__loc">{city}</p>}
+    <p class="adv-test__text">{text}</p>
+    <span class="adv-test__time">{timestamp}</span>
+  </div>
+</article>
+
+<style>
+  .adv-test {
+    display: flex;
+    gap: 1rem;
+    padding: 1.25rem;
+    border: 1px solid rgb(201 162 75 / 0.3);
+    border-radius: 12px;
+    background: rgb(253 251 245);
+    margin: 1rem 0;
+  }
+  .adv-test__avatar {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    font-family: var(--aw-font-heading, 'Playfair Display', Georgia, serif);
+  }
+  .adv-test__body { flex: 1; min-width: 0; }
+  .adv-test__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.15rem;
+  }
+  .adv-test__name {
+    font-weight: 700;
+    color: rgb(11 11 15);
+    font-size: 0.98rem;
+  }
+  .adv-test__name span { color: rgb(30 28 32 / 0.65); font-weight: 500; }
+  .adv-test__stars {
+    display: inline-flex;
+    gap: 1px;
+    color: rgb(201 162 75 / 0.3);
+  }
+  .adv-test__stars svg { width: 14px; height: 14px; }
+  .adv-test__stars .on { color: rgb(201 162 75); }
+  .adv-test__loc {
+    font-size: 0.78rem;
+    color: rgb(30 28 32 / 0.6);
+    margin: 0 0 0.4rem;
+  }
+  .adv-test__text {
+    font-size: 0.97rem;
+    line-height: 1.55;
+    color: rgb(30 28 32 / 0.92);
+    margin: 0 0 0.5rem;
+  }
+  .adv-test__time {
+    font-size: 0.78rem;
+    color: rgb(30 28 32 / 0.5);
+  }
+  :global(.dark) .adv-test {
+    background: rgb(40 30 35 / 0.5);
+    border-color: rgb(221 184 101 / 0.25);
+  }
+  :global(.dark) .adv-test__name { color: rgb(247 244 235); }
+  :global(.dark) .adv-test__name span { color: rgb(229 222 206 / 0.65); }
+  :global(.dark) .adv-test__loc { color: rgb(229 222 206 / 0.6); }
+  :global(.dark) .adv-test__text { color: rgb(229 222 206 / 0.92); }
+  :global(.dark) .adv-test__time { color: rgb(229 222 206 / 0.5); }
+  :global(.dark) .adv-test__stars { color: rgb(221 184 101 / 0.3); }
+  :global(.dark) .adv-test__stars .on { color: rgb(221 184 101); }
+</style>

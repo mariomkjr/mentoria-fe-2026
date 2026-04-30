@@ -1,0 +1,31 @@
+---
+interface Props {
+  text?: string;
+}
+const {
+  text = 'Este conteúdo é patrocinado e contém links de parceria comercial. Resultados individuais podem variar. Os relatos apresentados são ilustrativos e baseados em casos reais. Sempre consulte um profissional de saúde antes de iniciar qualquer suplementação. Os preços e disponibilidade dos produtos podem variar sem aviso prévio.',
+} = Astro.props;
+---
+
+<footer class="adv-disc">
+  <p>{text}</p>
+</footer>
+
+<style>
+  .adv-disc {
+    margin: 2.5rem 0 1.5rem;
+    padding: 1.25rem;
+    border-top: 1px solid rgb(201 162 75 / 0.3);
+    background: transparent;
+  }
+  .adv-disc p {
+    font-size: 0.78rem;
+    line-height: 1.55;
+    color: rgb(30 28 32 / 0.55);
+    margin: 0;
+    text-align: center;
+    font-style: italic;
+  }
+  :global(.dark) .adv-disc { border-color: rgb(221 184 101 / 0.25); }
+  :global(.dark) .adv-disc p { color: rgb(229 222 206 / 0.55); }
+</style>

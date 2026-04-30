@@ -1,0 +1,110 @@
+---
+interface Props {
+  eyebrow?: string;
+  title: string;
+  subtitle?: string;
+  author?: string;
+  publishedAt?: string;
+  readTime?: string;
+  heroImage?: string;
+  heroCaption?: string;
+}
+const {
+  eyebrow = 'HISTÓRIA REAL',
+  title,
+  subtitle,
+  author = 'Redação Mentoria',
+  publishedAt,
+  readTime = '8 min de leitura',
+  heroImage,
+  heroCaption,
+} = Astro.props;
+---
+
+<header class="adv-hero">
+  <span class="adv-hero__eyebrow">{eyebrow}</span>
+  <h1 class="adv-hero__title">{title}</h1>
+  {subtitle && <p class="adv-hero__subtitle">{subtitle}</p>}
+  <div class="adv-hero__meta">
+    <span class="adv-hero__author"><strong>Por {author}</strong></span>
+    {publishedAt && <span class="adv-hero__sep">·</span>}
+    {publishedAt && <span>{publishedAt}</span>}
+    <span class="adv-hero__sep">·</span>
+    <span>{readTime}</span>
+  </div>
+  {heroImage && (
+    <figure class="adv-hero__figure">
+      <img src={heroImage} alt={title} loading="eager" decoding="async" />
+      {heroCaption && <figcaption>{heroCaption}</figcaption>}
+    </figure>
+  )}
+</header>
+
+<style>
+  .adv-hero { margin-bottom: 2rem; }
+  .adv-hero__eyebrow {
+    display: inline-block;
+    background: rgb(122 31 58);
+    color: rgb(253 251 245);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    padding: 0.35rem 0.8rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .adv-hero__title {
+    font-family: var(--aw-font-heading, 'Playfair Display', Georgia, serif);
+    font-size: clamp(1.85rem, 4.2vw, 2.85rem);
+    font-weight: 700;
+    color: rgb(11 11 15);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    margin: 0 0 1rem;
+  }
+  .adv-hero__subtitle {
+    font-size: clamp(1.05rem, 2.1vw, 1.25rem);
+    color: rgb(30 28 32 / 0.75);
+    line-height: 1.5;
+    margin: 0 0 1.25rem;
+    font-weight: 400;
+  }
+  .adv-hero__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: rgb(30 28 32 / 0.7);
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgb(201 162 75 / 0.35);
+  }
+  .adv-hero__author strong {
+    color: rgb(122 31 58);
+    font-weight: 700;
+  }
+  .adv-hero__sep { color: rgb(30 28 32 / 0.35); }
+  .adv-hero__figure {
+    margin: 1.75rem 0 0;
+  }
+  .adv-hero__figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    display: block;
+    box-shadow: 0 8px 32px rgb(122 31 58 / 0.18);
+  }
+  .adv-hero__figure figcaption {
+    margin-top: 0.65rem;
+    font-size: 0.82rem;
+    color: rgb(30 28 32 / 0.6);
+    text-align: center;
+    font-style: italic;
+  }
+  :global(.dark) .adv-hero__title { color: rgb(247 244 235); }
+  :global(.dark) .adv-hero__subtitle { color: rgb(229 222 206 / 0.78); }
+  :global(.dark) .adv-hero__meta { color: rgb(229 222 206 / 0.7); border-color: rgb(221 184 101 / 0.3); }
+  :global(.dark) .adv-hero__author strong { color: rgb(221 184 101); }
+  :global(.dark) .adv-hero__eyebrow { background: rgb(221 184 101); color: rgb(20 12 16); }
+</style>

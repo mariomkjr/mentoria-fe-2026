@@ -1,0 +1,117 @@
+---
+interface Props {
+  title?: string;
+  before: string[];
+  after: string[];
+  beforeLabel?: string;
+  afterLabel?: string;
+}
+const {
+  title = 'O que mudou',
+  before,
+  after,
+  beforeLabel = 'Antes',
+  afterLabel = 'Depois',
+} = Astro.props;
+---
+
+<section class="adv-comp">
+  {title && <h3 class="adv-comp__title">{title}</h3>}
+  <div class="adv-comp__grid">
+    <div class="adv-comp__col adv-comp__col--before">
+      <header><span class="badge">{beforeLabel}</span></header>
+      <ul>
+        {before.map((it) => (
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            <span>{it}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+    <div class="adv-comp__col adv-comp__col--after">
+      <header><span class="badge">{afterLabel}</span></header>
+      <ul>
+        {after.map((it) => (
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>{it}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .adv-comp { margin: 2.5rem 0; }
+  .adv-comp__title {
+    font-family: var(--aw-font-heading, 'Playfair Display', Georgia, serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(11 11 15);
+    text-align: center;
+    margin: 0 0 1.25rem;
+  }
+  .adv-comp__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  @media (min-width: 720px) {
+    .adv-comp__grid { grid-template-columns: 1fr 1fr; }
+  }
+  .adv-comp__col {
+    border: 1px solid rgb(201 162 75 / 0.3);
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    background: rgb(253 251 245);
+  }
+  .adv-comp__col header { margin-bottom: 0.85rem; }
+  .badge {
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .adv-comp__col--before .badge {
+    background: rgb(120 113 108 / 0.15);
+    color: rgb(87 83 78);
+  }
+  .adv-comp__col--after .badge {
+    background: rgb(122 31 58);
+    color: rgb(253 251 245);
+  }
+  .adv-comp__col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .adv-comp__col li {
+    display: flex;
+    gap: 0.65rem;
+    align-items: flex-start;
+    padding: 0.55rem 0;
+    font-size: 0.96rem;
+    line-height: 1.5;
+    color: rgb(30 28 32 / 0.9);
+  }
+  .adv-comp__col li svg { width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px; }
+  .adv-comp__col--before li svg { color: rgb(160 100 110); }
+  .adv-comp__col--after li svg { color: rgb(15 130 80); }
+  :global(.dark) .adv-comp__title { color: rgb(247 244 235); }
+  :global(.dark) .adv-comp__col {
+    background: rgb(40 30 35 / 0.5);
+    border-color: rgb(221 184 101 / 0.25);
+  }
+  :global(.dark) .adv-comp__col li { color: rgb(229 222 206 / 0.9); }
+  :global(.dark) .adv-comp__col--before .badge { background: rgb(229 222 206 / 0.12); color: rgb(229 222 206 / 0.7); }
+  :global(.dark) .adv-comp__col--after .badge { background: rgb(221 184 101); color: rgb(20 12 16); }
+</style>

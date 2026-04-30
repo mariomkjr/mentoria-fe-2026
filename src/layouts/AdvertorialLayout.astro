@@ -1,0 +1,121 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import Header from '~/components/widgets/Header.astro';
+import Footer from '~/components/widgets/Footer.astro';
+import { headerData, footerData } from '~/navigation';
+import type { MetaData } from '~/types';
+
+export interface Props {
+  metadata?: MetaData;
+}
+const { metadata } = Astro.props;
+---
+
+<Layout metadata={metadata}>
+  <slot name="header">
+    <Header {...headerData} isSticky showRssFeed showToggleTheme />
+  </slot>
+  <main class="adv-main">
+    <article class="adv-article">
+      <slot />
+    </article>
+  </main>
+  <slot name="footer">
+    <Footer {...footerData} />
+  </slot>
+</Layout>
+
+<style is:global>
+  .adv-main {
+    background: rgb(253 251 245);
+    padding: 1.5rem 0 3rem;
+  }
+  .dark .adv-main { background: rgb(20 12 16); }
+
+  .adv-article {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    color: rgb(30 28 32);
+    font-family: var(--aw-font-sans, 'Inter', system-ui, sans-serif);
+    font-size: 1.08rem;
+    line-height: 1.75;
+  }
+  .dark .adv-article { color: rgb(229 222 206); }
+
+  .adv-article > p,
+  .adv-article > div > p {
+    margin: 0 0 1.25rem;
+    font-size: 1.08rem;
+    line-height: 1.75;
+  }
+
+  /* Drop cap on first paragraph after hero */
+  .adv-article > .adv-hero + p::first-letter,
+  .adv-article > p.lead::first-letter {
+    font-family: var(--aw-font-heading, 'Playfair Display', Georgia, serif);
+    font-size: 4.2rem;
+    font-weight: 700;
+    color: rgb(122 31 58);
+    float: left;
+    line-height: 0.9;
+    margin: 0.35rem 0.65rem 0 0;
+    padding-top: 0.2rem;
+  }
+  .dark .adv-article > .adv-hero + p::first-letter,
+  .dark .adv-article > p.lead::first-letter { color: rgb(221 184 101); }
+
+  .adv-article h2 {
+    font-family: var(--aw-font-heading, 'Playfair Display', Georgia, serif);
+    font-size: clamp(1.55rem, 3.2vw, 2rem);
+    font-weight: 700;
+    color: rgb(11 11 15);
+    line-height: 1.2;
+    letter-spacing: -0.005em;
+    margin: 2.5rem 0 1rem;
+  }
+  .dark .adv-article h2 { color: rgb(247 244 235); }
+
+  .adv-article h3 {
+    font-family: var(--aw-font-heading, 'Playfair Display', Georgia, serif);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: rgb(11 11 15);
+    margin: 2rem 0 0.85rem;
+  }
+  .dark .adv-article h3 { color: rgb(247 244 235); }
+
+  .adv-article a {
+    color: rgb(122 31 58);
+    text-decoration: underline;
+    text-decoration-color: rgb(201 162 75 / 0.4);
+    text-underline-offset: 3px;
+    font-weight: 600;
+  }
+  .dark .adv-article a { color: rgb(221 184 101); }
+  .adv-article a:hover {
+    text-decoration-color: rgb(201 162 75);
+  }
+
+  .adv-article strong { color: rgb(122 31 58); font-weight: 700; }
+  .dark .adv-article strong { color: rgb(221 184 101); }
+
+  .adv-article hr {
+    border: none;
+    border-top: 1px solid rgb(201 162 75 / 0.35);
+    margin: 2.25rem 0;
+  }
+  .dark .adv-article hr { border-color: rgb(221 184 101 / 0.25); }
+
+  .adv-article ul,
+  .adv-article ol {
+    margin: 0 0 1.25rem;
+    padding-left: 1.5rem;
+  }
+  .adv-article li {
+    margin-bottom: 0.45rem;
+    line-height: 1.65;
+  }
+  .adv-article ul li::marker { color: rgb(201 162 75); }
+  .adv-article ol li::marker { color: rgb(122 31 58); font-weight: 700; }
+</style>
