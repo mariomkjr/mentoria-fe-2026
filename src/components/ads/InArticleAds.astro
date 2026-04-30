@@ -28,7 +28,13 @@ const slotsJson = slotIds.length > 0 ? JSON.stringify(slotIds) : '[]';
         const slotId = slotIds[slotIdx++];
         const slot = (slotsData as any).slots[slotId];
         if (!slot) return;
-        const active = (slot.creatives || []).filter((c: any) => c.active !== false);
+        const now = new Date();
+        const active = (slot.creatives || []).filter((c: any) => {
+          if (c.active === false) return false;
+          if (c.start_at && new Date(c.start_at) > now) return false;
+          if (c.end_at && new Date(c.end_at) < now) return false;
+          return true;
+        });
         const dims = slot.dimensions || { width: 728, height: 90 };
         const container = document.createElement('div');
         container.style.margin = '2rem 0';

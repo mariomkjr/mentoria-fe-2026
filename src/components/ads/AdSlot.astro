@@ -12,7 +12,13 @@ const slot = (slotsData as any).slots[id];
 
 function pickCreative(creatives: any[]) {
   if (!creatives || creatives.length === 0) return null;
-  const active = creatives.filter((c) => c.active !== false);
+  const now = new Date();
+  const active = creatives.filter((c) => {
+    if (c.active === false) return false;
+    if (c.start_at && new Date(c.start_at) > now) return false;
+    if (c.end_at && new Date(c.end_at) < now) return false;
+    return true;
+  });
   if (active.length === 0) return null;
   const totalWeight = active.reduce((s, c) => s + (c.weight || 1), 0);
   let r = Math.random() * totalWeight;

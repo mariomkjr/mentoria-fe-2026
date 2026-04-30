@@ -4,8 +4,14 @@
   "slots": {
     "post-top": {
       "label": "Topo do post (leaderboard)",
-      "dimensions": { "width": 970, "height": 250 },
-      "mobileDimensions": { "width": 320, "height": 100 },
+      "dimensions": {
+        "width": 970,
+        "height": 250
+      },
+      "mobileDimensions": {
+        "width": 320,
+        "height": 100
+      },
       "creatives": [
         {
           "advertiser": "DEMO-TOP",
@@ -15,13 +21,63 @@
           "alt": "Anuncie aqui — post-top",
           "weight": 1,
           "active": true
+        },
+        {
+          "advertiser": "Sérum Clareador Íntimo Maxfem",
+          "image": "/ads/serum-clareador-intimo-maxfem/320x100-mobile.png",
+          "href": "/adv/clarear-regiao-intima-forma-segura",
+          "alt": "O que mulheres acima dos 45 estão fazendo pra clarear a região íntima de forma segura",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:46:40.564Z",
+          "end_at": "2026-05-07T04:46:40.564Z",
+          "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
+        },
+        {
+          "advertiser": "Sérum Clareador Íntimo Maxfem (v1)",
+          "image": "/ads/serum-clareador-intimo-maxfem/970x250-v1.png",
+          "href": "/adv/clarear-regiao-intima-forma-segura",
+          "alt": "O que mulheres acima dos 45 estão fazendo pra clarear a região íntima de forma segura",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:46:40.564Z",
+          "end_at": "2026-05-07T04:46:40.564Z",
+          "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
+        },
+        {
+          "advertiser": "Sérum Clareador Íntimo Maxfem (v2)",
+          "image": "/ads/serum-clareador-intimo-maxfem/970x250-v2.png",
+          "href": "/adv/clarear-regiao-intima-forma-segura",
+          "alt": "O que mulheres acima dos 45 estão fazendo pra clarear a região íntima de forma segura",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:46:40.564Z",
+          "end_at": "2026-05-07T04:46:40.564Z",
+          "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
+        },
+        {
+          "advertiser": "Sérum Clareador Íntimo Maxfem (v3)",
+          "image": "/ads/serum-clareador-intimo-maxfem/970x250-v3.png",
+          "href": "/adv/clarear-regiao-intima-forma-segura",
+          "alt": "O que mulheres acima dos 45 estão fazendo pra clarear a região íntima de forma segura",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:46:40.564Z",
+          "end_at": "2026-05-07T04:46:40.564Z",
+          "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
         }
       ]
     },
     "post-in-article-1": {
       "label": "Dentro do post — após parágrafo 3",
-      "dimensions": { "width": 300, "height": 250 },
-      "mobileDimensions": { "width": 300, "height": 250 },
+      "dimensions": {
+        "width": 300,
+        "height": 250
+      },
+      "mobileDimensions": {
+        "width": 300,
+        "height": 250
+      },
       "creatives": [
         {
           "advertiser": "DEMO-MPU-1",
@@ -30,13 +86,30 @@
           "alt": "Anuncie aqui — in-article 1",
           "weight": 1,
           "active": true
+        },
+        {
+          "advertiser": "Sérum Clareador Íntimo Maxfem",
+          "image": "/ads/serum-clareador-intimo-maxfem/300x250.png",
+          "href": "/adv/clarear-regiao-intima-forma-segura",
+          "alt": "O que mulheres acima dos 45 estão fazendo pra clarear a região íntima de forma segura",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:46:40.564Z",
+          "end_at": "2026-05-07T04:46:40.564Z",
+          "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
         }
       ]
     },
     "post-in-article-2": {
       "label": "Dentro do post — após parágrafo 6",
-      "dimensions": { "width": 728, "height": 90 },
-      "mobileDimensions": { "width": 300, "height": 100 },
+      "dimensions": {
+        "width": 728,
+        "height": 90
+      },
+      "mobileDimensions": {
+        "width": 300,
+        "height": 100
+      },
       "creatives": [
         {
           "advertiser": "DEMO-LB",
@@ -46,13 +119,31 @@
           "alt": "Anuncie aqui — in-article 2",
           "weight": 1,
           "active": true
+        },
+        {
+          "advertiser": "Sérum Clareador Íntimo Maxfem",
+          "image": "/ads/serum-clareador-intimo-maxfem/728x90.png",
+          "href": "/adv/clarear-regiao-intima-forma-segura",
+          "alt": "O que mulheres acima dos 45 estão fazendo pra clarear a região íntima de forma segura",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:46:40.564Z",
+          "end_at": "2026-05-07T04:46:40.564Z",
+          "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504",
+          "imageMobile": "/ads/serum-clareador-intimo-maxfem/300x100-mobile.png"
         }
       ]
     },
     "post-in-article-3": {
       "label": "Dentro do post — após parágrafo 9",
-      "dimensions": { "width": 300, "height": 250 },
-      "mobileDimensions": { "width": 300, "height": 250 },
+      "dimensions": {
+        "width": 300,
+        "height": 250
+      },
+      "mobileDimensions": {
+        "width": 300,
+        "height": 250
+      },
       "creatives": [
         {
           "advertiser": "DEMO-MPU-2",
@@ -61,13 +152,30 @@
           "alt": "Anuncie aqui — in-article 3",
           "weight": 1,
           "active": true
+        },
+        {
+          "advertiser": "Sérum Clareador Íntimo Maxfem",
+          "image": "/ads/serum-clareador-intimo-maxfem/300x250.png",
+          "href": "/adv/clarear-regiao-intima-forma-segura",
+          "alt": "O que mulheres acima dos 45 estão fazendo pra clarear a região íntima de forma segura",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:46:40.564Z",
+          "end_at": "2026-05-07T04:46:40.564Z",
+          "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
         }
       ]
     },
     "post-end": {
       "label": "Fim do post",
-      "dimensions": { "width": 970, "height": 250 },
-      "mobileDimensions": { "width": 320, "height": 100 },
+      "dimensions": {
+        "width": 970,
+        "height": 250
+      },
+      "mobileDimensions": {
+        "width": 320,
+        "height": 100
+      },
       "creatives": [
         {
           "advertiser": "DEMO-END",
@@ -77,13 +185,63 @@
           "alt": "Anuncie aqui — post-end",
           "weight": 1,
           "active": true
+        },
+        {
+          "advertiser": "Sérum Clareador Íntimo Maxfem",
+          "image": "/ads/serum-clareador-intimo-maxfem/320x100-mobile.png",
+          "href": "/adv/clarear-regiao-intima-forma-segura",
+          "alt": "O que mulheres acima dos 45 estão fazendo pra clarear a região íntima de forma segura",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:46:40.564Z",
+          "end_at": "2026-05-07T04:46:40.564Z",
+          "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
+        },
+        {
+          "advertiser": "Sérum Clareador Íntimo Maxfem (v1)",
+          "image": "/ads/serum-clareador-intimo-maxfem/970x250-v1.png",
+          "href": "/adv/clarear-regiao-intima-forma-segura",
+          "alt": "O que mulheres acima dos 45 estão fazendo pra clarear a região íntima de forma segura",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:46:40.564Z",
+          "end_at": "2026-05-07T04:46:40.564Z",
+          "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
+        },
+        {
+          "advertiser": "Sérum Clareador Íntimo Maxfem (v2)",
+          "image": "/ads/serum-clareador-intimo-maxfem/970x250-v2.png",
+          "href": "/adv/clarear-regiao-intima-forma-segura",
+          "alt": "O que mulheres acima dos 45 estão fazendo pra clarear a região íntima de forma segura",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:46:40.564Z",
+          "end_at": "2026-05-07T04:46:40.564Z",
+          "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
+        },
+        {
+          "advertiser": "Sérum Clareador Íntimo Maxfem (v3)",
+          "image": "/ads/serum-clareador-intimo-maxfem/970x250-v3.png",
+          "href": "/adv/clarear-regiao-intima-forma-segura",
+          "alt": "O que mulheres acima dos 45 estão fazendo pra clarear a região íntima de forma segura",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:46:40.564Z",
+          "end_at": "2026-05-07T04:46:40.564Z",
+          "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
         }
       ]
     },
     "sidebar-top": {
       "label": "Sidebar — topo MPU",
-      "dimensions": { "width": 300, "height": 250 },
-      "mobileDimensions": { "width": 300, "height": 250 },
+      "dimensions": {
+        "width": 300,
+        "height": 250
+      },
+      "mobileDimensions": {
+        "width": 300,
+        "height": 250
+      },
       "creatives": [
         {
           "advertiser": "DEMO-SIDE-TOP",
@@ -92,13 +250,30 @@
           "alt": "Anuncie aqui — sidebar top",
           "weight": 1,
           "active": true
+        },
+        {
+          "advertiser": "Sérum Clareador Íntimo Maxfem",
+          "image": "/ads/serum-clareador-intimo-maxfem/300x250.png",
+          "href": "/adv/clarear-regiao-intima-forma-segura",
+          "alt": "O que mulheres acima dos 45 estão fazendo pra clarear a região íntima de forma segura",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:46:40.564Z",
+          "end_at": "2026-05-07T04:46:40.564Z",
+          "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
         }
       ]
     },
     "sidebar-mid": {
       "label": "Sidebar — meio half-page sticky",
-      "dimensions": { "width": 300, "height": 600 },
-      "mobileDimensions": { "width": 300, "height": 600 },
+      "dimensions": {
+        "width": 300,
+        "height": 600
+      },
+      "mobileDimensions": {
+        "width": 300,
+        "height": 600
+      },
       "creatives": [
         {
           "advertiser": "DEMO-SIDE-MID",
@@ -107,13 +282,30 @@
           "alt": "Anuncie aqui — sidebar half-page",
           "weight": 1,
           "active": true
+        },
+        {
+          "advertiser": "Sérum Clareador Íntimo Maxfem",
+          "image": "/ads/serum-clareador-intimo-maxfem/300x600.png",
+          "href": "/adv/clarear-regiao-intima-forma-segura",
+          "alt": "O que mulheres acima dos 45 estão fazendo pra clarear a região íntima de forma segura",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:46:40.564Z",
+          "end_at": "2026-05-07T04:46:40.564Z",
+          "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
         }
       ]
     },
     "sticky-footer-mobile": {
       "label": "Banner fixo mobile rodapé",
-      "dimensions": { "width": 320, "height": 50 },
-      "mobileDimensions": { "width": 320, "height": 50 },
+      "dimensions": {
+        "width": 320,
+        "height": 50
+      },
+      "mobileDimensions": {
+        "width": 320,
+        "height": 50
+      },
       "creatives": [
         {
           "advertiser": "DEMO-STICKY",
@@ -122,6 +314,17 @@
           "alt": "Anuncie aqui — sticky footer",
           "weight": 1,
           "active": true
+        },
+        {
+          "advertiser": "Sérum Clareador Íntimo Maxfem",
+          "image": "/ads/serum-clareador-intimo-maxfem/320x50.png",
+          "href": "/adv/clarear-regiao-intima-forma-segura",
+          "alt": "O que mulheres acima dos 45 estão fazendo pra clarear a região íntima de forma segura",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:46:40.564Z",
+          "end_at": "2026-05-07T04:46:40.564Z",
+          "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
         }
       ]
     }

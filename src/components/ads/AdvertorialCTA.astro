@@ -1,0 +1,132 @@
+---
+interface Props {
+  name: string;
+  thumb: string;
+  url: string;
+  price?: number;
+  cta?: string;
+  description?: string;
+}
+
+const { name, thumb, url, price, cta = 'Quero conhecer', description } = Astro.props;
+---
+
+<aside class="adv-cta my-8">
+  <a href={url} target="_blank" rel="sponsored noopener noreferrer" class="adv-cta__link" data-adv-cta>
+    <div class="adv-cta__thumb">
+      <img src={thumb} alt={name} loading="lazy" decoding="async" />
+    </div>
+    <div class="adv-cta__body">
+      <h3 class="adv-cta__title">{name}</h3>
+      {description && <p class="adv-cta__desc">{description}</p>}
+      <div class="adv-cta__row">
+        {price !== undefined && (
+          <span class="adv-cta__price">R$ {Number(price).toFixed(2).replace('.', ',')}</span>
+        )}
+        <span class="adv-cta__btn">{cta} →</span>
+      </div>
+    </div>
+  </a>
+</aside>
+
+<style>
+  .adv-cta { display: block; }
+  .adv-cta__link {
+    display: flex;
+    flex-direction: column;
+    background: rgb(245 240 230 / 0.6);
+    border: 1px solid rgb(201 162 75 / 0.4);
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 12px rgb(122 31 58 / 0.08);
+  }
+  .adv-cta__link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgb(122 31 58 / 0.18);
+  }
+  .adv-cta__thumb {
+    background: rgb(253 251 245);
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+  }
+  .adv-cta__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .adv-cta__body { padding: 1.25rem 1.5rem; }
+  .adv-cta__title {
+    font-family: var(--aw-font-heading, 'Playfair Display', Georgia, serif);
+    font-weight: 700;
+    color: rgb(122 31 58);
+    font-size: 1.4rem;
+    line-height: 1.2;
+    margin: 0 0 0.5rem;
+  }
+  .adv-cta__desc {
+    color: rgb(30 28 32 / 0.7);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0 0 1rem;
+  }
+  .adv-cta__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .adv-cta__price {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: rgb(122 31 58);
+  }
+  .adv-cta__btn {
+    background: rgb(122 31 58);
+    color: rgb(253 251 245);
+    padding: 0.6rem 1.25rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: background 0.2s;
+  }
+  .adv-cta__link:hover .adv-cta__btn { background: rgb(92 23 41); }
+  :global(.dark) .adv-cta__link {
+    background: rgb(40 30 35 / 0.5);
+    border-color: rgb(221 184 101 / 0.3);
+  }
+  :global(.dark) .adv-cta__title { color: rgb(221 184 101); }
+  :global(.dark) .adv-cta__desc { color: rgb(229 222 206 / 0.8); }
+  :global(.dark) .adv-cta__price { color: rgb(221 184 101); }
+  :global(.dark) .adv-cta__btn {
+    background: rgb(221 184 101);
+    color: rgb(20 12 16);
+  }
+  :global(.dark) .adv-cta__link:hover .adv-cta__btn { background: rgb(201 162 75); }
+
+  @media (min-width: 640px) {
+    .adv-cta__link { flex-direction: row; }
+    .adv-cta__thumb {
+      width: 240px;
+      flex-shrink: 0;
+      aspect-ratio: 1 / 1;
+    }
+    .adv-cta__body { flex: 1; padding: 1.5rem; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('[data-adv-cta]').forEach((el) => {
+    el.addEventListener('click', () => {
+      const w = window as any;
+      if (w.plausible) w.plausible('adv-cta-click', { props: { url: (el as HTMLAnchorElement).href }});
+      else if (w.gtag) w.gtag('event', 'adv_cta_click', { url: (el as HTMLAnchorElement).href });
+    });
+  });
+</script>
