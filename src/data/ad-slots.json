@@ -153,6 +153,50 @@
           "start_at": "2026-04-30T05:04:08.234Z",
           "end_at": "2026-05-07T05:04:08.234Z",
           "campaign_id": "de3d63fc-02dd-41c0-b755-91f82ef530f1"
+        },
+        {
+          "advertiser": "Cheirozinha - Body Splash Íntimo, Desodorante Íntimo",
+          "image": "/ads/cheirozinha-body-splash-intimo-desodorante-intimo/320x100-mobile.png",
+          "href": "/adv/body-splash-intimo-frescor-dia-todo",
+          "alt": "O perfume íntimo que Renata, 48 anos, passou a usar todo dia e não consegue mais parar",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:16:16.233Z",
+          "end_at": "2026-05-07T05:16:16.233Z",
+          "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
+        },
+        {
+          "advertiser": "Cheirozinha - Body Splash Íntimo, Desodorante Íntimo (v1)",
+          "image": "/ads/cheirozinha-body-splash-intimo-desodorante-intimo/970x250-v1.png",
+          "href": "/adv/body-splash-intimo-frescor-dia-todo",
+          "alt": "O perfume íntimo que Renata, 48 anos, passou a usar todo dia e não consegue mais parar",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:16:16.233Z",
+          "end_at": "2026-05-07T05:16:16.233Z",
+          "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
+        },
+        {
+          "advertiser": "Cheirozinha - Body Splash Íntimo, Desodorante Íntimo (v2)",
+          "image": "/ads/cheirozinha-body-splash-intimo-desodorante-intimo/970x250-v2.png",
+          "href": "/adv/body-splash-intimo-frescor-dia-todo",
+          "alt": "O perfume íntimo que Renata, 48 anos, passou a usar todo dia e não consegue mais parar",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:16:16.233Z",
+          "end_at": "2026-05-07T05:16:16.233Z",
+          "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
+        },
+        {
+          "advertiser": "Cheirozinha - Body Splash Íntimo, Desodorante Íntimo (v3)",
+          "image": "/ads/cheirozinha-body-splash-intimo-desodorante-intimo/970x250-v3.png",
+          "href": "/adv/body-splash-intimo-frescor-dia-todo",
+          "alt": "O perfume íntimo que Renata, 48 anos, passou a usar todo dia e não consegue mais parar",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:16:16.233Z",
+          "end_at": "2026-05-07T05:16:16.233Z",
+          "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
         }
       ]
     },
@@ -207,6 +251,17 @@
           "start_at": "2026-04-30T05:04:08.234Z",
           "end_at": "2026-05-07T05:04:08.234Z",
           "campaign_id": "de3d63fc-02dd-41c0-b755-91f82ef530f1"
+        },
+        {
+          "advertiser": "Cheirozinha - Body Splash Íntimo, Desodorante Íntimo",
+          "image": "/ads/cheirozinha-body-splash-intimo-desodorante-intimo/300x250.png",
+          "href": "/adv/body-splash-intimo-frescor-dia-todo",
+          "alt": "O perfume íntimo que Renata, 48 anos, passou a usar todo dia e não consegue mais parar",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:16:16.233Z",
+          "end_at": "2026-05-07T05:16:16.233Z",
+          "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
         }
       ]
     },
@@ -265,6 +320,18 @@
           "end_at": "2026-05-07T05:04:08.234Z",
           "campaign_id": "de3d63fc-02dd-41c0-b755-91f82ef530f1",
           "imageMobile": "/ads/imunofem-gummy-probiotico-para-candidiase-em-gummy/300x100-mobile.png"
+        },
+        {
+          "advertiser": "Cheirozinha - Body Splash Íntimo, Desodorante Íntimo",
+          "image": "/ads/cheirozinha-body-splash-intimo-desodorante-intimo/728x90.png",
+          "href": "/adv/body-splash-intimo-frescor-dia-todo",
+          "alt": "O perfume íntimo que Renata, 48 anos, passou a usar todo dia e não consegue mais parar",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:16:16.233Z",
+          "end_at": "2026-05-07T05:16:16.233Z",
+          "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424",
+          "imageMobile": "/ads/cheirozinha-body-splash-intimo-desodorante-intimo/300x100-mobile.png"
         }
       ]
     },
@@ -319,6 +386,17 @@
           "start_at": "2026-04-30T05:04:08.234Z",
           "end_at": "2026-05-07T05:04:08.234Z",
           "campaign_id": "de3d63fc-02dd-41c0-b755-91f82ef530f1"
+        },
+        {
+          "advertiser": "Cheirozinha - Body Splash Íntimo, Desodorante Íntimo",
+          "image": "/ads/cheirozinha-body-splash-intimo-desodorante-intimo/300x250.png",
+          "href": "/adv/body-splash-intimo-frescor-dia-todo",
+          "alt": "O perfume íntimo que Renata, 48 anos, passou a usar todo dia e não consegue mais parar",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:16:16.233Z",
+          "end_at": "2026-05-07T05:16:16.233Z",
+          "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
         }
       ]
     },
@@ -473,6 +551,50 @@
           "start_at": "2026-04-30T05:04:08.234Z",
           "end_at": "2026-05-07T05:04:08.234Z",
           "campaign_id": "de3d63fc-02dd-41c0-b755-91f82ef530f1"
+        },
+        {
+          "advertiser": "Cheirozinha - Body Splash Íntimo, Desodorante Íntimo",
+          "image": "/ads/cheirozinha-body-splash-intimo-desodorante-intimo/320x100-mobile.png",
+          "href": "/adv/body-splash-intimo-frescor-dia-todo",
+          "alt": "O perfume íntimo que Renata, 48 anos, passou a usar todo dia e não consegue mais parar",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:16:16.233Z",
+          "end_at": "2026-05-07T05:16:16.233Z",
+          "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
+        },
+        {
+          "advertiser": "Cheirozinha - Body Splash Íntimo, Desodorante Íntimo (v1)",
+          "image": "/ads/cheirozinha-body-splash-intimo-desodorante-intimo/970x250-v1.png",
+          "href": "/adv/body-splash-intimo-frescor-dia-todo",
+          "alt": "O perfume íntimo que Renata, 48 anos, passou a usar todo dia e não consegue mais parar",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:16:16.233Z",
+          "end_at": "2026-05-07T05:16:16.233Z",
+          "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
+        },
+        {
+          "advertiser": "Cheirozinha - Body Splash Íntimo, Desodorante Íntimo (v2)",
+          "image": "/ads/cheirozinha-body-splash-intimo-desodorante-intimo/970x250-v2.png",
+          "href": "/adv/body-splash-intimo-frescor-dia-todo",
+          "alt": "O perfume íntimo que Renata, 48 anos, passou a usar todo dia e não consegue mais parar",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:16:16.233Z",
+          "end_at": "2026-05-07T05:16:16.233Z",
+          "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
+        },
+        {
+          "advertiser": "Cheirozinha - Body Splash Íntimo, Desodorante Íntimo (v3)",
+          "image": "/ads/cheirozinha-body-splash-intimo-desodorante-intimo/970x250-v3.png",
+          "href": "/adv/body-splash-intimo-frescor-dia-todo",
+          "alt": "O perfume íntimo que Renata, 48 anos, passou a usar todo dia e não consegue mais parar",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:16:16.233Z",
+          "end_at": "2026-05-07T05:16:16.233Z",
+          "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
         }
       ]
     },
@@ -527,6 +649,17 @@
           "start_at": "2026-04-30T05:04:08.234Z",
           "end_at": "2026-05-07T05:04:08.234Z",
           "campaign_id": "de3d63fc-02dd-41c0-b755-91f82ef530f1"
+        },
+        {
+          "advertiser": "Cheirozinha - Body Splash Íntimo, Desodorante Íntimo",
+          "image": "/ads/cheirozinha-body-splash-intimo-desodorante-intimo/300x250.png",
+          "href": "/adv/body-splash-intimo-frescor-dia-todo",
+          "alt": "O perfume íntimo que Renata, 48 anos, passou a usar todo dia e não consegue mais parar",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:16:16.233Z",
+          "end_at": "2026-05-07T05:16:16.233Z",
+          "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
         }
       ]
     },
@@ -581,6 +714,17 @@
           "start_at": "2026-04-30T05:04:08.234Z",
           "end_at": "2026-05-07T05:04:08.234Z",
           "campaign_id": "de3d63fc-02dd-41c0-b755-91f82ef530f1"
+        },
+        {
+          "advertiser": "Cheirozinha - Body Splash Íntimo, Desodorante Íntimo",
+          "image": "/ads/cheirozinha-body-splash-intimo-desodorante-intimo/300x600.png",
+          "href": "/adv/body-splash-intimo-frescor-dia-todo",
+          "alt": "O perfume íntimo que Renata, 48 anos, passou a usar todo dia e não consegue mais parar",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:16:16.233Z",
+          "end_at": "2026-05-07T05:16:16.233Z",
+          "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
         }
       ]
     },
@@ -635,6 +779,17 @@
           "start_at": "2026-04-30T05:04:08.234Z",
           "end_at": "2026-05-07T05:04:08.234Z",
           "campaign_id": "de3d63fc-02dd-41c0-b755-91f82ef530f1"
+        },
+        {
+          "advertiser": "Cheirozinha - Body Splash Íntimo, Desodorante Íntimo",
+          "image": "/ads/cheirozinha-body-splash-intimo-desodorante-intimo/320x50.png",
+          "href": "/adv/body-splash-intimo-frescor-dia-todo",
+          "alt": "O perfume íntimo que Renata, 48 anos, passou a usar todo dia e não consegue mais parar",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:16:16.233Z",
+          "end_at": "2026-05-07T05:16:16.233Z",
+          "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
         }
       ]
     }
