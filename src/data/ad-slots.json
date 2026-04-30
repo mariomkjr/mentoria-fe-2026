@@ -20,7 +20,7 @@
           "href": "https://creioemtesenhor.com/parceiros?slot=post-top",
           "alt": "Anuncie aqui — post-top",
           "weight": 1,
-          "active": true
+          "active": false
         },
         {
           "advertiser": "Sérum Clareador Íntimo Maxfem",
@@ -294,7 +294,7 @@
           "href": "https://creioemtesenhor.com/parceiros?slot=in-article-1",
           "alt": "Anuncie aqui — in-article 1",
           "weight": 1,
-          "active": true
+          "active": false
         },
         {
           "advertiser": "Sérum Clareador Íntimo Maxfem",
@@ -371,7 +371,7 @@
           "href": "https://creioemtesenhor.com/parceiros?slot=in-article-2",
           "alt": "Anuncie aqui — in-article 2",
           "weight": 1,
-          "active": true
+          "active": false
         },
         {
           "advertiser": "Sérum Clareador Íntimo Maxfem",
@@ -452,7 +452,7 @@
           "href": "https://creioemtesenhor.com/parceiros?slot=in-article-3",
           "alt": "Anuncie aqui — in-article 3",
           "weight": 1,
-          "active": true
+          "active": false
         },
         {
           "advertiser": "Sérum Clareador Íntimo Maxfem",
@@ -529,7 +529,7 @@
           "href": "https://creioemtesenhor.com/parceiros?slot=post-end",
           "alt": "Anuncie aqui — post-end",
           "weight": 1,
-          "active": true
+          "active": false
         },
         {
           "advertiser": "Sérum Clareador Íntimo Maxfem",
@@ -803,7 +803,7 @@
           "href": "https://creioemtesenhor.com/parceiros?slot=sidebar-top",
           "alt": "Anuncie aqui — sidebar top",
           "weight": 1,
-          "active": true
+          "active": false
         },
         {
           "advertiser": "Sérum Clareador Íntimo Maxfem",
@@ -879,7 +879,7 @@
           "href": "https://creioemtesenhor.com/parceiros?slot=sidebar-mid",
           "alt": "Anuncie aqui — sidebar half-page",
           "weight": 1,
-          "active": true
+          "active": false
         },
         {
           "advertiser": "Sérum Clareador Íntimo Maxfem",
@@ -942,24 +942,16 @@
       "label": "Banner fixo mobile rodapé",
       "dimensions": {
         "width": 320,
-        "height": 50
+        "height": 100
       },
       "mobileDimensions": {
         "width": 320,
-        "height": 50
+        "height": 100
       },
       "creatives": [
         {
-          "advertiser": "DEMO-STICKY",
-          "image": "/ads/demo-320x50.svg",
-          "href": "https://creioemtesenhor.com/parceiros?slot=sticky-footer-mobile",
-          "alt": "Anuncie aqui — sticky footer",
-          "weight": 1,
-          "active": true
-        },
-        {
           "advertiser": "Sérum Clareador Íntimo Maxfem",
-          "image": "/ads/serum-clareador-intimo-maxfem/320x50.png",
+          "image": "/ads/serum-clareador-intimo-maxfem/320x100-mobile.png",
           "href": "https://maxfem.com.br/products/serum-clareador-intimo-maxfem?utm_source=mentoria&utm_medium=display&utm_campaign=ad-builder&utm_content=serum-clareador-intimo-maxfem",
           "alt": "O que mulheres acima dos 45 estão fazendo pra clarear a região íntima de forma segura",
           "weight": 1,
@@ -970,7 +962,7 @@
         },
         {
           "advertiser": "Imunofem – Suplemento para o Bem-Estar Íntimo Feminino 3 meses",
-          "image": "/ads/imunofem-suplemento-para-o-bem-estar-intimo-feminino-3-meses/320x50.png",
+          "image": "/ads/imunofem-suplemento-para-o-bem-estar-intimo-feminino-3-meses/320x100-mobile.png",
           "href": "https://maxfem.com.br/products/imunofem-candidiase-com-180-caps-3-mes?utm_source=mentoria&utm_medium=display&utm_campaign=ad-builder&utm_content=imunofem-candidiase-com-180-caps-3-mes",
           "alt": "O que Fernanda, 43 anos, fez pra parar com a candidíase recorrente que ninguém conseguia resolver",
           "weight": 1,
@@ -981,7 +973,7 @@
         },
         {
           "advertiser": "Imunofem Gummy – Probiótico para Candidíase em Gummy",
-          "image": "/ads/imunofem-gummy-probiotico-para-candidiase-em-gummy/320x50.png",
+          "image": "/ads/imunofem-gummy-probiotico-para-candidiase-em-gummy/320x100-mobile.png",
           "href": "https://maxfem.com.br/products/imunofem-gummy?utm_source=mentoria&utm_medium=display&utm_campaign=ad-builder&utm_content=imunofem-gummy",
           "alt": "O relato curioso de Fabiana, 48 anos, que parou de ter candidíase recorrente todo mês",
           "weight": 1,
@@ -992,7 +984,7 @@
         },
         {
           "advertiser": "Cheirozinha - Body Splash Íntimo, Desodorante Íntimo",
-          "image": "/ads/cheirozinha-body-splash-intimo-desodorante-intimo/320x50.png",
+          "image": "/ads/cheirozinha-body-splash-intimo-desodorante-intimo/320x100-mobile.png",
           "href": "https://maxfem.com.br/products/cheirozinha-body-splash-intimo-desodorante-intimo?utm_source=mentoria&utm_medium=display&utm_campaign=ad-builder&utm_content=cheirozinha-body-splash-intimo-desodorante-intimo",
           "alt": "O perfume íntimo que Renata, 48 anos, passou a usar todo dia e não consegue mais parar",
           "weight": 1,
@@ -1003,7 +995,7 @@
         },
         {
           "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+",
-          "image": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/320x50.png",
+          "image": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/320x100-mobile.png",
           "href": "https://maxfem.com.br/products/menovital-para-melhora-da-menopausa?utm_source=mentoria&utm_medium=display&utm_campaign=ad-builder&utm_content=menovital-para-melhora-da-menopausa",
           "alt": "Selma, 55 anos, conta como parou de sofrer com calorões e insônia na menopausa. Veja!",
           "weight": 1,
