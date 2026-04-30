@@ -28,7 +28,7 @@
           "href": "https://maxfem.com.br/products/serum-clareador-intimo-maxfem?utm_source=mentoria&utm_medium=display&utm_campaign=ad-builder&utm_content=serum-clareador-intimo-maxfem",
           "alt": "O que mulheres acima dos 45 estão fazendo pra clarear a região íntima de forma segura",
           "weight": 1,
-          "active": true,
+          "active": false,
           "start_at": "2026-04-30T04:46:40.564Z",
           "end_at": "2026-05-07T04:46:40.564Z",
           "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
@@ -42,7 +42,8 @@
           "active": true,
           "start_at": "2026-04-30T04:46:40.564Z",
           "end_at": "2026-05-07T04:46:40.564Z",
-          "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
+          "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504",
+          "imageMobile": "/ads/serum-clareador-intimo-maxfem/320x100-mobile.png"
         },
         {
           "advertiser": "Sérum Clareador Íntimo Maxfem (v2)",
@@ -53,7 +54,8 @@
           "active": true,
           "start_at": "2026-04-30T04:46:40.564Z",
           "end_at": "2026-05-07T04:46:40.564Z",
-          "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
+          "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504",
+          "imageMobile": "/ads/serum-clareador-intimo-maxfem/320x100-mobile.png"
         },
         {
           "advertiser": "Sérum Clareador Íntimo Maxfem (v3)",
@@ -64,7 +66,8 @@
           "active": true,
           "start_at": "2026-04-30T04:46:40.564Z",
           "end_at": "2026-05-07T04:46:40.564Z",
-          "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
+          "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504",
+          "imageMobile": "/ads/serum-clareador-intimo-maxfem/320x100-mobile.png"
         },
         {
           "advertiser": "Imunofem – Suplemento para o Bem-Estar Íntimo Feminino 3 meses",
@@ -72,7 +75,7 @@
           "href": "https://maxfem.com.br/products/imunofem-candidiase-com-180-caps-3-mes?utm_source=mentoria&utm_medium=display&utm_campaign=ad-builder&utm_content=imunofem-candidiase-com-180-caps-3-mes",
           "alt": "O que Fernanda, 43 anos, fez pra parar com a candidíase recorrente que ninguém conseguia resolver",
           "weight": 1,
-          "active": true,
+          "active": false,
           "start_at": "2026-04-30T04:56:38.023Z",
           "end_at": "2026-05-07T04:56:38.023Z",
           "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac"
@@ -86,7 +89,8 @@
           "active": true,
           "start_at": "2026-04-30T04:56:38.023Z",
           "end_at": "2026-05-07T04:56:38.023Z",
-          "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac"
+          "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac",
+          "imageMobile": "/ads/imunofem-suplemento-para-o-bem-estar-intimo-feminino-3-meses/320x100-mobile.png"
         },
         {
           "advertiser": "Imunofem – Suplemento para o Bem-Estar Íntimo Feminino 3 meses (v2)",
@@ -97,7 +101,8 @@
           "active": true,
           "start_at": "2026-04-30T04:56:38.023Z",
           "end_at": "2026-05-07T04:56:38.023Z",
-          "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac"
+          "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac",
+          "imageMobile": "/ads/imunofem-suplemento-para-o-bem-estar-intimo-feminino-3-meses/320x100-mobile.png"
         },
         {
           "advertiser": "Imunofem – Suplemento para o Bem-Estar Íntimo Feminino 3 meses (v3)",
@@ -108,7 +113,8 @@
           "active": true,
           "start_at": "2026-04-30T04:56:38.023Z",
           "end_at": "2026-05-07T04:56:38.023Z",
-          "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac"
+          "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac",
+          "imageMobile": "/ads/imunofem-suplemento-para-o-bem-estar-intimo-feminino-3-meses/320x100-mobile.png"
         },
         {
           "advertiser": "Imunofem Gummy – Probiótico para Candidíase em Gummy",
@@ -116,7 +122,7 @@
           "href": "https://maxfem.com.br/products/imunofem-gummy?utm_source=mentoria&utm_medium=display&utm_campaign=ad-builder&utm_content=imunofem-gummy",
           "alt": "O relato curioso de Fabiana, 48 anos, que parou de ter candidíase recorrente todo mês",
           "weight": 1,
-          "active": true,
+          "active": false,
           "start_at": "2026-04-30T05:04:08.234Z",
           "end_at": "2026-05-07T05:04:08.234Z",
           "campaign_id": "de3d63fc-02dd-41c0-b755-91f82ef530f1"
@@ -130,7 +136,8 @@
           "active": true,
           "start_at": "2026-04-30T05:04:08.234Z",
           "end_at": "2026-05-07T05:04:08.234Z",
-          "campaign_id": "de3d63fc-02dd-41c0-b755-91f82ef530f1"
+          "campaign_id": "de3d63fc-02dd-41c0-b755-91f82ef530f1",
+          "imageMobile": "/ads/imunofem-gummy-probiotico-para-candidiase-em-gummy/320x100-mobile.png"
         },
         {
           "advertiser": "Imunofem Gummy – Probiótico para Candidíase em Gummy (v2)",
@@ -141,7 +148,8 @@
           "active": true,
           "start_at": "2026-04-30T05:04:08.234Z",
           "end_at": "2026-05-07T05:04:08.234Z",
-          "campaign_id": "de3d63fc-02dd-41c0-b755-91f82ef530f1"
+          "campaign_id": "de3d63fc-02dd-41c0-b755-91f82ef530f1",
+          "imageMobile": "/ads/imunofem-gummy-probiotico-para-candidiase-em-gummy/320x100-mobile.png"
         },
         {
           "advertiser": "Imunofem Gummy – Probiótico para Candidíase em Gummy (v3)",
@@ -152,7 +160,8 @@
           "active": true,
           "start_at": "2026-04-30T05:04:08.234Z",
           "end_at": "2026-05-07T05:04:08.234Z",
-          "campaign_id": "de3d63fc-02dd-41c0-b755-91f82ef530f1"
+          "campaign_id": "de3d63fc-02dd-41c0-b755-91f82ef530f1",
+          "imageMobile": "/ads/imunofem-gummy-probiotico-para-candidiase-em-gummy/320x100-mobile.png"
         },
         {
           "advertiser": "Cheirozinha - Body Splash Íntimo, Desodorante Íntimo",
@@ -160,7 +169,7 @@
           "href": "https://maxfem.com.br/products/cheirozinha-body-splash-intimo-desodorante-intimo?utm_source=mentoria&utm_medium=display&utm_campaign=ad-builder&utm_content=cheirozinha-body-splash-intimo-desodorante-intimo",
           "alt": "O perfume íntimo que Renata, 48 anos, passou a usar todo dia e não consegue mais parar",
           "weight": 1,
-          "active": true,
+          "active": false,
           "start_at": "2026-04-30T05:16:16.233Z",
           "end_at": "2026-05-07T05:16:16.233Z",
           "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
@@ -174,7 +183,8 @@
           "active": true,
           "start_at": "2026-04-30T05:16:16.233Z",
           "end_at": "2026-05-07T05:16:16.233Z",
-          "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
+          "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424",
+          "imageMobile": "/ads/cheirozinha-body-splash-intimo-desodorante-intimo/320x100-mobile.png"
         },
         {
           "advertiser": "Cheirozinha - Body Splash Íntimo, Desodorante Íntimo (v2)",
@@ -185,7 +195,8 @@
           "active": true,
           "start_at": "2026-04-30T05:16:16.233Z",
           "end_at": "2026-05-07T05:16:16.233Z",
-          "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
+          "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424",
+          "imageMobile": "/ads/cheirozinha-body-splash-intimo-desodorante-intimo/320x100-mobile.png"
         },
         {
           "advertiser": "Cheirozinha - Body Splash Íntimo, Desodorante Íntimo (v3)",
@@ -196,7 +207,8 @@
           "active": true,
           "start_at": "2026-04-30T05:16:16.233Z",
           "end_at": "2026-05-07T05:16:16.233Z",
-          "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
+          "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424",
+          "imageMobile": "/ads/cheirozinha-body-splash-intimo-desodorante-intimo/320x100-mobile.png"
         },
         {
           "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+",
@@ -204,7 +216,7 @@
           "href": "https://maxfem.com.br/products/menovital-para-melhora-da-menopausa?utm_source=mentoria&utm_medium=display&utm_campaign=ad-builder&utm_content=menovital-para-melhora-da-menopausa",
           "alt": "Selma, 55 anos, conta como parou de sofrer com calorões e insônia na menopausa. Veja!",
           "weight": 1,
-          "active": true,
+          "active": false,
           "start_at": "2026-04-30T05:27:56.398Z",
           "end_at": "2026-05-07T05:27:56.398Z",
           "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
@@ -218,7 +230,8 @@
           "active": true,
           "start_at": "2026-04-30T05:27:56.398Z",
           "end_at": "2026-05-07T05:27:56.398Z",
-          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f",
+          "imageMobile": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/320x100-mobile.png"
         },
         {
           "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+ (v2)",
@@ -229,7 +242,8 @@
           "active": true,
           "start_at": "2026-04-30T05:27:56.398Z",
           "end_at": "2026-05-07T05:27:56.398Z",
-          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f",
+          "imageMobile": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/320x100-mobile.png"
         },
         {
           "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+ (v3)",
@@ -240,7 +254,8 @@
           "active": true,
           "start_at": "2026-04-30T05:27:56.398Z",
           "end_at": "2026-05-07T05:27:56.398Z",
-          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f",
+          "imageMobile": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/320x100-mobile.png"
         },
         {
           "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+ (v4)",
@@ -251,7 +266,8 @@
           "active": true,
           "start_at": "2026-04-30T05:27:56.398Z",
           "end_at": "2026-05-07T05:27:56.398Z",
-          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f",
+          "imageMobile": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/320x100-mobile.png"
         },
         {
           "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+ (v5)",
@@ -262,7 +278,8 @@
           "active": true,
           "start_at": "2026-04-30T05:27:56.398Z",
           "end_at": "2026-05-07T05:27:56.398Z",
-          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f",
+          "imageMobile": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/320x100-mobile.png"
         },
         {
           "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+ (v6)",
@@ -273,7 +290,8 @@
           "active": true,
           "start_at": "2026-04-30T05:27:56.398Z",
           "end_at": "2026-05-07T05:27:56.398Z",
-          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f",
+          "imageMobile": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/320x100-mobile.png"
         }
       ]
     },
@@ -537,7 +555,7 @@
           "href": "https://maxfem.com.br/products/serum-clareador-intimo-maxfem?utm_source=mentoria&utm_medium=display&utm_campaign=ad-builder&utm_content=serum-clareador-intimo-maxfem",
           "alt": "O que mulheres acima dos 45 estão fazendo pra clarear a região íntima de forma segura",
           "weight": 1,
-          "active": true,
+          "active": false,
           "start_at": "2026-04-30T04:46:40.564Z",
           "end_at": "2026-05-07T04:46:40.564Z",
           "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
@@ -551,7 +569,8 @@
           "active": true,
           "start_at": "2026-04-30T04:46:40.564Z",
           "end_at": "2026-05-07T04:46:40.564Z",
-          "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
+          "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504",
+          "imageMobile": "/ads/serum-clareador-intimo-maxfem/320x100-mobile.png"
         },
         {
           "advertiser": "Sérum Clareador Íntimo Maxfem (v2)",
@@ -562,7 +581,8 @@
           "active": true,
           "start_at": "2026-04-30T04:46:40.564Z",
           "end_at": "2026-05-07T04:46:40.564Z",
-          "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
+          "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504",
+          "imageMobile": "/ads/serum-clareador-intimo-maxfem/320x100-mobile.png"
         },
         {
           "advertiser": "Sérum Clareador Íntimo Maxfem (v3)",
@@ -573,7 +593,8 @@
           "active": true,
           "start_at": "2026-04-30T04:46:40.564Z",
           "end_at": "2026-05-07T04:46:40.564Z",
-          "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
+          "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504",
+          "imageMobile": "/ads/serum-clareador-intimo-maxfem/320x100-mobile.png"
         },
         {
           "advertiser": "Imunofem – Suplemento para o Bem-Estar Íntimo Feminino 3 meses",
@@ -581,7 +602,7 @@
           "href": "https://maxfem.com.br/products/imunofem-candidiase-com-180-caps-3-mes?utm_source=mentoria&utm_medium=display&utm_campaign=ad-builder&utm_content=imunofem-candidiase-com-180-caps-3-mes",
           "alt": "O que Fernanda, 43 anos, fez pra parar com a candidíase recorrente que ninguém conseguia resolver",
           "weight": 1,
-          "active": true,
+          "active": false,
           "start_at": "2026-04-30T04:56:38.023Z",
           "end_at": "2026-05-07T04:56:38.023Z",
           "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac"
@@ -595,7 +616,8 @@
           "active": true,
           "start_at": "2026-04-30T04:56:38.023Z",
           "end_at": "2026-05-07T04:56:38.023Z",
-          "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac"
+          "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac",
+          "imageMobile": "/ads/imunofem-suplemento-para-o-bem-estar-intimo-feminino-3-meses/320x100-mobile.png"
         },
         {
           "advertiser": "Imunofem – Suplemento para o Bem-Estar Íntimo Feminino 3 meses (v2)",
@@ -606,7 +628,8 @@
           "active": true,
           "start_at": "2026-04-30T04:56:38.023Z",
           "end_at": "2026-05-07T04:56:38.023Z",
-          "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac"
+          "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac",
+          "imageMobile": "/ads/imunofem-suplemento-para-o-bem-estar-intimo-feminino-3-meses/320x100-mobile.png"
         },
         {
           "advertiser": "Imunofem – Suplemento para o Bem-Estar Íntimo Feminino 3 meses (v3)",
@@ -617,7 +640,8 @@
           "active": true,
           "start_at": "2026-04-30T04:56:38.023Z",
           "end_at": "2026-05-07T04:56:38.023Z",
-          "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac"
+          "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac",
+          "imageMobile": "/ads/imunofem-suplemento-para-o-bem-estar-intimo-feminino-3-meses/320x100-mobile.png"
         },
         {
           "advertiser": "Imunofem Gummy – Probiótico para Candidíase em Gummy",
@@ -625,7 +649,7 @@
           "href": "https://maxfem.com.br/products/imunofem-gummy?utm_source=mentoria&utm_medium=display&utm_campaign=ad-builder&utm_content=imunofem-gummy",
           "alt": "O relato curioso de Fabiana, 48 anos, que parou de ter candidíase recorrente todo mês",
           "weight": 1,
-          "active": true,
+          "active": false,
           "start_at": "2026-04-30T05:04:08.234Z",
           "end_at": "2026-05-07T05:04:08.234Z",
           "campaign_id": "de3d63fc-02dd-41c0-b755-91f82ef530f1"
@@ -639,7 +663,8 @@
           "active": true,
           "start_at": "2026-04-30T05:04:08.234Z",
           "end_at": "2026-05-07T05:04:08.234Z",
-          "campaign_id": "de3d63fc-02dd-41c0-b755-91f82ef530f1"
+          "campaign_id": "de3d63fc-02dd-41c0-b755-91f82ef530f1",
+          "imageMobile": "/ads/imunofem-gummy-probiotico-para-candidiase-em-gummy/320x100-mobile.png"
         },
         {
           "advertiser": "Imunofem Gummy – Probiótico para Candidíase em Gummy (v2)",
@@ -650,7 +675,8 @@
           "active": true,
           "start_at": "2026-04-30T05:04:08.234Z",
           "end_at": "2026-05-07T05:04:08.234Z",
-          "campaign_id": "de3d63fc-02dd-41c0-b755-91f82ef530f1"
+          "campaign_id": "de3d63fc-02dd-41c0-b755-91f82ef530f1",
+          "imageMobile": "/ads/imunofem-gummy-probiotico-para-candidiase-em-gummy/320x100-mobile.png"
         },
         {
           "advertiser": "Imunofem Gummy – Probiótico para Candidíase em Gummy (v3)",
@@ -661,7 +687,8 @@
           "active": true,
           "start_at": "2026-04-30T05:04:08.234Z",
           "end_at": "2026-05-07T05:04:08.234Z",
-          "campaign_id": "de3d63fc-02dd-41c0-b755-91f82ef530f1"
+          "campaign_id": "de3d63fc-02dd-41c0-b755-91f82ef530f1",
+          "imageMobile": "/ads/imunofem-gummy-probiotico-para-candidiase-em-gummy/320x100-mobile.png"
         },
         {
           "advertiser": "Cheirozinha - Body Splash Íntimo, Desodorante Íntimo",
@@ -669,7 +696,7 @@
           "href": "https://maxfem.com.br/products/cheirozinha-body-splash-intimo-desodorante-intimo?utm_source=mentoria&utm_medium=display&utm_campaign=ad-builder&utm_content=cheirozinha-body-splash-intimo-desodorante-intimo",
           "alt": "O perfume íntimo que Renata, 48 anos, passou a usar todo dia e não consegue mais parar",
           "weight": 1,
-          "active": true,
+          "active": false,
           "start_at": "2026-04-30T05:16:16.233Z",
           "end_at": "2026-05-07T05:16:16.233Z",
           "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
@@ -683,7 +710,8 @@
           "active": true,
           "start_at": "2026-04-30T05:16:16.233Z",
           "end_at": "2026-05-07T05:16:16.233Z",
-          "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
+          "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424",
+          "imageMobile": "/ads/cheirozinha-body-splash-intimo-desodorante-intimo/320x100-mobile.png"
         },
         {
           "advertiser": "Cheirozinha - Body Splash Íntimo, Desodorante Íntimo (v2)",
@@ -694,7 +722,8 @@
           "active": true,
           "start_at": "2026-04-30T05:16:16.233Z",
           "end_at": "2026-05-07T05:16:16.233Z",
-          "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
+          "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424",
+          "imageMobile": "/ads/cheirozinha-body-splash-intimo-desodorante-intimo/320x100-mobile.png"
         },
         {
           "advertiser": "Cheirozinha - Body Splash Íntimo, Desodorante Íntimo (v3)",
@@ -705,7 +734,8 @@
           "active": true,
           "start_at": "2026-04-30T05:16:16.233Z",
           "end_at": "2026-05-07T05:16:16.233Z",
-          "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
+          "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424",
+          "imageMobile": "/ads/cheirozinha-body-splash-intimo-desodorante-intimo/320x100-mobile.png"
         },
         {
           "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+",
@@ -713,7 +743,7 @@
           "href": "https://maxfem.com.br/products/menovital-para-melhora-da-menopausa?utm_source=mentoria&utm_medium=display&utm_campaign=ad-builder&utm_content=menovital-para-melhora-da-menopausa",
           "alt": "Selma, 55 anos, conta como parou de sofrer com calorões e insônia na menopausa. Veja!",
           "weight": 1,
-          "active": true,
+          "active": false,
           "start_at": "2026-04-30T05:27:56.398Z",
           "end_at": "2026-05-07T05:27:56.398Z",
           "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
@@ -727,7 +757,8 @@
           "active": true,
           "start_at": "2026-04-30T05:27:56.398Z",
           "end_at": "2026-05-07T05:27:56.398Z",
-          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f",
+          "imageMobile": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/320x100-mobile.png"
         },
         {
           "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+ (v2)",
@@ -738,7 +769,8 @@
           "active": true,
           "start_at": "2026-04-30T05:27:56.398Z",
           "end_at": "2026-05-07T05:27:56.398Z",
-          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f",
+          "imageMobile": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/320x100-mobile.png"
         },
         {
           "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+ (v3)",
@@ -749,7 +781,8 @@
           "active": true,
           "start_at": "2026-04-30T05:27:56.398Z",
           "end_at": "2026-05-07T05:27:56.398Z",
-          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f",
+          "imageMobile": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/320x100-mobile.png"
         },
         {
           "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+ (v4)",
@@ -760,7 +793,8 @@
           "active": true,
           "start_at": "2026-04-30T05:27:56.398Z",
           "end_at": "2026-05-07T05:27:56.398Z",
-          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f",
+          "imageMobile": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/320x100-mobile.png"
         },
         {
           "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+ (v5)",
@@ -771,7 +805,8 @@
           "active": true,
           "start_at": "2026-04-30T05:27:56.398Z",
           "end_at": "2026-05-07T05:27:56.398Z",
-          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f",
+          "imageMobile": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/320x100-mobile.png"
         },
         {
           "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+ (v6)",
@@ -782,7 +817,8 @@
           "active": true,
           "start_at": "2026-04-30T05:27:56.398Z",
           "end_at": "2026-05-07T05:27:56.398Z",
-          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f",
+          "imageMobile": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/320x100-mobile.png"
         }
       ]
     },
