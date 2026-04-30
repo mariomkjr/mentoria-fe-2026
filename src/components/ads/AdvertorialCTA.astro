@@ -3,7 +3,6 @@ interface Props {
   name: string;
   thumb: string;
   url: string;
-  price?: number;
   cta?: string;
   description?: string;
   rating?: number;
@@ -18,7 +17,6 @@ const {
   name,
   thumb,
   url,
-  price,
   cta = 'QUERO COMEÇAR AGORA',
   description,
   rating = 4.8,
@@ -66,13 +64,6 @@ const stars = Array.from({ length: 5 }, (_, i) => i < Math.round(rating));
           <span>Compra 100% segura</span>
         </li>
       </ul>
-      {price !== undefined && (
-        <div class="adv-cta__price-row">
-          <span class="adv-cta__price-label">Por apenas</span>
-          <span class="adv-cta__price">R$ {Number(price).toFixed(2).replace('.', ',')}</span>
-          <span class="adv-cta__pix">à vista no PIX</span>
-        </div>
-      )}
       <span class="adv-cta__btn">{cta} <span aria-hidden="true">→</span></span>
       {recentSales && (
         <p class="adv-cta__recent">
@@ -194,33 +185,6 @@ const stars = Array.from({ length: 5 }, (_, i) => i < Math.round(rating));
     flex-shrink: 0;
   }
 
-  .adv-cta__price-row {
-    display: flex;
-    align-items: baseline;
-    gap: 0.55rem;
-    flex-wrap: wrap;
-    margin-bottom: 0.85rem;
-    padding: 0.85rem 0;
-    border-top: 1px dashed rgb(201 162 75 / 0.35);
-    border-bottom: 1px dashed rgb(201 162 75 / 0.35);
-  }
-  .adv-cta__price-label {
-    font-size: 0.85rem;
-    color: rgb(30 28 32 / 0.6);
-  }
-  .adv-cta__price {
-    font-family: var(--aw-font-heading, 'Playfair Display', Georgia, serif);
-    font-weight: 800;
-    font-size: 1.85rem;
-    color: rgb(122 31 58);
-    line-height: 1;
-  }
-  .adv-cta__pix {
-    font-size: 0.78rem;
-    color: rgb(15 130 80);
-    font-weight: 600;
-  }
-
   .adv-cta__btn {
     display: block;
     width: 100%;
@@ -280,8 +244,6 @@ const stars = Array.from({ length: 5 }, (_, i) => i < Math.round(rating));
     background: rgb(30 22 26 / 0.7);
   }
   :global(.dark) .adv-cta__trust li { color: rgb(229 222 206 / 0.88); }
-  :global(.dark) .adv-cta__price { color: rgb(221 184 101); }
-  :global(.dark) .adv-cta__price-label { color: rgb(229 222 206 / 0.6); }
   :global(.dark) .adv-cta__btn {
     background: linear-gradient(135deg, rgb(221 184 101), rgb(201 162 75));
     color: rgb(20 12 16);
