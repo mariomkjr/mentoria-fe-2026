@@ -4,6 +4,10 @@ import NativeAdSlot from '~/components/NativeAdSlot.astro';
 import AdBanner from '~/components/ads/AdBanner.astro';
 import AdSlot from '~/components/ads/AdSlot.astro';
 import StickyFooter from '~/components/ads/StickyFooter.astro';
+import nativeData from '~/data/native-cards.json';
+
+const cardById = Object.fromEntries(nativeData.cards.map((c) => [c.id, c]));
+const pickCards = (...ids: string[]) => ids.map((id) => cardById[id]).filter(Boolean);
 
 const metadata = {
   title: 'Oração Diária — Creio em Te Senhor',
@@ -120,8 +124,17 @@ const sections = [
   ]},
 ];
 
-// Cards para os 10 slots de anúncio nativo (variados)
-const adCards1 = [
+// Cards para os 10 slots de anúncio nativo
+// Mix: ~25% sponsored Maxfem (linkam pros advertoriais) + ~75% editorial
+const adCards1 = pickCards('ed-testemunho-1', 'spons-menovital', 'ed-oracao-1', 'ed-saude-sono');
+const adCards2 = pickCards('ed-jejum-1', 'spons-serum', 'ed-receita-cha', 'ed-familia-1');
+const adFinal  = pickCards('ed-vocacao-1', 'ed-salmo-1', 'ed-casal-1', 'ed-pais-criancas');
+const adSingleHero1 = pickCards('spons-gummy');
+const adSingleHero2 = pickCards('spons-cheirosa');
+const adInline1 = pickCards('ed-politica-1');
+const adInline2 = pickCards('ed-receita-bolo');
+/* legacy hardcoded data (kept block to remove cleanly):
+const _legacyCards1 = [
   { category: 'TESTEMUNHO', title: 'Mulher orou 11 anos e o que aconteceu emocionou a igreja inteira', snippet: 'Ela quase desistiu, mas insistiu na madrugada. O desfecho deixou até pastor sem palavras.', source: 'testemunhos-de-fe.com', rating: '4.9', readTime: '14 min', gradient: 'from-[#7A1F3A] to-[#5C1729]' },
   { category: 'ORAÇÃO', title: '3 orações de madrugada que estão transformando vidas no Brasil', snippet: 'O método simples que uma missionária compartilhou e já viralizou nos grupos cristãos.', source: 'oracao-viva.com.br', rating: '4.8', readTime: '9 min', gradient: 'from-[#1E3A8A] to-[#3B82F6]' },
   { category: 'SALMOS', title: '7 Salmos que você precisa orar em toda noite difícil', snippet: 'Lista preparada por teóloga cristã com versículos comentados para dormir em paz.', source: 'devocional-diario.net', rating: '4.9', readTime: '11 min', gradient: 'from-[#064E3B]  to-[#10B981]' },
@@ -149,6 +162,7 @@ const adFinal = [
   { category: 'SAÚDE', title: 'Médico cristão explica o que a oração faz no cérebro (estudo comprova)', snippet: 'Pesquisa publicada numa revista médica mostrou alterações mensuráveis em áreas do cérebro de pessoas que oram diariamente.', source: 'ciencia-e-fe.net', rating: '4.9', readTime: '17 min', gradient: 'from-[#064E3B] to-[#10B981]' },
   { category: 'ORAÇÃO', title: 'Mãe ensinou o filho de 5 anos a orar assim — e a transformação surpreendeu os pais', snippet: 'Com um truque simples que ela aprendeu com a avó, a criança passou a orar todas as noites — e os pais começaram a notar mudanças.', source: 'pais-que-oram.com', rating: '4.7', readTime: '10 min', gradient: 'from-[#831843] to-[#EC4899]' },
 ];
+*/
 
 const block1 = sections.slice(0, 2);
 const block2 = sections.slice(2, 3);
