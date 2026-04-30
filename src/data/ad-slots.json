@@ -197,6 +197,83 @@
           "start_at": "2026-04-30T05:16:16.233Z",
           "end_at": "2026-05-07T05:16:16.233Z",
           "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
+        },
+        {
+          "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+",
+          "image": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/320x100-mobile.png",
+          "href": "/adv/mulheres-55-menopausa-caloroes-descoberta",
+          "alt": "Selma, 55 anos, conta como parou de sofrer com calorões e insônia na menopausa. Veja!",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:27:56.398Z",
+          "end_at": "2026-05-07T05:27:56.398Z",
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
+        },
+        {
+          "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+ (v1)",
+          "image": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/970x250-v1.png",
+          "href": "/adv/mulheres-55-menopausa-caloroes-descoberta",
+          "alt": "Selma, 55 anos, conta como parou de sofrer com calorões e insônia na menopausa. Veja!",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:27:56.398Z",
+          "end_at": "2026-05-07T05:27:56.398Z",
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
+        },
+        {
+          "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+ (v2)",
+          "image": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/970x250-v2.png",
+          "href": "/adv/mulheres-55-menopausa-caloroes-descoberta",
+          "alt": "Selma, 55 anos, conta como parou de sofrer com calorões e insônia na menopausa. Veja!",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:27:56.398Z",
+          "end_at": "2026-05-07T05:27:56.398Z",
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
+        },
+        {
+          "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+ (v3)",
+          "image": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/970x250-v3.png",
+          "href": "/adv/mulheres-55-menopausa-caloroes-descoberta",
+          "alt": "Selma, 55 anos, conta como parou de sofrer com calorões e insônia na menopausa. Veja!",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:27:56.398Z",
+          "end_at": "2026-05-07T05:27:56.398Z",
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
+        },
+        {
+          "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+ (v4)",
+          "image": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/970x250-v4.png",
+          "href": "/adv/mulheres-55-menopausa-caloroes-descoberta",
+          "alt": "Selma, 55 anos, conta como parou de sofrer com calorões e insônia na menopausa. Veja!",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:27:56.398Z",
+          "end_at": "2026-05-07T05:27:56.398Z",
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
+        },
+        {
+          "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+ (v5)",
+          "image": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/970x250-v5.png",
+          "href": "/adv/mulheres-55-menopausa-caloroes-descoberta",
+          "alt": "Selma, 55 anos, conta como parou de sofrer com calorões e insônia na menopausa. Veja!",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:27:56.398Z",
+          "end_at": "2026-05-07T05:27:56.398Z",
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
+        },
+        {
+          "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+ (v6)",
+          "image": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/970x250-v6.png",
+          "href": "/adv/mulheres-55-menopausa-caloroes-descoberta",
+          "alt": "Selma, 55 anos, conta como parou de sofrer com calorões e insônia na menopausa. Veja!",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:27:56.398Z",
+          "end_at": "2026-05-07T05:27:56.398Z",
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
         }
       ]
     },
@@ -262,6 +339,17 @@
           "start_at": "2026-04-30T05:16:16.233Z",
           "end_at": "2026-05-07T05:16:16.233Z",
           "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
+        },
+        {
+          "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+",
+          "image": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/300x250.png",
+          "href": "/adv/mulheres-55-menopausa-caloroes-descoberta",
+          "alt": "Selma, 55 anos, conta como parou de sofrer com calorões e insônia na menopausa. Veja!",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:27:56.398Z",
+          "end_at": "2026-05-07T05:27:56.398Z",
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
         }
       ]
     },
@@ -332,6 +420,18 @@
           "end_at": "2026-05-07T05:16:16.233Z",
           "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424",
           "imageMobile": "/ads/cheirozinha-body-splash-intimo-desodorante-intimo/300x100-mobile.png"
+        },
+        {
+          "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+",
+          "image": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/728x90.png",
+          "href": "/adv/mulheres-55-menopausa-caloroes-descoberta",
+          "alt": "Selma, 55 anos, conta como parou de sofrer com calorões e insônia na menopausa. Veja!",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:27:56.398Z",
+          "end_at": "2026-05-07T05:27:56.398Z",
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f",
+          "imageMobile": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/300x100-mobile.png"
         }
       ]
     },
@@ -397,6 +497,17 @@
           "start_at": "2026-04-30T05:16:16.233Z",
           "end_at": "2026-05-07T05:16:16.233Z",
           "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
+        },
+        {
+          "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+",
+          "image": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/300x250.png",
+          "href": "/adv/mulheres-55-menopausa-caloroes-descoberta",
+          "alt": "Selma, 55 anos, conta como parou de sofrer com calorões e insônia na menopausa. Veja!",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:27:56.398Z",
+          "end_at": "2026-05-07T05:27:56.398Z",
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
         }
       ]
     },
@@ -595,6 +706,83 @@
           "start_at": "2026-04-30T05:16:16.233Z",
           "end_at": "2026-05-07T05:16:16.233Z",
           "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
+        },
+        {
+          "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+",
+          "image": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/320x100-mobile.png",
+          "href": "/adv/mulheres-55-menopausa-caloroes-descoberta",
+          "alt": "Selma, 55 anos, conta como parou de sofrer com calorões e insônia na menopausa. Veja!",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:27:56.398Z",
+          "end_at": "2026-05-07T05:27:56.398Z",
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
+        },
+        {
+          "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+ (v1)",
+          "image": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/970x250-v1.png",
+          "href": "/adv/mulheres-55-menopausa-caloroes-descoberta",
+          "alt": "Selma, 55 anos, conta como parou de sofrer com calorões e insônia na menopausa. Veja!",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:27:56.398Z",
+          "end_at": "2026-05-07T05:27:56.398Z",
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
+        },
+        {
+          "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+ (v2)",
+          "image": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/970x250-v2.png",
+          "href": "/adv/mulheres-55-menopausa-caloroes-descoberta",
+          "alt": "Selma, 55 anos, conta como parou de sofrer com calorões e insônia na menopausa. Veja!",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:27:56.398Z",
+          "end_at": "2026-05-07T05:27:56.398Z",
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
+        },
+        {
+          "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+ (v3)",
+          "image": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/970x250-v3.png",
+          "href": "/adv/mulheres-55-menopausa-caloroes-descoberta",
+          "alt": "Selma, 55 anos, conta como parou de sofrer com calorões e insônia na menopausa. Veja!",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:27:56.398Z",
+          "end_at": "2026-05-07T05:27:56.398Z",
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
+        },
+        {
+          "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+ (v4)",
+          "image": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/970x250-v4.png",
+          "href": "/adv/mulheres-55-menopausa-caloroes-descoberta",
+          "alt": "Selma, 55 anos, conta como parou de sofrer com calorões e insônia na menopausa. Veja!",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:27:56.398Z",
+          "end_at": "2026-05-07T05:27:56.398Z",
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
+        },
+        {
+          "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+ (v5)",
+          "image": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/970x250-v5.png",
+          "href": "/adv/mulheres-55-menopausa-caloroes-descoberta",
+          "alt": "Selma, 55 anos, conta como parou de sofrer com calorões e insônia na menopausa. Veja!",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:27:56.398Z",
+          "end_at": "2026-05-07T05:27:56.398Z",
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
+        },
+        {
+          "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+ (v6)",
+          "image": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/970x250-v6.png",
+          "href": "/adv/mulheres-55-menopausa-caloroes-descoberta",
+          "alt": "Selma, 55 anos, conta como parou de sofrer com calorões e insônia na menopausa. Veja!",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:27:56.398Z",
+          "end_at": "2026-05-07T05:27:56.398Z",
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
         }
       ]
     },
@@ -660,6 +848,17 @@
           "start_at": "2026-04-30T05:16:16.233Z",
           "end_at": "2026-05-07T05:16:16.233Z",
           "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
+        },
+        {
+          "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+",
+          "image": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/300x250.png",
+          "href": "/adv/mulheres-55-menopausa-caloroes-descoberta",
+          "alt": "Selma, 55 anos, conta como parou de sofrer com calorões e insônia na menopausa. Veja!",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:27:56.398Z",
+          "end_at": "2026-05-07T05:27:56.398Z",
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
         }
       ]
     },
@@ -725,6 +924,17 @@
           "start_at": "2026-04-30T05:16:16.233Z",
           "end_at": "2026-05-07T05:16:16.233Z",
           "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
+        },
+        {
+          "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+",
+          "image": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/300x600.png",
+          "href": "/adv/mulheres-55-menopausa-caloroes-descoberta",
+          "alt": "Selma, 55 anos, conta como parou de sofrer com calorões e insônia na menopausa. Veja!",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:27:56.398Z",
+          "end_at": "2026-05-07T05:27:56.398Z",
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
         }
       ]
     },
@@ -790,6 +1000,17 @@
           "start_at": "2026-04-30T05:16:16.233Z",
           "end_at": "2026-05-07T05:16:16.233Z",
           "campaign_id": "9f42e298-cd3d-4484-a104-fdc900999424"
+        },
+        {
+          "advertiser": "Menovital – Suplemento para o Bem-Estar da Mulher 40+",
+          "image": "/ads/menovital-suplemento-para-o-bem-estar-da-mulher-40/320x50.png",
+          "href": "/adv/mulheres-55-menopausa-caloroes-descoberta",
+          "alt": "Selma, 55 anos, conta como parou de sofrer com calorões e insônia na menopausa. Veja!",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T05:27:56.398Z",
+          "end_at": "2026-05-07T05:27:56.398Z",
+          "campaign_id": "eaed9e85-00dd-4289-afa7-f1d788652b7f"
         }
       ]
     }
