@@ -65,6 +65,50 @@
           "start_at": "2026-04-30T04:46:40.564Z",
           "end_at": "2026-05-07T04:46:40.564Z",
           "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
+        },
+        {
+          "advertiser": "Imunofem – Suplemento para o Bem-Estar Íntimo Feminino 3 meses",
+          "image": "/ads/imunofem-suplemento-para-o-bem-estar-intimo-feminino-3-meses/320x100-mobile.png",
+          "href": "/adv/candid-ase-recorrente-o-que-fernanda-descobriu",
+          "alt": "O que Fernanda, 43 anos, fez pra parar com a candidíase recorrente que ninguém conseguia resolver",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:56:38.023Z",
+          "end_at": "2026-05-07T04:56:38.023Z",
+          "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac"
+        },
+        {
+          "advertiser": "Imunofem – Suplemento para o Bem-Estar Íntimo Feminino 3 meses (v1)",
+          "image": "/ads/imunofem-suplemento-para-o-bem-estar-intimo-feminino-3-meses/970x250-v1.png",
+          "href": "/adv/candid-ase-recorrente-o-que-fernanda-descobriu",
+          "alt": "O que Fernanda, 43 anos, fez pra parar com a candidíase recorrente que ninguém conseguia resolver",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:56:38.023Z",
+          "end_at": "2026-05-07T04:56:38.023Z",
+          "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac"
+        },
+        {
+          "advertiser": "Imunofem – Suplemento para o Bem-Estar Íntimo Feminino 3 meses (v2)",
+          "image": "/ads/imunofem-suplemento-para-o-bem-estar-intimo-feminino-3-meses/970x250-v2.png",
+          "href": "/adv/candid-ase-recorrente-o-que-fernanda-descobriu",
+          "alt": "O que Fernanda, 43 anos, fez pra parar com a candidíase recorrente que ninguém conseguia resolver",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:56:38.023Z",
+          "end_at": "2026-05-07T04:56:38.023Z",
+          "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac"
+        },
+        {
+          "advertiser": "Imunofem – Suplemento para o Bem-Estar Íntimo Feminino 3 meses (v3)",
+          "image": "/ads/imunofem-suplemento-para-o-bem-estar-intimo-feminino-3-meses/970x250-v3.png",
+          "href": "/adv/candid-ase-recorrente-o-que-fernanda-descobriu",
+          "alt": "O que Fernanda, 43 anos, fez pra parar com a candidíase recorrente que ninguém conseguia resolver",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:56:38.023Z",
+          "end_at": "2026-05-07T04:56:38.023Z",
+          "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac"
         }
       ]
     },
@@ -97,6 +141,17 @@
           "start_at": "2026-04-30T04:46:40.564Z",
           "end_at": "2026-05-07T04:46:40.564Z",
           "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
+        },
+        {
+          "advertiser": "Imunofem – Suplemento para o Bem-Estar Íntimo Feminino 3 meses",
+          "image": "/ads/imunofem-suplemento-para-o-bem-estar-intimo-feminino-3-meses/300x250.png",
+          "href": "/adv/candid-ase-recorrente-o-que-fernanda-descobriu",
+          "alt": "O que Fernanda, 43 anos, fez pra parar com a candidíase recorrente que ninguém conseguia resolver",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:56:38.023Z",
+          "end_at": "2026-05-07T04:56:38.023Z",
+          "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac"
         }
       ]
     },
@@ -131,6 +186,18 @@
           "end_at": "2026-05-07T04:46:40.564Z",
           "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504",
           "imageMobile": "/ads/serum-clareador-intimo-maxfem/300x100-mobile.png"
+        },
+        {
+          "advertiser": "Imunofem – Suplemento para o Bem-Estar Íntimo Feminino 3 meses",
+          "image": "/ads/imunofem-suplemento-para-o-bem-estar-intimo-feminino-3-meses/728x90.png",
+          "href": "/adv/candid-ase-recorrente-o-que-fernanda-descobriu",
+          "alt": "O que Fernanda, 43 anos, fez pra parar com a candidíase recorrente que ninguém conseguia resolver",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:56:38.023Z",
+          "end_at": "2026-05-07T04:56:38.023Z",
+          "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac",
+          "imageMobile": "/ads/imunofem-suplemento-para-o-bem-estar-intimo-feminino-3-meses/300x100-mobile.png"
         }
       ]
     },
@@ -163,6 +230,17 @@
           "start_at": "2026-04-30T04:46:40.564Z",
           "end_at": "2026-05-07T04:46:40.564Z",
           "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
+        },
+        {
+          "advertiser": "Imunofem – Suplemento para o Bem-Estar Íntimo Feminino 3 meses",
+          "image": "/ads/imunofem-suplemento-para-o-bem-estar-intimo-feminino-3-meses/300x250.png",
+          "href": "/adv/candid-ase-recorrente-o-que-fernanda-descobriu",
+          "alt": "O que Fernanda, 43 anos, fez pra parar com a candidíase recorrente que ninguém conseguia resolver",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:56:38.023Z",
+          "end_at": "2026-05-07T04:56:38.023Z",
+          "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac"
         }
       ]
     },
@@ -229,6 +307,50 @@
           "start_at": "2026-04-30T04:46:40.564Z",
           "end_at": "2026-05-07T04:46:40.564Z",
           "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
+        },
+        {
+          "advertiser": "Imunofem – Suplemento para o Bem-Estar Íntimo Feminino 3 meses",
+          "image": "/ads/imunofem-suplemento-para-o-bem-estar-intimo-feminino-3-meses/320x100-mobile.png",
+          "href": "/adv/candid-ase-recorrente-o-que-fernanda-descobriu",
+          "alt": "O que Fernanda, 43 anos, fez pra parar com a candidíase recorrente que ninguém conseguia resolver",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:56:38.023Z",
+          "end_at": "2026-05-07T04:56:38.023Z",
+          "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac"
+        },
+        {
+          "advertiser": "Imunofem – Suplemento para o Bem-Estar Íntimo Feminino 3 meses (v1)",
+          "image": "/ads/imunofem-suplemento-para-o-bem-estar-intimo-feminino-3-meses/970x250-v1.png",
+          "href": "/adv/candid-ase-recorrente-o-que-fernanda-descobriu",
+          "alt": "O que Fernanda, 43 anos, fez pra parar com a candidíase recorrente que ninguém conseguia resolver",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:56:38.023Z",
+          "end_at": "2026-05-07T04:56:38.023Z",
+          "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac"
+        },
+        {
+          "advertiser": "Imunofem – Suplemento para o Bem-Estar Íntimo Feminino 3 meses (v2)",
+          "image": "/ads/imunofem-suplemento-para-o-bem-estar-intimo-feminino-3-meses/970x250-v2.png",
+          "href": "/adv/candid-ase-recorrente-o-que-fernanda-descobriu",
+          "alt": "O que Fernanda, 43 anos, fez pra parar com a candidíase recorrente que ninguém conseguia resolver",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:56:38.023Z",
+          "end_at": "2026-05-07T04:56:38.023Z",
+          "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac"
+        },
+        {
+          "advertiser": "Imunofem – Suplemento para o Bem-Estar Íntimo Feminino 3 meses (v3)",
+          "image": "/ads/imunofem-suplemento-para-o-bem-estar-intimo-feminino-3-meses/970x250-v3.png",
+          "href": "/adv/candid-ase-recorrente-o-que-fernanda-descobriu",
+          "alt": "O que Fernanda, 43 anos, fez pra parar com a candidíase recorrente que ninguém conseguia resolver",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:56:38.023Z",
+          "end_at": "2026-05-07T04:56:38.023Z",
+          "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac"
         }
       ]
     },
@@ -261,6 +383,17 @@
           "start_at": "2026-04-30T04:46:40.564Z",
           "end_at": "2026-05-07T04:46:40.564Z",
           "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
+        },
+        {
+          "advertiser": "Imunofem – Suplemento para o Bem-Estar Íntimo Feminino 3 meses",
+          "image": "/ads/imunofem-suplemento-para-o-bem-estar-intimo-feminino-3-meses/300x250.png",
+          "href": "/adv/candid-ase-recorrente-o-que-fernanda-descobriu",
+          "alt": "O que Fernanda, 43 anos, fez pra parar com a candidíase recorrente que ninguém conseguia resolver",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:56:38.023Z",
+          "end_at": "2026-05-07T04:56:38.023Z",
+          "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac"
         }
       ]
     },
@@ -293,6 +426,17 @@
           "start_at": "2026-04-30T04:46:40.564Z",
           "end_at": "2026-05-07T04:46:40.564Z",
           "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
+        },
+        {
+          "advertiser": "Imunofem – Suplemento para o Bem-Estar Íntimo Feminino 3 meses",
+          "image": "/ads/imunofem-suplemento-para-o-bem-estar-intimo-feminino-3-meses/300x600.png",
+          "href": "/adv/candid-ase-recorrente-o-que-fernanda-descobriu",
+          "alt": "O que Fernanda, 43 anos, fez pra parar com a candidíase recorrente que ninguém conseguia resolver",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:56:38.023Z",
+          "end_at": "2026-05-07T04:56:38.023Z",
+          "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac"
         }
       ]
     },
@@ -325,6 +469,17 @@
           "start_at": "2026-04-30T04:46:40.564Z",
           "end_at": "2026-05-07T04:46:40.564Z",
           "campaign_id": "1d75562d-733a-4f59-9651-c4b3a05a4504"
+        },
+        {
+          "advertiser": "Imunofem – Suplemento para o Bem-Estar Íntimo Feminino 3 meses",
+          "image": "/ads/imunofem-suplemento-para-o-bem-estar-intimo-feminino-3-meses/320x50.png",
+          "href": "/adv/candid-ase-recorrente-o-que-fernanda-descobriu",
+          "alt": "O que Fernanda, 43 anos, fez pra parar com a candidíase recorrente que ninguém conseguia resolver",
+          "weight": 1,
+          "active": true,
+          "start_at": "2026-04-30T04:56:38.023Z",
+          "end_at": "2026-05-07T04:56:38.023Z",
+          "campaign_id": "de6b47c6-cabb-4a85-b910-4310dd0441ac"
         }
       ]
     }
