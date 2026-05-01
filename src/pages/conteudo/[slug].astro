@@ -63,7 +63,7 @@ const rendered = (article.paragraphs as string[]).map(renderParagraph);
   />
 
   <!-- top banner -->
-  <AdSlot slotId="post-top" />
+  <AdSlot id="post-top" />
 
   <InArticleAds interval={4} slotIds={['post-in-article-1', 'post-in-article-2', 'post-in-article-3']}>
     {rendered.map((r, i) => (
@@ -74,7 +74,7 @@ const rendered = (article.paragraphs as string[]).map(renderParagraph);
   </InArticleAds>
 
   <!-- end banner -->
-  <AdSlot slotId="post-end" />
+  <AdSlot id="post-end" />
 
   <!-- relacionados -->
   <NativeAdSlot
