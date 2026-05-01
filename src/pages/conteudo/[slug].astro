@@ -1,0 +1,86 @@
+---
+import AdvertorialLayout from '~/layouts/AdvertorialLayout.astro';
+import AdvHero from '~/components/adv/AdvHero.astro';
+import InArticleAds from '~/components/ads/InArticleAds.astro';
+import AdSlot from '~/components/ads/AdSlot.astro';
+import NativeAdSlot from '~/components/NativeAdSlot.astro';
+import editorialData from '~/data/editorial-content.json';
+import nativeData from '~/data/native-cards.json';
+
+export async function getStaticPaths() {
+  const articles = (editorialData as any).articles || {};
+  return Object.entries(articles).map(([cardId, art]: any) => ({
+    params: { slug: art.slug },
+    props: { cardId, article: art },
+  }));
+}
+
+const { cardId, article } = Astro.props as any;
+
+const metadata = {
+  title: `${article.title} — Creio em Te Senhor`,
+  description: article.snippet,
+};
+
+// Other editorial cards for "leia também", excluding self and pulling sponsored
+const allCards = (nativeData as any).cards as any[];
+const relatedCards = allCards.filter((c) => c.id !== cardId).slice(0, 4);
+
+// Render paragraphs — convert markdown lists to <ul>
+function renderParagraph(p: string): { kind: 'list' | 'p'; html: string } {
+  const trimmed = p.trim();
+  if (trimmed.startsWith('- ')) {
+    const items = trimmed.split('\n').filter((l) => l.trim().startsWith('- ')).map((l) => l.replace(/^-\s+/, ''));
+    return {
+      kind: 'list',
+      html: '<ul>' + items.map((it) => `<li>${escape(it)}</li>`).join('') + '</ul>',
+    };
+  }
+  // Handle simple markdown italics for verses with single quotes
+  return { kind: 'p', html: escape(p).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>') };
+}
+
+function escape(s: string) {
+  return s
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+const rendered = (article.paragraphs as string[]).map(renderParagraph);
+---
+
+<AdvertorialLayout metadata={metadata}>
+  <AdvHero
+    eyebrow={article.category}
+    title={article.title}
+    subtitle={article.subtitle}
+    author={article.author}
+    publishedAt={article.published_at}
+    readTime={article.read_time}
+    heroImage={article.image}
+    heroCaption={article.hero_caption}
+  />
+
+  <!-- top banner -->
+  <AdSlot slotId="post-top" />
+
+  <InArticleAds interval={4} slotIds={['post-in-article-1', 'post-in-article-2', 'post-in-article-3']}>
+    {rendered.map((r, i) => (
+      <Fragment>
+        {r.kind === 'p' ? <p class={i === 0 ? 'lead' : ''} set:html={r.html} /> : <Fragment set:html={r.html} />}
+      </Fragment>
+    ))}
+  </InArticleAds>
+
+  <!-- end banner -->
+  <AdSlot slotId="post-end" />
+
+  <!-- relacionados -->
+  <NativeAdSlot
+    heading="Você também vai gostar"
+    sublabel="Outras histórias e reflexões"
+    cards={relatedCards}
+    variant="grid"
+  />
+</AdvertorialLayout>
