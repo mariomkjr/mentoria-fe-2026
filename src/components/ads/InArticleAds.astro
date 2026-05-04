@@ -41,8 +41,11 @@ const slotsJson = slotIds.length > 0 ? JSON.stringify(slotIds) : '[]';
         container.style.minHeight = dims.height + 40 + 'px';
 
         if (active.length === 0) {
-          container.innerHTML = `
-            <aside class="ad-display-slot ad-display-slot--empty" style="margin:0 auto;width:100%;max-width:${dims.width}px;aspect-ratio:${dims.width} / ${dims.height};background:rgb(245 240 230 / 0.4);border-radius:6px;opacity:0.3;" aria-hidden="true"></aside>`;
+          const empty = document.createElement('aside');
+          empty.className = 'ad-display-slot ad-display-slot--empty';
+          empty.style.cssText = `margin:0 auto;width:100%;max-width:${dims.width}px;aspect-ratio:${dims.width} / ${dims.height};background:rgb(245 240 230 / 0.4);border-radius:6px;opacity:0.3;`;
+          empty.setAttribute('aria-hidden', 'true');
+          container.appendChild(empty);
         } else {
           const totalWeight = active.reduce((s: number, c: any) => s + (c.weight || 1), 0);
           let r = Math.random() * totalWeight;
@@ -51,12 +54,35 @@ const slotsJson = slotIds.length > 0 ? JSON.stringify(slotIds) : '[]';
             r -= (c.weight || 1);
             if (r <= 0) { creative = c; break; }
           }
-          container.innerHTML = `
-            <aside class="ad-display-slot ad-display-slot--${slotId}" data-ad-slot-id="${slotId}" data-ad-advertiser="${creative.advertiser}" style="margin:1.5rem auto;width:100%;max-width:${dims.width}px;text-align:center;">
-              <a href="${creative.href}" target="_blank" rel="sponsored noopener noreferrer" data-ad-click style="display:block;line-height:0;border-radius:8px;overflow:hidden;width:100%;">
-                <img src="${creative.image}" alt="${creative.alt || ''}" width="${dims.width}" height="${dims.height}" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;" />
-              </a>
-            </aside>`;
+          // Defesa: só http(s) — bloqueia javascript:, data:, vbscript:
+          const safeHref = /^https?:\/\//i.test(creative.href || '') ? creative.href : '#';
+          const safeImage = /^https?:\/\/|^\//.test(creative.image || '') ? creative.image : '';
+
+          const aside = document.createElement('aside');
+          aside.className = `ad-display-slot ad-display-slot--${String(slotId).replace(/[^a-z0-9-_]/gi, '')}`;
+          aside.setAttribute('data-ad-slot-id', slotId);
+          aside.setAttribute('data-ad-advertiser', creative.advertiser || '');
+          aside.style.cssText = `margin:1.5rem auto;width:100%;max-width:${dims.width}px;text-align:center;`;
+
+          const a = document.createElement('a');
+          a.href = safeHref;
+          a.target = '_blank';
+          a.rel = 'sponsored noopener noreferrer';
+          a.setAttribute('data-ad-click', '');
+          a.style.cssText = 'display:block;line-height:0;border-radius:8px;overflow:hidden;width:100%;';
+
+          const img = document.createElement('img');
+          img.src = safeImage;
+          img.alt = creative.alt || '';
+          img.width = dims.width;
+          img.height = dims.height;
+          img.loading = 'lazy';
+          img.decoding = 'async';
+          img.style.cssText = 'width:100%;height:auto;display:block;';
+
+          a.appendChild(img);
+          aside.appendChild(a);
+          container.appendChild(aside);
           trackImpressionAndClick(container, slotId, creative.advertiser);
         }
         p.after(container);
