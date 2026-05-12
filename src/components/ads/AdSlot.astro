@@ -110,6 +110,8 @@ const aspectMobile = `${mobileDims.width} / ${mobileDims.height}`;
     width: 100%;
     height: auto;
     max-width: 100%;
+    aspect-ratio: var(--aspect);
+    object-fit: cover;
   }
   @media (max-width: 767px) {
     .ad-display-slot {
@@ -117,6 +119,9 @@ const aspectMobile = `${mobileDims.width} / ${mobileDims.height}`;
       padding: 0 0.5rem;
     }
     .ad-display-slot--empty {
+      aspect-ratio: var(--aspectMobile);
+    }
+    .ad-display-slot__image {
       aspect-ratio: var(--aspectMobile);
     }
   }

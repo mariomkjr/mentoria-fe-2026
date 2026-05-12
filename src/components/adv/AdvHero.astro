@@ -34,7 +34,7 @@ const {
   </div>
   {heroImage && (
     <figure class="adv-hero__figure">
-      <img src={heroImage} alt={title} loading="eager" decoding="async" />
+      <img src={heroImage} alt={title} width={1536} height={1024} loading="eager" decoding="async" />
       {heroCaption && <figcaption>{heroCaption}</figcaption>}
     </figure>
   )}
@@ -91,9 +91,17 @@ const {
   .adv-hero__figure img {
     width: 100%;
     height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
     border-radius: 14px;
     display: block;
     box-shadow: 0 8px 32px rgb(122 31 58 / 0.18);
+  }
+  @media (max-width: 640px) {
+    .adv-hero__figure img {
+      aspect-ratio: 4 / 3;
+      border-radius: 10px;
+    }
   }
   .adv-hero__figure figcaption {
     margin-top: 0.65rem;
